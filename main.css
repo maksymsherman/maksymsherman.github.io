@@ -60,9 +60,9 @@ html {
     display:block;
   }
   
-  ul{
+  /* ul{
     list-style-image:url('assets/images/bullet.png');
-  }
+  } */
   
   strong {
     font-weight: normal;
