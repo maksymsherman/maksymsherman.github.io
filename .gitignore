@@ -1,3 +1,4 @@
 /_site
 /Gemfile.lock
 /drafts
+.DS_Store
