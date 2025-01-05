@@ -285,8 +285,7 @@ html {
     }
   }
   
-  @media print, screen and (max-width: 480px) {
-  
+  @media print, screen and (max-width: 768px) {
     #header {
       margin-top: -20px;
     }
@@ -294,8 +293,36 @@ html {
     section {
       margin-top: 40px;
     }
+  
     nav {
       display: none;
+    }
+  
+    /* New styles for larger text */
+    html {
+      font-size: 18px;
+    }
+  
+    h1 {
+      font-size: 32px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    h3 {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  
+    p, ul, ol, dl {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  
+    code {
+      font-size: 16px;
     }
   }
   
