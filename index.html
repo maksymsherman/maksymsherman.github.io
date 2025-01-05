@@ -1,6 +1,7 @@
 <!-- bundle exec jekyll serve -->
 <!DOCTYPE html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TR23NDH2MP"></script>
 <script>
@@ -24,4 +25,12 @@
 <p> <a href="contact">Contact</a>
 
 <h4>Sign up to receive email updates for new blog posts:</h4>
-<iframe src="https://maksymsherman.substack.com/embed" style="border:1px solid #434343; background:#252525; width: 75%; max-width: 480px; height: 320px;" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://maksymsherman.substack.com/embed" style="border:1px solid #434343; background:#252525; width: 100%; max-width: 480px; height: 320px;" frameborder="0" scrolling="no">
+</iframe>
+<style>
+@media (min-width: 768px) {
+  iframe {
+    width: 75% !important;
+  }
+}
+</style>

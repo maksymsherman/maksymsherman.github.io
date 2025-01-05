@@ -1,5 +1,4 @@
 html {
-    max-width: 55ch;
     margin: 0 auto;
     padding:0px 0 20px 0px;
     color:#f0e7d5;
@@ -7,6 +6,18 @@ html {
     background: #252525;
     background-attachment: fixed !important;
     background: linear-gradient(#2a2a29, #1c1c1c);
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+      box-sizing: inherit;
+  }
+
+  /* Desktop styles */
+  @media screen and (min-width: 769px) {
+    html {
+        max-width: 55ch;
+    }
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -263,69 +274,31 @@ html {
     }
   }
   
-  @media print, screen and (max-width: 720px) {
-  
-    #title {
-      .credits {
-        display: block;
-        width: 100%;
-        line-height: 30px;
-        text-align: center;
-  
-        .left {
-          float: none;
-          display: block;
-        }
-  
-        .right {
-          float: none;
-          display: block;
-        }
+
+  @media screen and (max-width: 768px) {
+      html {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          max-width: none;
       }
-    }
+
+      .wrapper {
+          width: 100%;
+          max-width: none;
+      }
+
+      body {
+          width: 100%;
+          margin: 0;
+          padding: 0 26px;
+      }
+      
+      p, h1, h2, h3, h4, h5, h6 {
+          width: 100%;
+      }
   }
-  
-  @media print, screen and (max-width: 768px) {
-    #header {
-      margin-top: -20px;
-    }
-  
-    section {
-      margin-top: 40px;
-    }
-  
-    nav {
-      display: none;
-    }
-  
-    /* New styles for larger text */
-    html {
-      font-size: 18px;
-    }
-  
-    h1 {
-      font-size: 32px;
-    }
-  
-    h2 {
-      font-size: 28px;
-    }
-  
-    h3 {
-      font-size: 22px;
-      line-height: 28px;
-    }
-  
-    p, ul, ol, dl {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-  
-    code {
-      font-size: 16px;
-    }
-  }
-  
+
   @font-face {
     font-family: 'Inter';
     font-style: normal;
