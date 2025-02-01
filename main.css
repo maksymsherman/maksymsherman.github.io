@@ -36,22 +36,35 @@ html {
   }
   
   h1 {
-    font-size:28px;
+    font-size: 28px;
+    line-height: 1.2;
   }
   
   h2 {
     font-size: 24px;
+    line-height: 1.2;
   }
-  
-  h4, h5, h6 {
-    color:#e8e8e8;
-  }
-  
+
   h3 {
     font-size: 18px;
-    line-height: 24px;
-    font-weight: normal;
+    line-height: 1.3;
     color: #b6b6b6;
+  }
+  
+  h4 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  
+  h5 {
+    font-size: 15px;
+    line-height: 1.4;
+    color: #b6b6b6;
+  }
+  
+  h6 {
+    font-size: 13px;
+    line-height: 1.4;
   }
   
   a {
@@ -277,25 +290,67 @@ html {
 
   @media screen and (max-width: 768px) {
       html {
-          margin: 0;
+          margin: 0 auto;
           padding: 0;
           width: 100%;
-          max-width: none;
-      }
-
-      .wrapper {
-          width: 100%;
-          max-width: none;
+          max-width: 80%;
       }
 
       body {
           width: 100%;
-          margin: 0;
-          padding: 0 26px;
+          margin: 0 auto;
+          padding: 20px 0 0 0;
+          max-width: 100%;
       }
       
-      p, h1, h2, h3, h4, h5, h6 {
+      .wrapper {
           width: 100%;
+          max-width: none;
+          padding: 0;
+      }
+
+      p, h1, h2, h3, h4, h5, h6, .captioned-image-container {
+          width: 100%;
+          max-width: 100%;
+      }
+
+      iframe {
+          width: 100% !important;
+          max-width: 100% !important;
+      }
+
+      p {
+          font-size: 16px;
+          line-height: 1.6;
+      }
+
+      h1 {
+          font-size: 28px;
+      }
+
+      h2 {
+          font-size: 24px;
+      }
+
+      h3 {
+          font-size: 20px;
+      }
+
+      h4 {
+          font-size: 18px;
+      }
+
+      h5 {
+          font-size: 16px;
+      }
+
+      h6 {
+          font-size: 14px;
+      }
+
+      h1:first-of-type {
+          padding-top: 5px;
+          margin-top: 0;
       }
   }
 
