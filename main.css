@@ -371,6 +371,9 @@ html {
   }
   
   :root {
+    --book-green: #00FF00;
+    --book-blue: #00FFFF;
+    --book-gray: #9E9E9E;
     font-family: 'Inter', sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
   }
