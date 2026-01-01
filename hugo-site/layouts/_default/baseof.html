@@ -1,0 +1,29 @@
+<!-- cd hugo-site && hugo server -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TR23NDH2MP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TR23NDH2MP');
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="621725b9-29f5-45d4-a844-ccce88020346"></script>
+  <link rel="stylesheet" href="/main.css">
+
+  <title>{{ .Title | default .Site.Title }}</title>
+  <style>
+    .captioned-image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  {{- block "main" . }}{{- end }}
+</body>
+</html>

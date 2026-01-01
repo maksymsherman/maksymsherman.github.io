@@ -1,0 +1,20 @@
+# Local development: cd hugo-site && hugo server
+baseURL = 'https://msherman.xyz/'
+languageCode = 'en-us'
+title = 'Maksym Sherman'
+
+# Don't generate RSS, sitemap etc for now
+disableKinds = ['RSS', 'sitemap', 'taxonomy', 'term']
+
+# Use actual .html files instead of directories (for relative path compatibility)
+uglyURLs = true
+
+# Keep .html extensions for backwards compatibility
+[permalinks]
+  posts = '/p/:contentbasename'
+
+# Allow raw HTML in content files
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

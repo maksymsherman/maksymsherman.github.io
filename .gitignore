@@ -2,3 +2,7 @@
 /Gemfile.lock
 /drafts
 .DS_Store
+
+# Hugo build artifacts
+/hugo-site/public/
+/hugo-site/.hugo_build.lock
