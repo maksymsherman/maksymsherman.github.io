@@ -1148,7 +1148,20 @@ Visit: http://localhost:1313/
 
 ### Step 1 Implementation Issues
 
-1. **Code cell text alignment:** Code input text within cells may appear visually centered instead of left-aligned despite `text-align: left` being set. This is a visual rendering issue that needs further investigation.
+~~1. **Code cell text alignment:** Code input text within cells may appear visually centered instead of left-aligned despite `text-align: left` being set. This is a visual rendering issue that needs further investigation.~~
+
+**RESOLVED (2026-01-02):** The alignment issue was caused by HTML whitespace. List pages (blog.html, books.html, articles.html, contact.html) had newlines after the `<div class="code-input">` opening tag, creating unwanted whitespace that misaligned the code with the "In [1]:" gutter labels. Fixed by placing code content on the same line as the opening tag, matching the structure in index.html.
+
+**Critical formatting rule for code cells:**
+```html
+<!-- CORRECT - code on same line as opening tag -->
+<div class="code-input"><span class="variable">me</span>.<span class="function">list_posts</span>()</div>
+
+<!-- WRONG - newline creates whitespace and misalignment -->
+<div class="code-input">
+  <span class="variable">me</span>.<span class="function">list_posts</span>()
+</div>
+```
 
 ---
 
