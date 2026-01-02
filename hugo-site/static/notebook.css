@@ -59,7 +59,7 @@ body {
    ============================================ */
 
 .notebook {
-  max-width: 700px;
+  max-width: 55ch;
   margin: 0 auto;
   padding: 20px 16px 60px;
 }
@@ -475,8 +475,9 @@ body {
 
 @media (max-width: 640px) {
   .cell-gutter {
-    width: 35px;
-    font-size: 11px;
+    width: 60px;
+    font-size: 10px;
+    padding-right: 6px;
   }
 
   .code-input {

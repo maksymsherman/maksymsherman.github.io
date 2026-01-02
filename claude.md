@@ -65,7 +65,7 @@ hugo-site/
 - Color-coded book ratings (green for 9-10/10, blue for 7-8/10, gray for 5-6/10)
 
 **Typography:**
-- Notebook pages: 16px base with 1.6 line-height, 700px max-width
+- Notebook pages: 16px base with 1.6 line-height, 55ch max-width
 - Blog posts: 16px base with 55ch reading width for optimal readability
 - Code cells: 14px monospace (Menlo, Monaco, Consolas)
 
@@ -151,8 +151,13 @@ External embeds (Substack newsletter)
 
 ### Header Fixed Positioning
 - Header uses `position: fixed` (not sticky)
-- Body has `padding-top: 40px` to prevent content hiding
+- Body has `padding-top: 40px` to prevent content hiding (critical for mobile)
 - Header links to homepage (/)
+
+### Mobile Responsiveness Fixes
+- **Mobile body padding:** Set to `40px 0 0 0` (not 20px) to prevent blog post titles from being cut off by fixed header
+- **Mobile cell gutter:** Increased to `60px` width with `10px` font size to prevent "Out[1]:" from overlapping content
+- **Consistent max-width:** Both notebook pages and blog posts use `55ch` to eliminate jarring horizontal shifts when navigating
 
 ### Manual Counts
 Navigation card counts must be updated manually:
@@ -239,7 +244,7 @@ Visit: http://localhost:1313/
 - Notebook pages: 16px base, line-height 1.6
 - Blog posts: 16px base (from main.css)
 - Code cells: 14px monospace
-- Max-width: 700px for notebook container, 55ch for reading text
+- Max-width: 55ch for both notebook pages and blog posts (ensures consistent alignment when navigating between pages)
 
 ---
 
@@ -262,3 +267,8 @@ The site uses a Jupyter notebook metaphor to create an authentic technical aesth
 ---
 
 **Last Updated:** 2026-01-02
+
+### Recent Changes (2026-01-02)
+- Fixed mobile header overlap issue on blog posts
+- Fixed "Out[1]:" text overlapping with content on mobile
+- Standardized max-width to 55ch across all pages for consistent alignment
