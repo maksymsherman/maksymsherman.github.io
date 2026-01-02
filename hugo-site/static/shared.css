@@ -1,0 +1,163 @@
+/* ============================================
+   SHARED STYLES - Loaded on every page
+   ============================================
+   - Inter font declarations
+   - Shared CSS variables (book colors)
+   - Notebook header styling
+   - Blog wrapper/container helpers
+   ============================================ */
+
+/* ============================================
+   FONT FACE DECLARATIONS
+   ============================================ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable.woff2') format('woff2-variations');
+  font-named-instance: 'Regular';
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterVariable-Italic.woff2') format('woff2-variations');
+  font-named-instance: 'Italic';
+}
+
+/* ============================================
+   CSS VARIABLES - Shared across all pages
+   ============================================ */
+
+:root {
+  /* Book rating colors */
+  --book-green: #a8e6a0;  /* 9-10/10 ratings */
+  --book-blue: #64b5f6;   /* 7-8/10 ratings */
+  --book-gray: #b0b0b0;   /* 5-6/10 ratings */
+
+  /* Notebook header colors */
+  --header-bg: #252526;
+  --header-border: #3c3c3c;
+  --header-text: #e0e0e0;
+  --kernel-green: #81c784;
+
+  /* Accent colors */
+  --accent-blue: #4fc3f7;
+  --accent-orange: #ffb74d;
+}
+
+/* ============================================
+   NOTEBOOK HEADER - Persistent across all pages
+   ============================================ */
+
+.notebook-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.notebook-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.notebook-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+}
+
+.notebook-title:hover {
+  opacity: 0.8;
+}
+
+.notebook-title .icon {
+  font-size: 16px;
+}
+
+.kernel-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--header-text);
+  font-size: 12px;
+}
+
+.kernel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--kernel-green);
+  display: inline-block;
+}
+
+/* Mobile responsiveness for notebook header */
+@media (max-width: 640px) {
+  .notebook-toolbar {
+    flex-wrap: wrap;
+    padding: 6px 12px;
+  }
+
+  .notebook-title {
+    font-size: 12px;
+  }
+
+  .kernel-indicator span:not(.kernel-dot) {
+    display: none; /* Hide "Maksym Sherman (active)" text, keep dot */
+  }
+}
+
+/* ============================================
+   BLOG WRAPPER & CONTAINER HELPERS
+   Used by blog posts with main.css typography
+   ============================================ */
+
+.blog-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px 50px;
+}
+
+.blog-container {
+  max-width: 55ch;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .blog-wrapper {
+    padding: 20px 10px 50px;
+  }
+
+  .blog-container {
+    max-width: 80%;
+  }
+}
+
+/* ============================================
+   FONT FEATURE SETTINGS & BODY PADDING
+   Enable ligatures for Inter font
+   Add padding for fixed header
+   ============================================ */
+
+body {
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  padding-top: 40px; /* Account for fixed header */
+}

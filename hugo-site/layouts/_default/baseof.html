@@ -13,7 +13,16 @@
     gtag('config', 'G-TR23NDH2MP');
   </script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="621725b9-29f5-45d4-a844-ccce88020346"></script>
-  <link rel="stylesheet" href="/main.css">
+
+  <!-- Shared CSS: fonts, variables, notebook header, blog helpers -->
+  <link rel="stylesheet" href="/shared.css">
+
+  <!-- Conditional CSS: notebook.css for homepage + list pages, main.css for blog posts -->
+  {{ if or .IsHome (eq .Params.layout "notebook") }}
+    <link rel="stylesheet" href="/notebook.css">
+  {{ else }}
+    <link rel="stylesheet" href="/main.css">
+  {{ end }}
 
   <title>{{ .Title | default .Site.Title }}</title>
   <style>
