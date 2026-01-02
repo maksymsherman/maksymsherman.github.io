@@ -6,30 +6,27 @@ Transform the personal website into a Jupyter notebook-inspired interface that a
 
 **Core Philosophy:** The notebook metaphor creates an authentic, technical aesthetic for the homepage and navigation, but steps back for blog posts to prioritize reading experience.
 
----
+**Status:** Planning only. Implementation is not complete yet.
 
-## Critical Pre-Implementation Requirements
+## Scope & Sequencing (must follow)
 
-Before building notebook layouts, fix these main.css issues:
+1) **Step 1 — Notebook pages only.** Build the notebook UI for the homepage and list pages (blog/books/articles/contact). Do **not** modify blog post templates or blog post typography in this step (global CSS loading changes are OK only if blog post appearance remains unchanged).
+2) **Step 2 — Blog posts.** Add the notebook header to blog posts while keeping the existing 55ch reading width and `main.css` typography.
+3) **Step 3 — Polish.** Hover states, spacing, contrast checks, and minor refinements only after Steps 1–2 land cleanly.
 
-### 1. Remove Width Constraint (lines 17-21)
-```css
-/* DELETE THIS - breaks 900px notebook layout */
-@media screen and (min-width: 769px) {
-  html {
-    max-width: 55ch;
-  }
-}
-```
+## Locked Decisions (current)
 
-### 2. Remove Legacy Header (lines 171-244)
-The `#header` block with green button navigation is unused. Delete it.
+- Blog posts keep `55ch` line length (`main.css` stays the source of truth).
+- List pages stay fully manual (no auto-generated lists).
+- Substack embed stays at `https://maksymsherman.substack.com/embed`.
+- CSS is separated by page type: notebook pages load `notebook.css`, blog posts load `main.css`, and a shared stylesheet is always loaded for fonts/vars/header.
 
-### 3. Remove Duplicate Variables (lines 373-379)
-The `:root` block at the end has book colors that conflict with notebook.css. Delete it.
+## Risks & Watchouts
 
-### 4. Load Notebook Styles
-Copy `public/notebook.css` → `static/notebook.css`, then add link in baseof.html. Two separate files keeps concerns separated (base typography vs notebook theme).
+1. **CSS bleed:** Never load `main.css` and `notebook.css` together. Use conditional loading in `baseof.html`.
+2. **Plain CSS only:** Avoid SCSS nesting in `notebook.css` or styles will silently fail.
+3. **Manual counts drift:** Blog/books/articles counts must be updated by hand.
+4. **Class alignment:** Ensure the HTML class names match the CSS (e.g., `nav-card` vs `nav-link`).
 
 ---
 
@@ -99,7 +96,7 @@ Inspired by VS Code's dark theme, optimized for readability:
 - Blue books: `#64b5f6` (7-8/10 ratings)
 - Gray books: `#b0b0b0` (5-6/10 ratings)
 
-**Note on CSS Variable Conflicts:** main.css defines different book color values (`#00FF00`, `#00FFFF`, `#9E9E9E`) that will be overridden by notebook.css. Remove the duplicate `:root` variables from main.css to prevent confusion—notebook.css values are authoritative.
+**Note on CSS Variable Conflicts:** main.css defines different book color values (`#00FF00`, `#00FFFF`, `#9E9E9E`). Move these variables into `shared.css` and remove them from main.css so there is a single source of truth.
 
 ### Background Colors
 - **All pages:** Keep main.css gradient `linear-gradient(#2a2a29, #1c1c1c)` on html element
@@ -140,7 +137,7 @@ Inspired by VS Code's dark theme, optimized for readability:
 ### Font Sizes - Blog Posts (from main.css)
 
 **Desktop:**
-- Base: `16px` (set explicitly on `html` element)
+- Base: `16px` (browser default; do not override in Step 1)
 - H1: `28px`, line-height 1.2
 - H2: `24px`, line-height 1.2
 - H3: `18px`, line-height 1.3, color `#b6b6b6`
@@ -324,19 +321,19 @@ Grid of clickable cards:
     <span class="nav-card-icon">&#128221;</span>
     <div class="nav-card-title">blog <span class="nav-card-arrow">→</span></div>
     <div class="nav-card-description">Essays on economics, technology, and ideas</div>
-    <div class="nav-card-count">{{ len (where .Site.RegularPages "Section" "posts") }} posts</div>
+    <div class="nav-card-count">16 posts</div>
   </a>
   <a href="books.html" class="nav-card">
     <span class="nav-card-icon">&#128218;</span>
     <div class="nav-card-title">books <span class="nav-card-arrow">→</span></div>
     <div class="nav-card-description">Reading list with ratings</div>
-    <div class="nav-card-count">160+ books</div>
+    <div class="nav-card-count">160 books</div>
   </a>
   <a href="articles.html" class="nav-card">
     <span class="nav-card-icon">&#128279;</span>
     <div class="nav-card-title">articles <span class="nav-card-arrow">→</span></div>
     <div class="nav-card-description">Best articles I've read</div>
-    <div class="nav-card-count">70+ links</div>
+    <div class="nav-card-count">70 links</div>
   </a>
   <a href="contact.html" class="nav-card">
     <span class="nav-card-icon">&#128231;</span>
@@ -417,7 +414,7 @@ Used for blog/books/articles/contact pages:
     </div>
     <div class="cell-body">
       <div class="widget-container">
-        <iframe src="https://msherman.substack.com/embed" ...></iframe>
+        <iframe src="https://maksymsherman.substack.com/embed" ...></iframe>
       </div>
     </div>
   </div>
@@ -469,11 +466,11 @@ For blog posts, keep the simple inline iframe (no cell wrapper) since blog posts
 7. **Cell 5 - Code:** `In [4]:` Call `me.subscribe()` with comment "# Get notified of new posts"
 8. **Cell 5 - Output:** `Out[4]:` Substack newsletter embed
 
-### Dynamic Content
+### Manual Counts
 
-- Blog post count: `{{ len (where .Site.RegularPages "Section" "posts") }}`
-- Books count: Hard-coded `160` (manual update)
-- Articles count: Hard-coded `70` (manual update)
+- Blog post count: manual number in the nav card
+- Books count: manual number (`160`)
+- Articles count: manual number (`70`)
 
 ---
 
@@ -530,11 +527,13 @@ layout: notebook
 - **articles.html:** `me.list_articles(by="rating")`
 - **contact.html:** `me.get_contact_info()`
 
+**Note:** These code snippets are purely decorative; list content remains manual HTML.
+
 ---
 
 ## Blog Post Structure
 
-**Design Decision:** Blog posts use a simplified layout - notebook header for branding, but standard typography for maximum readability.
+**Design Decision:** Blog posts use a simplified layout - notebook header for branding, but standard typography for maximum readability. This is **Step 2 only**.
 
 ### Template (single.html)
 
@@ -563,10 +562,10 @@ layout: notebook
 
 ### Styling Approach
 
-**Typography comes from main.css**, notebook.css only provides:
-- Header styling
-- Layout containers (`.blog-wrapper`, `.blog-container`)
-- HR styling (uses original `hr.gif` background)
+**Typography comes from main.css**, while **shared.css** provides:
+- Notebook header styling
+- Blog layout containers (`.blog-wrapper`, `.blog-container`)
+- HR styling (already in `main.css`, unchanged)
 
 **Key constraint:** `.blog-container { max-width: 55ch }` for optimal reading line length (matches your current site)
 
@@ -574,70 +573,73 @@ layout: notebook
 
 ## CSS Architecture
 
-### Two-File System
+### Separated Stylesheets (simple + low-risk)
 
-**main.css** (378 lines) - Base typography and colors
-- All heading styles (h1-h6)
-- Paragraph, link, code, blockquote styles
-- Table styling
-- Mobile responsive font sizes
-- Original site colors and backgrounds
-- 650px max-width for sections
-- Base font-size: `16px` on html element
+**shared.css** - Loaded on every page
+- Inter font-face declarations
+- Shared CSS variables (book colors)
+- Notebook header styles (used on notebook pages now; blog posts in Step 2)
+- Blog wrapper/container layout helpers
 
-**notebook.css** (570+ lines) - Notebook theme UI only
-- CSS variables for notebook colors
-- Notebook header/toolbar
-- Cell structure (gutters, bodies, containers)
-- Code cell syntax highlighting
-- Output cell styling
-- Navigation cards
-- DataFrame tables
-- List content styling (with `max-width: 55ch` for reading)
-- Widget containers
-- Mobile responsiveness for notebook elements
-- **Reading width constraints** (`55ch` on text content, `900px` on decorative containers)
+**main.css** - Blog posts only
+- Existing typography, colors, and 55ch width
+- No notebook UI here
 
-**Load Order (in baseof.html):**
+**notebook.css** - Notebook pages only
+- Cell layout, gutters, syntax colors
+- Output grids (nav cards, DataFrames, lists, widgets)
+- Reading width constraints (`55ch` on text content, `900px` on decorative containers)
+
+**Load Logic (in baseof.html):**
 ```html
-<link rel="stylesheet" href="/main.css">
-<link rel="stylesheet" href="/notebook.css">
+<link rel="stylesheet" href="/shared.css">
+{{ if or .IsHome (eq .Params.layout "notebook") }}
+  <link rel="stylesheet" href="/notebook.css">
+{{ else }}
+  <link rel="stylesheet" href="/main.css">
+{{ end }}
 ```
 
-**Important:** Do NOT add universal reset (`* { margin: 0; padding: 0 }`) to notebook.css as it will override main.css spacing.
+**Important:**
+- Do NOT add universal resets to `notebook.css`.
+- Do NOT use SCSS nesting in `notebook.css` (plain CSS only).
 
 ---
 
 ## Templates
 
-### baseof.html (already exists, minor update needed)
-This is Hugo's standard base template that wraps all pages. It already exists at `layouts/_default/baseof.html` with analytics and main.css.
-
-**Only change needed:** Add notebook.css link (if using two-file approach):
+### baseof.html
+Base template for all pages:
 ```html
-<link rel="stylesheet" href="/main.css">
-<link rel="stylesheet" href="/notebook.css">  <!-- ADD THIS LINE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Analytics: Google tag, Umami -->
+  <link rel="stylesheet" href="/shared.css">
+  {{ if or .IsHome (eq .Params.layout "notebook") }}
+    <link rel="stylesheet" href="/notebook.css">
+  {{ else }}
+    <link rel="stylesheet" href="/main.css">
+  {{ end }}
+  <title>{{ .Title | default .Site.Title }}</title>
+</head>
+<body>
+  {{- block "main" . }}{{- end }}
+</body>
+</html>
 ```
 
-The rest of baseof.html stays as-is (analytics, meta tags, title). Each layout (index.html, single.html, notebook.html) defines the `{{ block "main" }}` content.
+### partials/notebook-header.html
+Reusable notebook header shared by the homepage and list pages (and later blog posts).
 
 ### index.html
 Homepage layout. Update `layouts/index.html` with the complete notebook structure:
 
 ```html
 {{ define "main" }}
-<header class="notebook-header">
-  <div class="notebook-toolbar">
-    <a href="/" class="notebook-title">
-      <span class="icon">&#128211;</span>
-      <span>maksym_sherman.ipynb</span>
-    </a>
-    <div class="kernel-indicator">
-      <span class="kernel-dot"></span>
-      <span>Maksym Sherman (active)</span>
-    </div>
-  </div>
-</header>
+{{ partial "notebook-header.html" . }}
 
 <main class="notebook">
   <!-- Cell 1: Import -->
@@ -662,12 +664,12 @@ Homepage layout. Update `layouts/index.html` with the complete notebook structur
     </div>
   </div>
 
-  <!-- Cell 3: Navigation -->
+  <!-- Cell 3: Describe -->
   <div class="cell code-cell">
     <div class="cell-content">
       <div class="cell-gutter"><span class="bracket">In [</span>2<span class="bracket">]:</span></div>
       <div class="cell-body">
-        <div class="code-input"><span class="variable">me</span>.<span class="function">get_sections</span>()  <span class="comment"># Explore my work</span></div>
+        <div class="code-input"><span class="variable">me</span>.<span class="function">describe</span>()</div>
       </div>
     </div>
   </div>
@@ -676,24 +678,66 @@ Homepage layout. Update `layouts/index.html` with the complete notebook structur
     <div class="cell-content">
       <div class="cell-gutter"><span class="bracket">Out[</span>2<span class="bracket">]:</span></div>
       <div class="cell-body">
+        <div class="dataframe-output">
+          <table class="dataframe">
+            <thead>
+              <tr><th></th><th>status</th><th>description</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="index">currently</td>
+                <td>Economic consulting</td>
+                <td>Focused on data work</td>
+              </tr>
+              <tr>
+                <td class="index">previously</td>
+                <td>OurNetwork, college endowment</td>
+                <td>Crypto data newsletter, investing</td>
+              </tr>
+              <tr>
+                <td class="index">always</td>
+                <td>Looking to connect</td>
+                <td>Curious people and ideas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 4: Navigation -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>3<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">me</span>.<span class="function">get_sections</span>()  <span class="comment"># Explore my work</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell output-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>3<span class="bracket">]:</span></div>
+      <div class="cell-body">
         <div class="nav-output">
           <a href="blog.html" class="nav-card">
             <span class="nav-card-icon">&#128221;</span>
             <div class="nav-card-title">blog <span class="nav-card-arrow">→</span></div>
             <div class="nav-card-description">Essays on economics, technology, and ideas</div>
-            <div class="nav-card-count">{{ len (where .Site.RegularPages "Section" "posts") }} posts</div>
+            <div class="nav-card-count">16 posts</div>
           </a>
           <a href="books.html" class="nav-card">
             <span class="nav-card-icon">&#128218;</span>
             <div class="nav-card-title">books <span class="nav-card-arrow">→</span></div>
             <div class="nav-card-description">Reading list with ratings</div>
-            <div class="nav-card-count">160+ books</div>
+            <div class="nav-card-count">160 books</div>
           </a>
           <a href="articles.html" class="nav-card">
             <span class="nav-card-icon">&#128279;</span>
             <div class="nav-card-title">articles <span class="nav-card-arrow">→</span></div>
             <div class="nav-card-description">Best articles I've read</div>
-            <div class="nav-card-count">70+ links</div>
+            <div class="nav-card-count">70 links</div>
           </a>
           <a href="contact.html" class="nav-card">
             <span class="nav-card-icon">&#128231;</span>
@@ -705,10 +749,10 @@ Homepage layout. Update `layouts/index.html` with the complete notebook structur
     </div>
   </div>
 
-  <!-- Cell 4: Newsletter -->
+  <!-- Cell 5: Newsletter -->
   <div class="cell code-cell">
     <div class="cell-content">
-      <div class="cell-gutter"><span class="bracket">In [</span>3<span class="bracket">]:</span></div>
+      <div class="cell-gutter"><span class="bracket">In [</span>4<span class="bracket">]:</span></div>
       <div class="cell-body">
         <div class="code-input"><span class="variable">me</span>.<span class="function">subscribe</span>()  <span class="comment"># Get notified of new posts</span></div>
       </div>
@@ -717,7 +761,7 @@ Homepage layout. Update `layouts/index.html` with the complete notebook structur
 
   <div class="cell widget-cell">
     <div class="cell-content">
-      <div class="cell-gutter"><span class="bracket">Out[</span>3<span class="bracket">]:</span></div>
+      <div class="cell-gutter"><span class="bracket">Out[</span>4<span class="bracket">]:</span></div>
       <div class="cell-body">
         <div class="widget-container">
           <iframe src="https://maksymsherman.substack.com/embed" width="480" height="320" frameborder="0"></iframe>
@@ -734,18 +778,7 @@ Blog post layout with notebook header only. Update `layouts/_default/single.html
 
 ```html
 {{ define "main" }}
-<header class="notebook-header">
-  <div class="notebook-toolbar">
-    <a href="/" class="notebook-title">
-      <span class="icon">&#128211;</span>
-      <span>maksym_sherman.ipynb</span>
-    </a>
-    <div class="kernel-indicator">
-      <span class="kernel-dot"></span>
-      <span>Maksym Sherman (active)</span>
-    </div>
-  </div>
-</header>
+{{ partial "notebook-header.html" . }}
 
 <div class="blog-wrapper">
   <main class="blog-container">
@@ -763,18 +796,7 @@ Blog posts use main.css typography (not notebook cells) for optimal reading.
 List page layout for blog/books/articles/contact. Create at `layouts/_default/notebook.html`:
 ```html
 {{ define "main" }}
-<header class="notebook-header">
-  <div class="notebook-toolbar">
-    <a href="/" class="notebook-title">
-      <span class="icon">&#128211;</span>
-      <span>maksym_sherman.ipynb</span>
-    </a>
-    <div class="kernel-indicator">
-      <span class="kernel-dot"></span>
-      <span>Maksym Sherman (active)</span>
-    </div>
-  </div>
-</header>
+{{ partial "notebook-header.html" . }}
 
 <main class="notebook list-page">
   {{ .Content }}
@@ -891,7 +913,7 @@ Your current site uses good sizes. Preserve or increase:
 | `#f0e7d5` (blog text) | `#1c1c1c` (blog bg) | 12.4:1 | ✅ |
 
 ### Mobile Width
-Your current mobile uses `max-width: 80%` on html. Preserve this approach:
+On mobile, keep notebook containers slightly inset from the edges:
 ```css
 @media (max-width: 768px) {
   .notebook {
@@ -923,37 +945,17 @@ Your current mobile uses `max-width: 80%` on html. Preserve this approach:
 
 ---
 
-## Known Issues & Design Decisions
+## Implementation Notes
 
-### Blocking Issues (Fix in Phase 0)
-1. **notebook.css not loaded**: Copy to static/ and add link in baseof.html
-2. **main.css width conflict**: The `max-width: 55ch` on html (lines 17-21) breaks 900px notebook layout
-3. **Legacy CSS cruft**: Unused `#header` block (lines 171-244) and duplicate `:root` variables
-
-### Resolved by This Document
-- ✅ Navigation class naming: Use `nav-card-*` consistently (documented above)
-- ✅ Reading content width: Use `55ch` via `.blog-container`, `.list-content`, `.markdown-cell .cell-body`
-- ✅ Two-file CSS system for clean separation
-
-### Important Decisions
-
-1. **No notebook cells for blog posts:** The cell wrapper adds friction for long-form reading. Just use the header for branding.
-
+1. **No notebook cells for blog posts:** The cell wrapper adds friction for long-form reading. Use only the header in Step 2.
 2. **Authentic but not literal:** Use real Jupyter patterns (execution counts, syntax highlighting, DataFrames) but don't force them where they don't fit.
-
 3. **Mobile-first navigation:** Cards stack vertically on mobile, ensuring all content is accessible.
-
 4. **Sticky header:** Notebook header stays visible on scroll for constant branding.
-
 5. **Original typography for blogs:** Reading experience > aesthetic consistency. Blog posts use proven readable type.
-
 6. **Header links to homepage:** Clicking "maksym_sherman.ipynb" navigates to `/` (index).
-
 7. **Execution counts reset per page:** Each page starts at `In [1]:`. No global counter.
-
-8. **Book colors stay inline:** Current books.html uses inline `style="color: var(--book-green)"`. Keep this approach—it's simple and works.
-
-9. **404 page design:** Simple notebook error cell:
+8. **Book colors stay inline:** `books.html` keeps inline `style="color: var(--book-green)"` for simplicity.
+9. **404 page design (optional):**
    ```
    In [1]: me.find_page("/missing")
    Out[1]: PageNotFoundError: The requested page does not exist.
@@ -978,50 +980,29 @@ Your current mobile uses `max-width: 80%` on html. Preserve this approach:
 
 ---
 
-## Implementation Checklist
+## Implementation Checklist (Step-by-step)
 
-### Phase 0: Fix Blocking Issues (REQUIRED FIRST)
+### Step 1 — Notebook pages only (DO NOT touch blog posts)
+- [ ] Create `hugo-site/static/shared.css` for fonts + shared variables + notebook header + blog container helpers
+- [ ] Create `hugo-site/static/notebook.css` with all notebook UI styles
+- [ ] Update `hugo-site/layouts/_default/baseof.html` to conditionally load `notebook.css` or `main.css`
+- [ ] Add `hugo-site/layouts/partials/notebook-header.html`
+- [ ] Add `hugo-site/layouts/_default/notebook.html` (list pages)
+- [ ] Update `hugo-site/layouts/index.html` with notebook header + cells
+- [ ] Add `layout: notebook` to `hugo-site/content/blog.html`, `books.html`, `articles.html`, `contact.html`
+- [ ] Wrap list-page content in code/output cells (manual content stays)
+- [ ] Ensure Substack embed uses `https://maksymsherman.substack.com/embed`
+- [ ] Smoke-check homepage + list pages only
 
-**CSS setup:**
-- [ ] Copy `hugo-site/public/notebook.css` → `hugo-site/static/notebook.css`
-- [ ] Edit `baseof.html`: add `<link rel="stylesheet" href="/notebook.css">` after main.css
+### Step 2 — Blog posts (after Step 1 is merged)
+- [ ] Update `hugo-site/layouts/_default/single.html` to add the notebook header
+- [ ] Keep `main.css` typography and `55ch` width unchanged
+- [ ] Check a few existing posts for layout regressions
 
-**Clean up main.css:**
-- [ ] Remove lines 17-21 (the `max-width: 55ch` media query on html)
-- [ ] Remove lines 171-244 (the legacy `#header` block)
-- [ ] Remove `:root` block at end of file (duplicate variables)
-
-### Phase 1: Create Layout Templates
-- [ ] Create `hugo-site/layouts/_default/notebook.html` (for list pages)
-- [ ] Update `hugo-site/layouts/_default/single.html` with notebook header
-- [ ] Update `hugo-site/layouts/index.html` with full homepage cell structure
-
-### Phase 2: Update Content Files with Notebook Structure
-- [ ] Update `hugo-site/content/_index.html` with homepage cells (or rely on index.html layout)
-- [ ] Update `hugo-site/content/blog.html` with code cell + output cell structure
-- [ ] Update `hugo-site/content/books.html` with code cell + output cell + book color classes
-- [ ] Update `hugo-site/content/articles.html` with code cell + output cell
-- [ ] Update `hugo-site/content/contact.html` with code cell + output cell
-
-### Phase 3: Test and Verify
-- [ ] Run `hugo server` and verify homepage renders correctly
-- [ ] Verify all 4 list pages (blog, books, articles, contact) render correctly
-- [ ] Test a blog post (e.g., striking_while_the_iron_is_hot.html)
-- [ ] Test navigation card links work
-- [ ] Verify Substack iframe displays in widget cell
-
-**Readability testing (critical):**
-- [ ] Desktop (1200px+): Verify list content doesn't stretch too wide
-- [ ] Tablet (768px): Check cell gutters don't crowd content
-- [ ] Mobile (375px): Verify text is readable, no horizontal scroll on content
-- [ ] Mobile (320px): Test smallest common screen, execution counts still fit
-- [ ] Check all link colors are distinguishable from regular text
-- [ ] Verify DataFrame table is scrollable on mobile, text readable
-
-### Phase 4: Polish
-- [ ] Update `hugo-site/layouts/404.html` with notebook theme
-- [ ] Replace all inline-styled iframes in blog posts with widget-cell structure
-- [ ] Final visual review across all page types
+### Step 3 — Polish
+- [ ] Refine hover states, spacing, and mobile breakpoints
+- [ ] Fix any HTML/CSS class mismatches (e.g., `nav-card` vs `nav-link`)
+- [ ] Optional: add notebook-themed 404 and other extras
 
 ---
 
@@ -1041,14 +1022,17 @@ hugo-site/
 │       └── ...
 ├── layouts/
 │   ├── _default/
-│   │   ├── baseof.html          # Base template (loads both CSS files)
+│   │   ├── baseof.html          # Base template (conditional CSS load)
 │   │   ├── single.html          # Blog post layout
 │   │   ├── notebook.html        # List page layout
 │   │   └── list.html            # (unused)
 │   └── index.html               # Homepage layout
+│   └── partials/
+│       └── notebook-header.html # Shared notebook header
 ├── static/
-│   ├── main.css                 # Original site typography (378 lines)
-│   ├── notebook.css             # Notebook UI theme (570 lines)
+│   ├── shared.css               # Fonts + shared vars + header helpers
+│   ├── main.css                 # Blog post typography (unchanged)
+│   ├── notebook.css             # Notebook UI theme
 │   └── assets/
 │       ├── fonts/
 │       │   ├── InterVariable.woff2
@@ -1140,25 +1124,26 @@ Visit: http://localhost:1313/
 ## Current State Summary
 
 **What already exists:**
-- `hugo-site/static/main.css` - typography and base styles (needs cleanup)
-- `hugo-site/public/notebook.css` - notebook theme (needs to be moved/merged)
-- `hugo-site/layouts/_default/baseof.html` - base template (needs notebook.css link)
+- `hugo-site/static/main.css` - blog typography and base styles (keep for posts)
+- `hugo-site/layouts/_default/baseof.html` - base template (needs conditional CSS load)
 - `hugo-site/layouts/index.html` - homepage layout (needs notebook cells)
-- `hugo-site/layouts/_default/single.html` - blog post layout (needs notebook header)
-- All content files exist but use plain HTML (need notebook cell structure)
+- `hugo-site/layouts/_default/single.html` - blog post layout (Step 2 header only)
+- All content files exist but use plain HTML (need notebook cell structure for list pages)
 
 **What needs to be created:**
+- `hugo-site/static/shared.css` - fonts + shared vars + header helpers
+- `hugo-site/static/notebook.css` - notebook UI styles
 - `hugo-site/layouts/_default/notebook.html` - list page layout
+- `hugo-site/layouts/partials/notebook-header.html` - shared header
 
 **What needs to be updated:**
-- main.css: remove conflicting width rules and legacy CSS
-- baseof.html: add notebook.css link
+- baseof.html: conditional CSS load (`shared.css` + `notebook.css` or `main.css`)
 - index.html: add full notebook cell structure
-- single.html: add notebook header
-- All content files: wrap in notebook cell structure
+- blog/books/articles/contact content: wrap in notebook cell structure + `layout: notebook`
+- single.html (Step 2): add notebook header only
 
 ---
 
 **Last Updated:** 2026-01-02
 **Branch:** redesign
-**Status:** Design complete, implementation not started
+**Status:** Planning; Step 1 pending
