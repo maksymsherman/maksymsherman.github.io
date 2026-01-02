@@ -1,56 +1,18 @@
-# Jupyter Notebook Redesign
+# Personal Website Documentation
 
 ## Overview
 
-Personal website redesigned with Jupyter notebook-inspired interface for technical aesthetic while maintaining excellent readability.
+Personal website built with Hugo, featuring a Jupyter notebook-inspired interface for navigation pages while maintaining optimal reading experience for blog posts. The site combines technical aesthetic with excellent readability.
 
-**Branch:** `redesign`
-**Status:** Ready for production (Steps 1-2 complete)
+**Live site:** https://msherman.xyz/
+**Deployment:** GitHub Pages via GitHub Actions
 
----
+### Site Structure
 
-## Current State
-
-### Completed
-
-**Step 1 - Notebook pages (homepage + list pages):**
-- ✅ Notebook header with `maksym_sherman.ipynb` branding
-- ✅ Cell-based layout with execution counts (`In [n]:`, `Out[n]:`)
-- ✅ Python syntax highlighting in code cells
-- ✅ Navigation links styled as notebook output
-- ✅ DataFrame output for personal info
-- ✅ Substack newsletter embed in widget cell
-- ✅ List pages (blog/books/articles/contact) with notebook cells
-
-**Step 2 - Blog posts:**
-- ✅ Notebook header added to all blog posts
-- ✅ Original typography and 55ch reading width preserved
-- ✅ No notebook cells (optimal reading experience)
-
-**Testing completed:**
-- ✅ Desktop browser testing (1080px viewport, Chrome)
-- ✅ Mobile browser testing (375px viewport, Chrome)
-- ✅ All navigation pages verified
-- ✅ 4 blog posts tested (various content types)
-- ✅ Link colors, typography, and layout confirmed
-
-### Not Yet Done
-
-**Cross-browser testing:**
-- [ ] Safari (desktop and iOS)
-- [ ] Firefox
-- [ ] Edge
-
-**Device testing:**
-- [ ] iPhone (actual device, not just viewport)
-- [ ] Android devices
-- [ ] iPad/tablets
-
-**Optional polish (Step 3):**
-- [ ] Hover state refinements
-- [ ] Spacing fine-tuning
-- [ ] Contrast checks (current colors pass WCAG AA)
-- [ ] 404 page with notebook theme
+- **Homepage:** Notebook-style interface with personal info (DataFrame output), navigation cards, and newsletter signup
+- **List Pages:** Blog, Books, Articles, Contact - all using notebook cell layout
+- **Blog Posts:** Individual posts with notebook header but traditional reading layout (no cells)
+- **Static Assets:** CSS files for shared styles, notebook UI, and blog typography
 
 ---
 
@@ -93,12 +55,24 @@ hugo-site/
 
 ### Key Design Decisions
 
-1. **Notebook pages (homepage + lists):** Full cell-based layout with 700px max-width
-2. **Blog posts:** Header only, no cells, 55ch reading width preserved
-3. **Typography:** Blog posts use proven `main.css` styles for optimal readability
-4. **Colors:** Golden yellow links (#ffcc00), VS Code dark theme palette
-5. **Header:** Fixed positioning, always visible on scroll
-6. **Manual content:** All list pages remain hand-curated (no auto-generation)
+**Two-tier design approach:**
+- Navigation pages (homepage, blog list, books, articles, contact) use full notebook interface with code cells, execution counts, and DataFrame outputs
+- Blog posts use only the notebook header, preserving traditional reading typography for long-form content
+
+**Color scheme:**
+- Based on VS Code dark theme with golden yellow links (#ffcc00) for high visibility
+- Warm cream text (#f0e7d5) for blog posts to reduce eye strain
+- Color-coded book ratings (green for 9-10/10, blue for 7-8/10, gray for 5-6/10)
+
+**Typography:**
+- Notebook pages: 16px base with 1.6 line-height, 700px max-width
+- Blog posts: 16px base with 55ch reading width for optimal readability
+- Code cells: 14px monospace (Menlo, Monaco, Consolas)
+
+**Technical implementation:**
+- Fixed header positioning for consistent branding across scroll
+- Conditional CSS loading to prevent style conflicts
+- Manual content curation (no auto-generated lists)
 
 ---
 
@@ -207,44 +181,43 @@ Visit: http://localhost:1313/
 
 **Platform:** GitHub Pages via GitHub Actions
 
-**Process:**
-1. Merge `redesign` branch to `main`
-2. GitHub Actions automatically builds and deploys
-3. Verify live site at https://msherman.xyz/
+**Workflow:**
+- Push changes to `main` branch
+- GitHub Actions automatically builds from `hugo-site/` directory
+- Site deploys to https://msherman.xyz/
 
-**GitHub Actions workflow:** `.github/workflows/hugo.yml`
-- Builds from `hugo-site/` directory
+**Configuration:** `.github/workflows/hugo.yml`
 - Uses Hugo v0.154.0 (extended)
-- Deploys on push to `main`
+- Builds on every push to `main`
+- Automatic deployment to GitHub Pages
 
 ---
 
-## Known Issues & Solutions
+## Future Ideas & Enhancements
 
-### Issue: Code cell text misalignment
-**Cause:** HTML newlines after `<div class="code-input">` create whitespace
-**Solution:** Keep code on same line as opening tag (see Critical Implementation Details)
+### Additional Testing
+- Cross-browser testing (Safari, Firefox, Edge)
+- Device testing on actual devices (iPhone, Android, iPad/tablets)
+- Accessibility audit (WCAG compliance verification)
 
-### Issue: Header jumps during scroll
-**Cause:** Using `position: sticky`
-**Solution:** Changed to `position: fixed` with `left: 0, right: 0, width: 100%`
+### UI Polish
+- Hover state refinements
+- Spacing micro-adjustments
+- Create notebook-themed 404 page
+- Additional contrast checks
 
----
+### Interactive Features
+- Add Python execution (via Pyodide) for interactive demos
+- Implement code folding for long snippets
+- Add "copy code" buttons to code cells
+- Add search functionality styled as code input
+- Add animations for cell execution
 
-## Future Enhancement Ideas
-
-Optional improvements (not required for launch):
-
-- [ ] Add Python execution (via Pyodide) for interactive demos
-- [ ] Implement code folding for long snippets
-- [ ] Add "copy code" buttons to code cells
-- [ ] Create notebook-themed 404 page
-- [ ] Add search functionality styled as code input
-- [ ] Implement light theme toggle
-- [ ] Add animations for cell execution
-- [ ] RSS feed styled as Python import
-- [ ] Additional hover state polish
-- [ ] Spacing and contrast micro-adjustments
+### Content Features
+- RSS feed styled as Python import
+- Light theme toggle
+- Tag/category filtering for blog posts
+- Reading time estimates
 
 ---
 
@@ -272,9 +245,9 @@ Optional improvements (not required for launch):
 
 ## Design Philosophy
 
-**Core principle:** Notebook metaphor creates authentic technical aesthetic for navigation, but steps back for blog posts to prioritize reading experience.
+The site uses a Jupyter notebook metaphor to create an authentic technical aesthetic for navigation while prioritizing reading experience for blog posts.
 
-**Why Jupyter notebooks?**
+**Why Jupyter notebooks for navigation?**
 - Familiar to technical audiences (data scientists, developers)
 - Cell-based layout organizes content naturally
 - Code aesthetic signals technical credibility
@@ -289,5 +262,3 @@ Optional improvements (not required for launch):
 ---
 
 **Last Updated:** 2026-01-02
-**Branch:** redesign
-**Status:** Production-ready (Steps 1-2 complete, Step 3 optional)
