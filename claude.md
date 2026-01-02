@@ -1,212 +1,293 @@
-# Hugo Migration Project
+# Jupyter Notebook Redesign
 
 ## Overview
 
-**Goal:** Migrate from Jekyll to Hugo for faster builds, better templating, and more flexible hosting options.
+Personal website redesigned with Jupyter notebook-inspired interface for technical aesthetic while maintaining excellent readability.
 
-**Note:** This is the `hugo-migration` branch - focused purely on Hugo migration. For notebook aesthetic redesign, see the `redesign` branch.
-
-## Current State
-
-**Branch:** `hugo-migration`
-
-**Hugo migration:** ~98% complete
-- All content migrated and synced
-- Build system working and tested
-- GitHub Actions deployment configured
-- Ready for final testing and deployment
+**Branch:** `redesign`
+**Status:** Ready for production (Steps 1-2 complete)
 
 ---
 
-## Hugo Migration
+## Current State
 
-### What's Done
+### Completed
 
-- [x] Hugo installed and configured (`hugo-site/hugo.toml`)
-- [x] All 16 blog posts migrated to `hugo-site/content/posts/`
-- [x] All 5 navigation pages migrated (`_index.html`, `blog.html`, `books.html`, `articles.html`, `contact.html`)
-- [x] 2025 books synced to Hugo version of `books.html`
-- [x] Layouts created (`hugo-site/layouts/_default/`)
-- [x] CSS and fonts copied to `hugo-site/static/`
-- [x] Images and PDFs copied to `hugo-site/static/p/`
-- [x] URLs preserved exactly (including `soulbound(less)-tokens.html` with parentheses)
-- [x] Relative paths work correctly (images, PDFs)
-- [x] Build artifacts added to `.gitignore` (hugo-site/public/, .hugo_build.lock)
-- [x] Hugo build tested successfully (23 pages including 404, 32 static files)
-- [x] Development server tested and working
-- [x] All 16 blog posts tested (images, links, PDFs verified)
-- [x] Blog navigation links fixed (all have .html extensions)
-- [x] 404 page created (`hugo-site/layouts/404.html`)
-- [x] GitHub Actions workflow configured (`.github/workflows/hugo.yml`)
-- [x] Permalink configuration updated (deprecated :filename → :contentbasename)
-- [x] Hugo output compared with live Jekyll site (content matches)
+**Step 1 - Notebook pages (homepage + list pages):**
+- ✅ Notebook header with `maksym_sherman.ipynb` branding
+- ✅ Cell-based layout with execution counts (`In [n]:`, `Out[n]:`)
+- ✅ Python syntax highlighting in code cells
+- ✅ Navigation links styled as notebook output
+- ✅ DataFrame output for personal info
+- ✅ Substack newsletter embed in widget cell
+- ✅ List pages (blog/books/articles/contact) with notebook cells
 
-### Hugo Directory Structure
+**Step 2 - Blog posts:**
+- ✅ Notebook header added to all blog posts
+- ✅ Original typography and 55ch reading width preserved
+- ✅ No notebook cells (optimal reading experience)
+
+**Testing completed:**
+- ✅ Desktop browser testing (1080px viewport, Chrome)
+- ✅ Mobile browser testing (375px viewport, Chrome)
+- ✅ All navigation pages verified
+- ✅ 4 blog posts tested (various content types)
+- ✅ Link colors, typography, and layout confirmed
+
+### Not Yet Done
+
+**Cross-browser testing:**
+- [ ] Safari (desktop and iOS)
+- [ ] Firefox
+- [ ] Edge
+
+**Device testing:**
+- [ ] iPhone (actual device, not just viewport)
+- [ ] Android devices
+- [ ] iPad/tablets
+
+**Optional polish (Step 3):**
+- [ ] Hover state refinements
+- [ ] Spacing fine-tuning
+- [ ] Contrast checks (current colors pass WCAG AA)
+- [ ] 404 page with notebook theme
+
+---
+
+## Architecture
+
+### File Structure
 
 ```
 hugo-site/
 ├── hugo.toml                     # Hugo configuration
-├── content/
-│   ├── _index.html               # Homepage
-│   ├── blog.html                 # Blog listing page
-│   ├── books.html                # Books page (includes 2025 books)
-│   ├── articles.html             # Articles page
-│   ├── contact.html              # Contact page
-│   └── posts/                    # Blog posts (16 files)
-│       ├── art-clustering-in-renaissance-florence.html
-│       ├── live-nation.html
-│       ├── soulbound(less)-tokens.html
-│       └── ... (13 more)
 ├── layouts/
 │   ├── _default/
-│   │   ├── baseof.html           # Base template (head, analytics, CSS)
-│   │   ├── single.html           # Single page template (blog posts)
-│   │   └── list.html             # List template (sections)
-│   └── index.html                # Homepage layout
+│   │   ├── baseof.html           # Conditional CSS loading
+│   │   ├── single.html           # Blog posts (has header)
+│   │   └── notebook.html         # List pages layout
+│   ├── partials/
+│   │   └── notebook-header.html  # Shared header component
+│   └── index.html                # Homepage with full notebook UI
 ├── static/
-│   ├── main.css                  # Site styles with CSS variables
-│   ├── assets/
-│   │   ├── fonts/                # Inter font files
-│   │   └── images/               # Site images (hr.gif, etc.)
-│   └── p/
-│       ├── images/               # Blog post images
-│       └── pdfs/                 # PDF files
-└── public/                       # Build output (gitignored)
+│   ├── shared.css                # Fonts, variables, header styles
+│   ├── notebook.css              # Notebook UI (cells, syntax, layouts)
+│   └── main.css                  # Blog post typography (unchanged)
+└── content/
+    ├── _index.html               # Homepage
+    ├── blog.html                 # List pages (notebook layout)
+    ├── books.html
+    ├── articles.html
+    ├── contact.html
+    └── posts/                    # Blog posts (16 files)
 ```
 
-### Key Hugo Configuration (`hugo.toml`)
+### CSS Loading Strategy
 
-```toml
-uglyURLs = true                   # Creates .html files, not directories
-[permalinks]
-  posts = '/p/:contentbasename'   # Blog posts at /p/filename.html
-[markup.goldmark.renderer]
-  unsafe = true                   # Allows raw HTML in content
+**Conditional loading in baseof.html:**
+- All pages load: `shared.css` (fonts, header, variables)
+- Notebook pages load: `notebook.css` (homepage, blog/books/articles/contact)
+- Blog posts load: `main.css` (original typography)
+
+**Critical:** Never load `main.css` and `notebook.css` together to prevent style conflicts.
+
+### Key Design Decisions
+
+1. **Notebook pages (homepage + lists):** Full cell-based layout with 700px max-width
+2. **Blog posts:** Header only, no cells, 55ch reading width preserved
+3. **Typography:** Blog posts use proven `main.css` styles for optimal readability
+4. **Colors:** Golden yellow links (#ffcc00), VS Code dark theme palette
+5. **Header:** Fixed positioning, always visible on scroll
+6. **Manual content:** All list pages remain hand-curated (no auto-generation)
+
+---
+
+## Color Scheme
+
+### Background
+- Primary: `#1e1e1e` (dark), gradient: `linear-gradient(#2a2a29, #1c1c1c)`
+- Cell backgrounds: `#2d2d2d`
+- Header: `#252526`
+
+### Text
+- Primary: `#e0e0e0` (light gray)
+- Secondary: `#a0a0a0` (medium gray)
+- Blog posts: `#f0e7d5` (warm cream)
+
+### Accents
+- Links: `#ffcc00` (golden yellow)
+- Link hover: `#ffeb9b` (lighter golden)
+- Blue (execution counts): `#4fc3f7`
+- Green (kernel dot): `#81c784`
+- Purple (keywords): `#b39ddb`
+- Yellow (functions): `#fff176`
+
+### Book Ratings
+- Green: `#a8e6a0` (9-10/10)
+- Blue: `#64b5f6` (7-8/10)
+- Gray: `#b0b0b0` (5-6/10)
+
+---
+
+## Cell Types
+
+### Code Cells
+Display Python-style code with syntax highlighting:
+```html
+<div class="cell code-cell">
+  <div class="cell-content">
+    <div class="cell-gutter">
+      <span class="bracket">In [</span>1<span class="bracket">]:</span>
+    </div>
+    <div class="cell-body">
+      <div class="code-input"><span class="keyword">from</span> <span class="variable">world</span>...</div>
+    </div>
+  </div>
+</div>
 ```
 
-### What's Left for Hugo Migration
+### Output Cells
+Display execution results (DataFrames, lists, navigation):
+- DataFrame output: Table with borders, monospace font
+- Navigation output: Vertical list of links with icons and metadata
+- List content: 55ch max-width for readability
 
-- [ ] Verify mobile responsiveness on actual devices
-- [ ] Enable GitHub Pages in repository settings (Settings → Pages → Source: GitHub Actions)
-- [ ] Test deployment workflow on main branch
-- [ ] Verify live site after deployment
-- [ ] Clean up old Jekyll files from repo root after migration is confirmed working
-- [ ] Optional: Add RSS feed if desired (currently disabled in hugo.toml)
+### Markdown Cells
+Formatted text without execution counts (empty gutter)
 
-### To Test Hugo Locally
+### Widget Cells
+External embeds (Substack newsletter)
+
+---
+
+## Critical Implementation Details
+
+### Code Cell Formatting
+**MUST** place code content on same line as opening tag to prevent whitespace misalignment:
+
+```html
+<!-- CORRECT -->
+<div class="code-input"><span class="variable">me</span>.<span class="function">list_posts</span>()</div>
+
+<!-- WRONG - creates whitespace -->
+<div class="code-input">
+  <span class="variable">me</span>.<span class="function">list_posts</span>()
+</div>
+```
+
+### Header Fixed Positioning
+- Header uses `position: fixed` (not sticky)
+- Body has `padding-top: 40px` to prevent content hiding
+- Header links to homepage (/)
+
+### Manual Counts
+Navigation card counts must be updated manually:
+- Blog posts: Update in `content/_index.html`
+- Books: Currently 160
+- Articles: Currently 70
+
+---
+
+## Testing Locally
 
 ```bash
 cd hugo-site
-hugo server
+hugo server --noHTTPCache --disableFastRender
 ```
 
-Visit http://localhost:1313/
+Visit: http://localhost:1313/
 
-### GitHub Actions Deployment
-
-The site is configured to deploy automatically via GitHub Actions:
-
-**Workflow file:** `.github/workflows/hugo.yml`
-
-**How it works:**
-1. Triggers on push to `main` branch or manual workflow dispatch
-2. Builds Hugo site from `hugo-site/` directory
-3. Uses Hugo v0.154.0 (extended) with minification
-4. Deploys to GitHub Pages
-
-**To enable:**
-1. Go to repository Settings → Pages
-2. Set Source to "GitHub Actions"
-3. Merge `hugo-migration` branch to `main`
-4. Workflow will automatically deploy
+**Hard refresh to clear cache:**
+- Mac: `Cmd + Shift + R`
+- Windows/Linux: `Ctrl + F5`
 
 ---
 
-## Branch Structure
+## Deployment
 
-This repository has multiple branches for different purposes:
+**Platform:** GitHub Pages via GitHub Actions
 
-- **`main`** - Production Jekyll site (currently live at msherman.xyz)
-- **`hugo-migration`** (this branch) - Hugo migration work only, no notebook styling
-- **`redesign`** - Notebook aesthetic prototypes and styling (for future implementation)
+**Process:**
+1. Merge `redesign` branch to `main`
+2. GitHub Actions automatically builds and deploys
+3. Verify live site at https://msherman.xyz/
 
----
-
-## Files Changed from Main Branch
-
-Key files modified/added on `hugo-migration` branch:
-
-### New
-- `hugo-site/` - Complete Hugo site structure
-- `claude.md` - This documentation file
-- `.gitignore` - Updated with Hugo build artifacts
-
-### Modified in Root (from main branch updates)
-- `books.html` - 2025 books added, CSS variables for colors
-- `main.css` - CSS variables added for book colors
-- `index.html` - Minor updates
-- Several blog posts in `p/` directory
-
-### To Clean Up After Migration
-Once Hugo deployment is confirmed working, these Jekyll files can be removed from root:
-- `_layouts/` - Jekyll layouts (if they exist)
-- `_includes/` - Jekyll includes (if they exist)
-- `_config.yml` - Jekyll config (if it exists)
-- `Gemfile`, `Gemfile.lock` - Jekyll dependencies
+**GitHub Actions workflow:** `.github/workflows/hugo.yml`
+- Builds from `hugo-site/` directory
+- Uses Hugo v0.154.0 (extended)
+- Deploys on push to `main`
 
 ---
 
-## Quick Commands
+## Known Issues & Solutions
 
-```bash
-# Test Hugo locally
-cd hugo-site && hugo server
+### Issue: Code cell text misalignment
+**Cause:** HTML newlines after `<div class="code-input">` create whitespace
+**Solution:** Keep code on same line as opening tag (see Critical Implementation Details)
 
-# Build Hugo site
-cd hugo-site && hugo --cleanDestinationDir
-
-# Check what Hugo generates
-ls -la hugo-site/public/
-
-# Compare with live site
-open https://msherman.xyz/p/art-clustering-in-renaissance-florence.html
-open http://localhost:1313/p/art-clustering-in-renaissance-florence.html
-```
+### Issue: Header jumps during scroll
+**Cause:** Using `position: sticky`
+**Solution:** Changed to `position: fixed` with `left: 0, right: 0, width: 100%`
 
 ---
 
-## Next Steps
+## Future Enhancement Ideas
 
-Priority tasks for completing Hugo migration:
+Optional improvements (not required for launch):
 
-1. **Test all 16 blog posts thoroughly**
-   - Verify images load correctly
-   - Check PDF links work
-   - Test internal and external links
-   - Verify mobile responsiveness
+- [ ] Add Python execution (via Pyodide) for interactive demos
+- [ ] Implement code folding for long snippets
+- [ ] Add "copy code" buttons to code cells
+- [ ] Create notebook-themed 404 page
+- [ ] Add search functionality styled as code input
+- [ ] Implement light theme toggle
+- [ ] Add animations for cell execution
+- [ ] RSS feed styled as Python import
+- [ ] Additional hover state polish
+- [ ] Spacing and contrast micro-adjustments
 
-2. **Set up GitHub Actions for deployment**
-   - Hugo doesn't have native GitHub Pages support like Jekyll
-   - Need workflow to build and deploy to gh-pages branch or custom hosting
-   - Consider deployment options (GitHub Pages, Netlify, Vercel, etc.)
+---
 
-3. **Add 404 page**
-   - Create `hugo-site/layouts/404.html`
-   - Test 404 handling
+## Quick Reference
 
-4. **Final testing**
-   - Compare Hugo output with live site
-   - Mobile responsiveness check
-   - Performance testing
+### Manual Updates Needed
 
-5. **Switch to production**
-   - Update deployment to use Hugo
-   - Clean up old Jekyll files from root
-   - Update main branch with Hugo site
+**Adding a new blog post:**
+1. Create HTML file in `hugo-site/content/posts/`
+2. Update count in `hugo-site/content/_index.html` navigation
+3. Add link to `hugo-site/content/blog.html`
 
-## Future Work (Separate Branch)
+**Adding a new book:**
+1. Add entry to `hugo-site/content/books.html`
+2. Use inline style for color: `style="color: var(--book-green)"`
+3. Update count in `hugo-site/content/_index.html` if needed
 
-For notebook aesthetic redesign, switch to the `redesign` branch which contains:
-- `prototype-index.html` - Notebook UI prototype
-- `notebook.css` - Notebook styling
-- Implementation plan for applying notebook aesthetic to navigation pages
+**Typography rules:**
+- Notebook pages: 16px base, line-height 1.6
+- Blog posts: 16px base (from main.css)
+- Code cells: 14px monospace
+- Max-width: 700px for notebook container, 55ch for reading text
+
+---
+
+## Design Philosophy
+
+**Core principle:** Notebook metaphor creates authentic technical aesthetic for navigation, but steps back for blog posts to prioritize reading experience.
+
+**Why Jupyter notebooks?**
+- Familiar to technical audiences (data scientists, developers)
+- Cell-based layout organizes content naturally
+- Code aesthetic signals technical credibility
+- Interactive, exploratory feel
+
+**Why simplify blog posts?**
+- Reading long-form content in cells is exhausting
+- Original typography is proven and readable
+- Notebook header provides enough branding
+- Focus on ideas, not interface
+
+---
+
+**Last Updated:** 2026-01-02
+**Branch:** redesign
+**Status:** Production-ready (Steps 1-2 complete, Step 3 optional)
