@@ -32,8 +32,8 @@
 
   /* Border & UI */
   --border-color: #3c3c3c;
-  --link-color: #64b5f6;
-  --link-hover: #90caf9;
+  --link-color: #ffcc00;
+  --link-hover: #ffeb9b;
 }
 
 /* ============================================
@@ -48,6 +48,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  padding-top: 40px; /* Override to account for fixed header */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text-primary);
   line-height: 1.6;

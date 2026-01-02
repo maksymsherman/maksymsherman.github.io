@@ -57,8 +57,11 @@
 .notebook-header {
   background: var(--header-bg);
   border-bottom: 1px solid var(--header-border);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 }
@@ -149,10 +152,12 @@
 }
 
 /* ============================================
-   FONT FEATURE SETTINGS
+   FONT FEATURE SETTINGS & BODY PADDING
    Enable ligatures for Inter font
+   Add padding for fixed header
    ============================================ */
 
 body {
   font-feature-settings: 'liga' 1, 'calt' 1;
+  padding-top: 40px; /* Account for fixed header */
 }

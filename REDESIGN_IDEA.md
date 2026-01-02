@@ -1198,6 +1198,24 @@ Visit: http://localhost:1313/
 - `hugo-site/content/articles.html` (notebook cells + layout)
 - `hugo-site/content/contact.html` (notebook cells + layout)
 
+### Post-Step 1 Refinements (2026-01-02)
+
+**Color improvements:**
+- Changed link colors from blue (`#64b5f6`) to golden yellow (`#ffcc00`) in `notebook.css` for better contrast and readability on dark backgrounds
+- Link hover color changed from `#90caf9` to `#ffeb9b` (lighter golden)
+- This matches the existing `main.css` link colors and provides superior WCAG contrast ratios
+
+**Header positioning fix:**
+- Changed notebook header from `position: sticky` to `position: fixed` in `shared.css`
+- Added `left: 0`, `right: 0`, `width: 100%` for full-width coverage
+- Prevents header from jumping or disappearing during fast scrolling
+- More professional and reliable than sticky positioning
+
+**Spacing adjustments:**
+- Added `padding-top: 40px` to body in both `shared.css` and `notebook.css`
+- Ensures content doesn't hide under the fixed header
+- Provides proper breathing room between header and page content
+
 ---
 
 **Last Updated:** 2026-01-02
