@@ -8,6 +8,31 @@ Transform the personal website into a Jupyter notebook-inspired interface that a
 
 ---
 
+## Critical Pre-Implementation Requirements
+
+Before building notebook layouts, fix these main.css issues:
+
+### 1. Remove Width Constraint (lines 17-21)
+```css
+/* DELETE THIS - breaks 900px notebook layout */
+@media screen and (min-width: 769px) {
+  html {
+    max-width: 55ch;
+  }
+}
+```
+
+### 2. Remove Legacy Header (lines 171-244)
+The `#header` block with green button navigation is unused. Delete it.
+
+### 3. Remove Duplicate Variables (lines 373-379)
+The `:root` block at the end has book colors that conflict with notebook.css. Delete it.
+
+### 4. Load Notebook Styles
+Copy `public/notebook.css` → `static/notebook.css`, then add link in baseof.html. Two separate files keeps concerns separated (base typography vs notebook theme).
+
+---
+
 ## Visual Identity
 
 ### The Notebook Header
@@ -74,6 +99,13 @@ Inspired by VS Code's dark theme, optimized for readability:
 - Blue books: `#64b5f6` (7-8/10 ratings)
 - Gray books: `#b0b0b0` (5-6/10 ratings)
 
+**Note on CSS Variable Conflicts:** main.css defines different book color values (`#00FF00`, `#00FFFF`, `#9E9E9E`) that will be overridden by notebook.css. Remove the duplicate `:root` variables from main.css to prevent confusion—notebook.css values are authoritative.
+
+### Background Colors
+- **All pages:** Keep main.css gradient `linear-gradient(#2a2a29, #1c1c1c)` on html element
+- The gradient works well for both notebook UI and blog reading
+- notebook.css cell backgrounds (`#2d2d2d`) provide sufficient contrast against the gradient
+
 ---
 
 ## Typography
@@ -93,7 +125,8 @@ Inspired by VS Code's dark theme, optimized for readability:
 - H1: `28px`, weight 600
 - H2: `22px`, weight 600, bottom border
 - H3: `16px`, weight 600, secondary color
-- Paragraph: `15px`, line-height 1.6
+- Paragraph: `16px`, line-height 1.6 (matches current site)
+- Max-width: `55ch` on `.cell-body` for reading content
 
 **Navigation cards:**
 - Icon: `32px` (desktop), `28px` (mobile)
@@ -158,10 +191,10 @@ Every interactive element is a "cell" with:
 - Padding: `20px 16px 60px` (desktop), `20px 12px 40px` (mobile)
 
 **Blog Posts:**
-- Max width: `650px` (matches original site's `.wrapper` and `section`)
+- Max width: `55ch` (~500px, matches your current site's reading width)
 - Centered with `margin: 0 auto`
 - Padding: `30px 20px 50px` (desktop), `20px 10px 50px` (mobile)
-- Mobile: `80%` max-width for narrower screens
+- Mobile: `80%` max-width (same as current site)
 
 **List Pages (blog, books, articles, contact):**
 - Max width: `900px` (same as homepage)
@@ -287,19 +320,33 @@ Grid of clickable cards:
 
 ```html
 <div class="nav-output">
-  <a href="blog.html" class="nav-link">
-    <span class="nav-icon">&#128221;</span>
-    <div class="nav-content">
-      <div class="nav-title">blog <span class="nav-arrow">→</span></div>
-      <div class="nav-desc">Essays on economics, technology, and ideas</div>
-    </div>
-    <div class="nav-meta">16 posts</div>
+  <a href="blog.html" class="nav-card">
+    <span class="nav-card-icon">&#128221;</span>
+    <div class="nav-card-title">blog <span class="nav-card-arrow">→</span></div>
+    <div class="nav-card-description">Essays on economics, technology, and ideas</div>
+    <div class="nav-card-count">{{ len (where .Site.RegularPages "Section" "posts") }} posts</div>
   </a>
-  <!-- Repeat for books, articles, contact -->
+  <a href="books.html" class="nav-card">
+    <span class="nav-card-icon">&#128218;</span>
+    <div class="nav-card-title">books <span class="nav-card-arrow">→</span></div>
+    <div class="nav-card-description">Reading list with ratings</div>
+    <div class="nav-card-count">160+ books</div>
+  </a>
+  <a href="articles.html" class="nav-card">
+    <span class="nav-card-icon">&#128279;</span>
+    <div class="nav-card-title">articles <span class="nav-card-arrow">→</span></div>
+    <div class="nav-card-description">Best articles I've read</div>
+    <div class="nav-card-count">70+ links</div>
+  </a>
+  <a href="contact.html" class="nav-card">
+    <span class="nav-card-icon">&#128231;</span>
+    <div class="nav-card-title">contact <span class="nav-card-arrow">→</span></div>
+    <div class="nav-card-description">Get in touch</div>
+  </a>
 </div>
 ```
 
-**Note:** HTML uses `nav-link` class but CSS should style as `nav-card` (implementation detail to fix)
+**Class naming convention:** Use `nav-card-*` prefix consistently (matches notebook.css)
 
 **Icons:**
 - Blog: `&#128221;` (📝)
@@ -340,11 +387,22 @@ Used for blog/books/articles/contact pages:
 ```
 
 **Styling:**
-- Font size: `15px`
+- **Max-width: `55ch`** (~500px, matches your current site's narrow reading width)
+- Font size: `16px` (same as current site)
 - H2: `20px`, bottom border, margin-top `24px`
 - H3: `16px`, secondary color, margin-top `20px`
 - Links: Blue (`#64b5f6`), underline on hover
 - Lists: No bullet points, minimal padding
+- Line-height: `1.6` for comfortable reading
+
+**Key CSS addition for notebook.css:**
+```css
+.list-content {
+  max-width: 55ch;  /* Narrow, readable line length */
+  font-size: 16px;
+  line-height: 1.6;
+}
+```
 
 ### 4. Widget Cells
 
@@ -370,6 +428,31 @@ Used for blog/books/articles/contact pages:
 - Widget container: Centered with flexbox
 - Padding: `20px 0`
 - Iframe: Border `1px solid --border-color`, radius `4px`
+
+**Migration Note:** Current blog posts use inline-styled iframes:
+```html
+<!-- BEFORE (current) -->
+<iframe src="https://maksymsherman.substack.com/embed"
+  style="border:1px solid #434343; background:#252525; width: 100%; max-width: 480px; height: 320px;">
+</iframe>
+
+<!-- AFTER (notebook style) -->
+<div class="cell widget-cell">
+  <div class="cell-content">
+    <div class="cell-gutter">
+      <span class="bracket">Out[</span>4<span class="bracket">]:</span>
+    </div>
+    <div class="cell-body">
+      <div class="widget-container">
+        <iframe src="https://maksymsherman.substack.com/embed"
+          width="480" height="320" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+For blog posts, keep the simple inline iframe (no cell wrapper) since blog posts don't use notebook cells.
 
 ---
 
@@ -458,10 +541,10 @@ layout: notebook
 ```html
 <header class="notebook-header">
   <div class="notebook-toolbar">
-    <div class="notebook-title">
+    <a href="/" class="notebook-title">
       <span class="icon">&#128211;</span>
       <span>maksym_sherman.ipynb</span>
-    </div>
+    </a>
     <div class="kernel-indicator">
       <span class="kernel-dot"></span>
       <span>Maksym Sherman (active)</span>
@@ -485,7 +568,7 @@ layout: notebook
 - Layout containers (`.blog-wrapper`, `.blog-container`)
 - HR styling (uses original `hr.gif` background)
 
-**Key constraint:** `.blog-container { max-width: 650px }` for optimal reading line length
+**Key constraint:** `.blog-container { max-width: 55ch }` for optimal reading line length (matches your current site)
 
 ---
 
@@ -502,7 +585,7 @@ layout: notebook
 - 650px max-width for sections
 - Base font-size: `16px` on html element
 
-**notebook.css** (570 lines) - Notebook theme UI only
+**notebook.css** (570+ lines) - Notebook theme UI only
 - CSS variables for notebook colors
 - Notebook header/toolbar
 - Cell structure (gutters, bodies, containers)
@@ -510,9 +593,10 @@ layout: notebook
 - Output cell styling
 - Navigation cards
 - DataFrame tables
-- List content styling
+- List content styling (with `max-width: 55ch` for reading)
 - Widget containers
 - Mobile responsiveness for notebook elements
+- **Reading width constraints** (`55ch` on text content, `900px` on decorative containers)
 
 **Load Order (in baseof.html):**
 ```html
@@ -526,37 +610,170 @@ layout: notebook
 
 ## Templates
 
-### baseof.html
-Base template for all pages:
+### baseof.html (already exists, minor update needed)
+This is Hugo's standard base template that wraps all pages. It already exists at `layouts/_default/baseof.html` with analytics and main.css.
+
+**Only change needed:** Add notebook.css link (if using two-file approach):
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Analytics: Google tag, Umami -->
-  <link rel="stylesheet" href="/main.css">
-  <link rel="stylesheet" href="/notebook.css">
-  <title>{{ .Title | default .Site.Title }}</title>
-</head>
-<body>
-  {{- block "main" . }}{{- end }}
-</body>
-</html>
+<link rel="stylesheet" href="/main.css">
+<link rel="stylesheet" href="/notebook.css">  <!-- ADD THIS LINE -->
 ```
 
+The rest of baseof.html stays as-is (analytics, meta tags, title). Each layout (index.html, single.html, notebook.html) defines the `{{ block "main" }}` content.
+
 ### index.html
-Homepage layout with full notebook cells (see "Homepage Structure" above)
+Homepage layout. Update `layouts/index.html` with the complete notebook structure:
 
-### single.html
-Blog post layout with notebook header only (see "Blog Post Structure" above)
-
-### notebook.html
-List page layout for blog/books/articles/contact:
 ```html
 {{ define "main" }}
 <header class="notebook-header">
-  <!-- Same header as everywhere -->
+  <div class="notebook-toolbar">
+    <a href="/" class="notebook-title">
+      <span class="icon">&#128211;</span>
+      <span>maksym_sherman.ipynb</span>
+    </a>
+    <div class="kernel-indicator">
+      <span class="kernel-dot"></span>
+      <span>Maksym Sherman (active)</span>
+    </div>
+  </div>
+</header>
+
+<main class="notebook">
+  <!-- Cell 1: Import -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>1<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="keyword">from</span> <span class="variable">world</span> <span class="keyword">import</span> <span class="function">Person</span>
+<span class="variable">me</span> = <span class="function">Person</span>(<span class="string">"Maksym Sherman"</span>)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 2: Intro (markdown) -->
+  <div class="cell markdown-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"></div>
+      <div class="cell-body">
+        <h1>Hi, I'm Maksym!</h1>
+        <p>I believe in great work, ambition, and obsessiveness. I seek to understand the world through better explanations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 3: Navigation -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>2<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">me</span>.<span class="function">get_sections</span>()  <span class="comment"># Explore my work</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell output-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>2<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="nav-output">
+          <a href="blog.html" class="nav-card">
+            <span class="nav-card-icon">&#128221;</span>
+            <div class="nav-card-title">blog <span class="nav-card-arrow">→</span></div>
+            <div class="nav-card-description">Essays on economics, technology, and ideas</div>
+            <div class="nav-card-count">{{ len (where .Site.RegularPages "Section" "posts") }} posts</div>
+          </a>
+          <a href="books.html" class="nav-card">
+            <span class="nav-card-icon">&#128218;</span>
+            <div class="nav-card-title">books <span class="nav-card-arrow">→</span></div>
+            <div class="nav-card-description">Reading list with ratings</div>
+            <div class="nav-card-count">160+ books</div>
+          </a>
+          <a href="articles.html" class="nav-card">
+            <span class="nav-card-icon">&#128279;</span>
+            <div class="nav-card-title">articles <span class="nav-card-arrow">→</span></div>
+            <div class="nav-card-description">Best articles I've read</div>
+            <div class="nav-card-count">70+ links</div>
+          </a>
+          <a href="contact.html" class="nav-card">
+            <span class="nav-card-icon">&#128231;</span>
+            <div class="nav-card-title">contact <span class="nav-card-arrow">→</span></div>
+            <div class="nav-card-description">Get in touch</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 4: Newsletter -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>3<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">me</span>.<span class="function">subscribe</span>()  <span class="comment"># Get notified of new posts</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell widget-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>3<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="widget-container">
+          <iframe src="https://maksymsherman.substack.com/embed" width="480" height="320" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}
+```
+
+### single.html
+Blog post layout with notebook header only. Update `layouts/_default/single.html`:
+
+```html
+{{ define "main" }}
+<header class="notebook-header">
+  <div class="notebook-toolbar">
+    <a href="/" class="notebook-title">
+      <span class="icon">&#128211;</span>
+      <span>maksym_sherman.ipynb</span>
+    </a>
+    <div class="kernel-indicator">
+      <span class="kernel-dot"></span>
+      <span>Maksym Sherman (active)</span>
+    </div>
+  </div>
+</header>
+
+<div class="blog-wrapper">
+  <main class="blog-container">
+    <article class="blog-post-content">
+      {{ .Content }}
+    </article>
+  </main>
+</div>
+{{ end }}
+```
+
+Blog posts use main.css typography (not notebook cells) for optimal reading.
+
+### notebook.html
+List page layout for blog/books/articles/contact. Create at `layouts/_default/notebook.html`:
+```html
+{{ define "main" }}
+<header class="notebook-header">
+  <div class="notebook-toolbar">
+    <a href="/" class="notebook-title">
+      <span class="icon">&#128211;</span>
+      <span>maksym_sherman.ipynb</span>
+    </a>
+    <div class="kernel-indicator">
+      <span class="kernel-dot"></span>
+      <span>Maksym Sherman (active)</span>
+    </div>
+  </div>
 </header>
 
 <main class="notebook list-page">
@@ -565,8 +782,43 @@ List page layout for blog/books/articles/contact:
 {{ end }}
 ```
 
+Content files (blog.html, books.html, etc.) contain the cell HTML structure directly. Example for blog.html:
+```html
+---
+title: "Blog"
+layout: notebook
+---
+<div class="cell code-cell">
+  <div class="cell-content">
+    <div class="cell-gutter">
+      <span class="bracket">In [</span>1<span class="bracket">]:</span>
+    </div>
+    <div class="cell-body">
+      <div class="code-input">
+        <span class="variable">me</span>.<span class="function">list_posts</span>(by=<span class="string">"year"</span>)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cell output-cell">
+  <div class="cell-content">
+    <div class="cell-gutter">
+      <span class="bracket">Out[</span>1<span class="bracket">]:</span>
+    </div>
+    <div class="cell-body">
+      <div class="list-content">
+        <h3>2025</h3>
+        <p><a href="p/striking_while_the_iron_is_hot.html">Lyndon Johnson and Robert Caro</a></p>
+        <!-- ... more posts ... -->
+      </div>
+    </div>
+  </div>
+</div>
+```
+
 ### list.html
-Standard Hugo list template (currently unused, prefer notebook.html)
+Keep as simple fallback (currently unused):
 
 ---
 
@@ -581,7 +833,7 @@ Standard Hugo list template (currently unused, prefer notebook.html)
 - Font sizes: Explicit sizes for all headings (see Typography section)
 
 **640px and below:**
-- Notebook toolbar: Wraps, hides status indicator
+- Notebook toolbar: Wraps, hides kernel indicator text (keep green dot)
 - Cell gutter: `35px` width (down from 50px)
 - Code input: `13px` font
 - Output content: `12px` font
@@ -590,18 +842,98 @@ Standard Hugo list template (currently unused, prefer notebook.html)
 
 ---
 
+## Readability Guidelines
+
+The notebook aesthetic must not compromise readability. **Core principle: decorative elements can be wide, but text people actually read must be narrow with large fonts.**
+
+### Width Strategy (Critical)
+
+Your current site uses `max-width: 55ch` (~500px) which is excellent for reading. Preserve this:
+
+| Element | Max Width | Rationale |
+|---------|-----------|-----------|
+| **Notebook container** | `900px` | Decorative - holds cards, code cells, tables |
+| **Reading text** (list content, paragraphs) | `55ch` (~500px) | Matches current site, optimal line length |
+| **Blog posts** | `55ch` | Same narrow width for consistency |
+| **Navigation cards grid** | `900px` | Decorative, visual element |
+| **DataFrames** | `100%` of container | Tables can be wider, they're scannable |
+
+**Implementation:**
+```css
+/* Notebook container can be wide */
+.notebook {
+  max-width: 900px;
+}
+
+/* But reading content inside stays narrow */
+.list-content,
+.markdown-cell .cell-body,
+.blog-container {
+  max-width: 55ch;  /* ~500px - matches your current site */
+}
+```
+
+### Font Sizes (Match Current Site)
+Your current site uses good sizes. Preserve or increase:
+- **Body text:** 16px minimum (your current mobile size)
+- **Paragraphs:** 16px with `line-height: 1.6`
+- **Code cells:** 14px (monospace appears smaller, so slightly larger)
+- **DataFrames:** 13px desktop, 12px mobile
+- **Execution counts:** 12px (decorative, can be smaller)
+
+### Color Contrast (WCAG AA)
+| Text | Background | Ratio | Status |
+|------|------------|-------|--------|
+| `#e0e0e0` (primary) | `#1e1e1e` (bg) | 11.6:1 | ✅ |
+| `#a0a0a0` (secondary) | `#1e1e1e` (bg) | 5.9:1 | ✅ |
+| `#6a6a6a` (muted) | `#1e1e1e` (bg) | 2.9:1 | ⚠️ decorative only |
+| `#64b5f6` (links) | `#1e1e1e` (bg) | 6.8:1 | ✅ |
+| `#f0e7d5` (blog text) | `#1c1c1c` (blog bg) | 12.4:1 | ✅ |
+
+### Mobile Width
+Your current mobile uses `max-width: 80%` on html. Preserve this approach:
+```css
+@media (max-width: 768px) {
+  .notebook {
+    max-width: 90%;  /* Slight padding from edges */
+  }
+  .list-content,
+  .markdown-cell .cell-body {
+    max-width: 100%;  /* Fill the 90% container */
+  }
+}
+```
+
+### Touch Targets
+- Navigation cards: Minimum 44x44px tap area
+- Links in lists: 8px+ vertical spacing between items
+
+### What Can Be Wide (Decorative)
+- Notebook header (full width OK)
+- Cell gutters with execution counts
+- Navigation card grid
+- DataFrame tables (with horizontal scroll)
+- Code cell backgrounds
+
+### What Must Be Narrow (Reading)
+- Paragraph text in markdown cells
+- List items (blog titles, book titles, article titles)
+- Blog post content
+- Contact information
+
+---
+
 ## Known Issues & Design Decisions
 
-### Fixed
-- ✅ Blog post centering (removed `width: 100%` from container, use `margin: 0 auto`)
-- ✅ List pages implemented with notebook aesthetic
-- ✅ Consistent notebook header across all pages
-- ✅ Two-file CSS system for cleaner separation
+### Blocking Issues (Fix in Phase 0)
+1. **notebook.css not loaded**: Copy to static/ and add link in baseof.html
+2. **main.css width conflict**: The `max-width: 55ch` on html (lines 17-21) breaks 900px notebook layout
+3. **Legacy CSS cruft**: Unused `#header` block (lines 171-244) and duplicate `:root` variables
 
-### Current Issues
-1. **Width constraints:** Some experimentation needed with `650px` vs `55ch` for optimal reading
-2. **HTML/CSS mismatch:** Homepage uses `nav-link` class but CSS defines `nav-card` - need to align
-3. **Font rendering:** May appear smaller than expected due to cascade issues - ensure `font-size: 16px` is set on `html` element in main.css
+### Resolved by This Document
+- ✅ Navigation class naming: Use `nav-card-*` consistently (documented above)
+- ✅ Reading content width: Use `55ch` via `.blog-container`, `.list-content`, `.markdown-cell .cell-body`
+- ✅ Two-file CSS system for clean separation
 
 ### Important Decisions
 
@@ -614,6 +946,18 @@ Standard Hugo list template (currently unused, prefer notebook.html)
 4. **Sticky header:** Notebook header stays visible on scroll for constant branding.
 
 5. **Original typography for blogs:** Reading experience > aesthetic consistency. Blog posts use proven readable type.
+
+6. **Header links to homepage:** Clicking "maksym_sherman.ipynb" navigates to `/` (index).
+
+7. **Execution counts reset per page:** Each page starts at `In [1]:`. No global counter.
+
+8. **Book colors stay inline:** Current books.html uses inline `style="color: var(--book-green)"`. Keep this approach—it's simple and works.
+
+9. **404 page design:** Simple notebook error cell:
+   ```
+   In [1]: me.find_page("/missing")
+   Out[1]: PageNotFoundError: The requested page does not exist.
+   ```
 
 ---
 
@@ -636,54 +980,48 @@ Standard Hugo list template (currently unused, prefer notebook.html)
 
 ## Implementation Checklist
 
-Starting from main branch, implement in this order:
+### Phase 0: Fix Blocking Issues (REQUIRED FIRST)
 
-### 1. Setup CSS Files
-- [ ] Create `hugo-site/static/notebook.css` with variables and base styles
-- [ ] Ensure `hugo-site/static/main.css` has `font-size: 16px` on html element
-- [ ] Update `baseof.html` to load both stylesheets in order
+**CSS setup:**
+- [ ] Copy `hugo-site/public/notebook.css` → `hugo-site/static/notebook.css`
+- [ ] Edit `baseof.html`: add `<link rel="stylesheet" href="/notebook.css">` after main.css
 
-### 2. Create Notebook Header Component
-- [ ] Add notebook header HTML to all templates
-- [ ] Style header (sticky, dark background, proper spacing)
-- [ ] Test on all page types
+**Clean up main.css:**
+- [ ] Remove lines 17-21 (the `max-width: 55ch` media query on html)
+- [ ] Remove lines 171-244 (the legacy `#header` block)
+- [ ] Remove `:root` block at end of file (duplicate variables)
 
-### 3. Build Homepage
-- [ ] Implement cell structure (gutters, bodies, containers)
-- [ ] Create code cells with syntax highlighting
-- [ ] Add markdown cell for intro
-- [ ] Build DataFrame output for status
-- [ ] Create navigation cards with hover effects
-- [ ] Add newsletter widget embed
-- [ ] Test mobile responsive layout
+### Phase 1: Create Layout Templates
+- [ ] Create `hugo-site/layouts/_default/notebook.html` (for list pages)
+- [ ] Update `hugo-site/layouts/_default/single.html` with notebook header
+- [ ] Update `hugo-site/layouts/index.html` with full homepage cell structure
 
-### 4. Implement List Pages
-- [ ] Create `notebook.html` layout template
-- [ ] Update blog.html with code/output cell structure
-- [ ] Update books.html (with color-coded ratings)
-- [ ] Update articles.html (organized by rating)
-- [ ] Update contact.html
-- [ ] Test list content styling in output cells
+### Phase 2: Update Content Files with Notebook Structure
+- [ ] Update `hugo-site/content/_index.html` with homepage cells (or rely on index.html layout)
+- [ ] Update `hugo-site/content/blog.html` with code cell + output cell structure
+- [ ] Update `hugo-site/content/books.html` with code cell + output cell + book color classes
+- [ ] Update `hugo-site/content/articles.html` with code cell + output cell
+- [ ] Update `hugo-site/content/contact.html` with code cell + output cell
 
-### 5. Simplify Blog Posts
-- [ ] Keep only notebook header in `single.html`
-- [ ] Ensure blog content uses main.css typography
-- [ ] Test 650px max-width constraint
-- [ ] Verify mobile responsive fonts
-- [ ] Test with real blog posts
+### Phase 3: Test and Verify
+- [ ] Run `hugo server` and verify homepage renders correctly
+- [ ] Verify all 4 list pages (blog, books, articles, contact) render correctly
+- [ ] Test a blog post (e.g., striking_while_the_iron_is_hot.html)
+- [ ] Test navigation card links work
+- [ ] Verify Substack iframe displays in widget cell
 
-### 6. Polish & Test
-- [ ] Verify all hover states work smoothly
-- [ ] Test on actual mobile devices
-- [ ] Ensure consistent spacing throughout
-- [ ] Check color contrast for accessibility
-- [ ] Fix any HTML/CSS class mismatches
-- [ ] Verify dynamic counts display correctly
+**Readability testing (critical):**
+- [ ] Desktop (1200px+): Verify list content doesn't stretch too wide
+- [ ] Tablet (768px): Check cell gutters don't crowd content
+- [ ] Mobile (375px): Verify text is readable, no horizontal scroll on content
+- [ ] Mobile (320px): Test smallest common screen, execution counts still fit
+- [ ] Check all link colors are distinguishable from regular text
+- [ ] Verify DataFrame table is scrollable on mobile, text readable
 
-### 7. Documentation
-- [ ] Update CLAUDE.md with final state
-- [ ] Document any deviations from this plan
-- [ ] Note any issues encountered
+### Phase 4: Polish
+- [ ] Update `hugo-site/layouts/404.html` with notebook theme
+- [ ] Replace all inline-styled iframes in blog posts with widget-cell structure
+- [ ] Final visual review across all page types
 
 ---
 
@@ -799,6 +1137,28 @@ Visit: http://localhost:1313/
 
 ---
 
+## Current State Summary
+
+**What already exists:**
+- `hugo-site/static/main.css` - typography and base styles (needs cleanup)
+- `hugo-site/public/notebook.css` - notebook theme (needs to be moved/merged)
+- `hugo-site/layouts/_default/baseof.html` - base template (needs notebook.css link)
+- `hugo-site/layouts/index.html` - homepage layout (needs notebook cells)
+- `hugo-site/layouts/_default/single.html` - blog post layout (needs notebook header)
+- All content files exist but use plain HTML (need notebook cell structure)
+
+**What needs to be created:**
+- `hugo-site/layouts/_default/notebook.html` - list page layout
+
+**What needs to be updated:**
+- main.css: remove conflicting width rules and legacy CSS
+- baseof.html: add notebook.css link
+- index.html: add full notebook cell structure
+- single.html: add notebook header
+- All content files: wrap in notebook cell structure
+
+---
+
 **Last Updated:** 2026-01-02
 **Branch:** redesign
-**Status:** Implementation complete, refinement in progress
+**Status:** Design complete, implementation not started
