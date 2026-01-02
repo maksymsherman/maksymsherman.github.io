@@ -1,3 +1,138 @@
 {{ define "main" }}
-{{ .Content }}
+{{ partial "notebook-header.html" . }}
+
+<main class="notebook">
+  <!-- Cell 1: Import -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>1<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="keyword">from</span> <span class="variable">world</span> <span class="keyword">import</span> <span class="function">Person</span>
+<span class="variable">me</span> = <span class="function">Person</span>(<span class="string">"Maksym Sherman"</span>)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 2: Intro (markdown) -->
+  <div class="cell markdown-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"></div>
+      <div class="cell-body">
+        <h1>Hi, I'm Maksym!</h1>
+        <p>I believe in great work, ambition, and obsessiveness. I seek to understand the world through better explanations.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 3: Describe -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>2<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">me</span>.<span class="function">describe</span>()</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell output-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>2<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="dataframe-output">
+          <table class="dataframe">
+            <thead>
+              <tr><th></th><th>status</th><th>description</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="index">currently</td>
+                <td>Economic consulting</td>
+                <td>Focused on data work</td>
+              </tr>
+              <tr>
+                <td class="index">previously</td>
+                <td>OurNetwork</td>
+                <td>Crypto data newsletter</td>
+              </tr>
+              <tr>
+                <td class="index">always</td>
+                <td>Looking to connect</td>
+                <td>Curious people and ideas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 4: Navigation -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>3<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">me</span>.<span class="function">get_sections</span>()  <span class="comment"># Explore my work</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell output-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>3<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="nav-output">
+          <a href="blog.html" class="nav-link">
+            <span class="nav-icon">&#128221;</span>
+            <div class="nav-content">
+              <div class="nav-title">blog <span class="nav-arrow">→</span></div>
+            </div>
+            <div class="nav-meta">16 posts</div>
+          </a>
+          <a href="books.html" class="nav-link">
+            <span class="nav-icon">&#128218;</span>
+            <div class="nav-content">
+              <div class="nav-title">books <span class="nav-arrow">→</span></div>
+            </div>
+            <div class="nav-meta">160 books</div>
+          </a>
+          <a href="articles.html" class="nav-link">
+            <span class="nav-icon">&#128279;</span>
+            <div class="nav-content">
+              <div class="nav-title">articles <span class="nav-arrow">→</span></div>
+            </div>
+            <div class="nav-meta">70 links</div>
+          </a>
+          <a href="contact.html" class="nav-link">
+            <span class="nav-icon">&#128231;</span>
+            <div class="nav-content">
+              <div class="nav-title">contact <span class="nav-arrow">→</span></div>
+            </div>
+            <div class="nav-meta"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 5: Newsletter -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>4<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">me</span>.<span class="function">subscribe</span>()  <span class="comment"># Get notified of new posts</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell widget-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>4<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="widget-container">
+          <iframe src="https://maksymsherman.substack.com/embed" width="480" height="320" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 {{ end }}

@@ -1144,6 +1144,49 @@ Visit: http://localhost:1313/
 
 ---
 
+## Known Issues
+
+### Step 1 Implementation Issues
+
+1. **Code cell text alignment:** Code input text within cells may appear visually centered instead of left-aligned despite `text-align: left` being set. This is a visual rendering issue that needs further investigation.
+
+---
+
+## Implementation Notes - Step 1 (Completed 2026-01-02)
+
+### Changes from Original Design Doc
+
+1. **Navigation cards → Navigation links:** Changed from vertical card layout to horizontal list-style links for cleaner appearance
+   - Structure: Icon (left) → Title (middle) → Count (right)
+   - Removed descriptions for simpler design
+   - Changed classes from `nav-card-*` to `nav-link`, `nav-icon`, `nav-content`, `nav-title`, `nav-desc`, `nav-meta`
+
+2. **Notebook container width:** Reduced from 900px to 700px for narrower, more readable layout matching live site feel
+
+3. **Cell hover behavior:** Set `border-left: 3px solid transparent` on default state to prevent 2px shift on hover (was changing from 1px to 3px)
+
+4. **DataFrame "previously" row:** Simplified content
+   - Status: `OurNetwork` (removed ", college endowment")
+   - Description: `Crypto data newsletter` (removed ", investing")
+
+5. **Kernel indicator position:** Kept on the right side of header (changed from initial left-side experiment)
+
+### Files Created
+- `hugo-site/static/shared.css` (fonts, variables, header, blog helpers)
+- `hugo-site/static/notebook.css` (notebook UI)
+- `hugo-site/layouts/partials/notebook-header.html`
+- `hugo-site/layouts/_default/notebook.html`
+
+### Files Modified
+- `hugo-site/layouts/_default/baseof.html` (conditional CSS loading)
+- `hugo-site/layouts/index.html` (full notebook structure)
+- `hugo-site/content/blog.html` (notebook cells + layout)
+- `hugo-site/content/books.html` (notebook cells + layout)
+- `hugo-site/content/articles.html` (notebook cells + layout)
+- `hugo-site/content/contact.html` (notebook cells + layout)
+
+---
+
 **Last Updated:** 2026-01-02
 **Branch:** redesign
-**Status:** Planning; Step 1 pending
+**Status:** Step 1 Complete; Step 2 Pending

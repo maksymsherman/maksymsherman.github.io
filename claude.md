@@ -16,6 +16,8 @@
 - GitHub Actions deployment configured
 - Ready for final testing and deployment
 
+** Always run the server with --disableFastRender**
+
 ---
 
 ## Hugo Migration
