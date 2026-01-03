@@ -176,6 +176,10 @@ hugo server --noHTTPCache --disableFastRender
 
 Visit: http://localhost:1313/
 
+
+- **Whenever you are testing the website in Chrome, verify that the server is running before attempted to do any Chrome checks.**
+
+
 **Hard refresh to clear cache:**
 - Mac: `Cmd + Shift + R`
 - Windows/Linux: `Ctrl + F5`
