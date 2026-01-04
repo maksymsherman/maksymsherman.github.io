@@ -202,6 +202,276 @@ Visit: http://localhost:1313/
 
 ---
 
+## LLM Optimization Implementation Plan
+
+### Goal
+Optimize msherman.xyz for LLM consumption by adding JSON-LD structured data, semantic HTML, and machine-readable metadata while preserving the Jupyter notebook aesthetic.
+
+### Current State Analysis
+- **No metadata**: Missing meta descriptions, OpenGraph tags, structured data
+- **Disabled features**: RSS and sitemap explicitly disabled in `hugo.toml` line 7
+- **Minimal front matter**: Blog posts only have `title`, missing dates and descriptions
+- **Dates in content**: Embedded as `<h5>July 13th, 2025</h5>` text, not machine-readable
+- **No semantic HTML**: Missing `<article>`, `<time>`, proper metadata tags
+- **16 blog posts** need manual front matter updates
+
+### Implementation Steps
+
+#### Step 1: Enable RSS & Sitemap
+**File**: `hugo-site/hugo.toml`
+
+Change line 7 from:
+```toml
+disableKinds = ['RSS', 'sitemap', 'taxonomy', 'term']
+```
+
+To:
+```toml
+disableKinds = ['taxonomy', 'term']
+```
+
+Add site-wide metadata after line 10:
+```toml
+[params]
+  author = "Maksym Sherman"
+  description = "Personal website of Maksym Sherman - exploring great work, ambition, and explanations."
+```
+
+#### Step 2: Add Base Metadata to All Pages
+**File**: `hugo-site/layouts/_default/baseof.html`
+
+Insert after line 6 (after viewport meta tag):
+```html
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+```
+
+#### Step 3: Add JSON-LD Structured Data
+**File**: `hugo-site/layouts/_default/baseof.html`
+
+Insert before closing `</head>` tag (after line 33):
+
+```html
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
+
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Maksym Sherman",
+  "url": "{{ .Site.BaseURL }}",
+  "jobTitle": "Data Consultant",
+  "description": "I believe in great work, ambition, and obsessiveness. I seek to understand the world through better explanations."
+}
+</script>
+{{ end }}
+
+{{ if and (not .IsHome) (eq .Type "posts") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  {{ with .Params.date }}
+  "datePublished": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",
+  {{ end }}
+  {{ with .Params.description }}
+  "description": {{ . | jsonify }},
+  {{ else }}
+  "description": {{ .Summary | plainify | truncate 160 | jsonify }},
+  {{ end }}
+  "url": "{{ .Permalink }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  }
+}
+</script>
+{{ end }}
+```
+
+**Why JSON-LD?**
+- Preferred structured data format for LLMs
+- Enables semantic understanding of content
+- Separate from display HTML (no visual changes)
+- Uses `jsonify` filter to properly escape strings
+
+#### Step 4: Add Semantic HTML to Blog Posts
+**File**: `hugo-site/layouts/_default/single.html`
+
+Replace lines 1-5 with:
+```html
+{{ define "main" }}
+{{ partial "notebook-header.html" . }}
+
+<article itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="headline" content="{{ .Title }}">
+  <meta itemprop="author" content="{{ .Site.Params.author }}">
+  {{ with .Params.date }}<meta itemprop="datePublished" content="{{ .Format "2006-01-02" }}">{{ end }}
+  {{ with .Description }}<meta itemprop="description" content="{{ . }}">{{ end }}
+
+  {{ .Content }}
+</article>
+{{ end }}
+```
+
+**Note**:
+- `<meta>` tags are hidden (no visual change)
+- `<article>` tag is semantic wrapper
+- Microdata provides in-page structured data
+
+#### Step 5: Update All 16 Blog Posts with Front Matter
+**Files**: All files in `hugo-site/content/posts/`
+
+For each blog post:
+1. Extract date from `<h5>` tag (e.g., "July 13th, 2025")
+2. Add to front matter in ISO 8601 format
+3. Add description (use first paragraph or write custom, max 160 chars)
+4. Wrap date in `<time>` tag for semantic HTML
+
+**Example - unpredictable.html**:
+
+Change front matter from:
+```yaml
+---
+title: "Unpredictable"
+---
+```
+
+To:
+```yaml
+---
+title: "Unpredictable"
+date: 2025-07-13
+description: "Human creativity makes even our most well-reasoned long-term forecasts fundamentally unreliable."
+---
+```
+
+Change date in content from:
+```html
+<h5>July 13th, 2025</h5>
+```
+
+To:
+```html
+<h5><time datetime="2025-07-13">July 13th, 2025</time></h5>
+```
+
+**Repeat for all 16 posts**:
+- unpredictable.html
+- striking_while_the_iron_is_hot.html
+- boi-favorite-book.html
+- soulbound(less)-tokens.html
+- art-clustering-in-renaissance-florence.html
+- knowledge-without-explanation.html
+- reasoning-by-inertia.html
+- live-nation.html
+- some-thoughts.html
+- men-and-rubber.html
+- newsletter-publishing-platforms.html
+- 7powers-vs-blockchain.html
+- beyond-blockchain-marketplaces.html
+- the-known-world.html
+- perverse-incentives-and-airdrops.html
+- to-the-lighthouse.html
+
+#### Step 6: Create Post Archetype for Future Posts
+**File**: `hugo-site/archetypes/posts.md` (create new file)
+
+```yaml
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+description: "Brief summary of the post (max 160 characters)"
+---
+
+<h1>{{ replace .Name "-" " " | title }}</h1>
+<h5><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2nd, 2006" }}</time></h5>
+
+<p>Your content here...</p>
+```
+
+### Testing & Validation
+
+#### Build Test
+```bash
+cd hugo-site
+hugo --noHTTPCache
+```
+
+#### Verify Generated Files
+- `public/sitemap.xml` should exist
+- `public/index.xml` (RSS feed) should exist
+
+#### Visual Regression Test
+Compare before/after screenshots to ensure zero visual changes:
+- Homepage
+- Blog list page
+- Individual blog posts
+- Mobile views
+
+#### Structured Data Validation
+1. View page source - verify no `{{` Hugo variables in output
+2. Test with Google Rich Results Test: https://search.google.com/test/rich-results
+3. Test with Schema.org validator: https://validator.schema.org/
+
+#### LLM Consumption Test
+- Ask LLM to extract publication date from blog post URL
+- Ask LLM to identify author from homepage
+- Verify sitemap lists all pages
+
+### Critical Files to Modify
+
+1. `hugo-site/hugo.toml` - Enable RSS/sitemap, add params
+2. `hugo-site/layouts/_default/baseof.html` - Add metadata and JSON-LD
+3. `hugo-site/layouts/_default/single.html` - Add semantic article wrapper
+4. `hugo-site/content/posts/*.html` - Add front matter to all 16 posts
+
+### Files to Create
+
+1. `hugo-site/archetypes/posts.md` - Template for future posts
+
+### Success Criteria
+
+✓ Sitemap and RSS feed generated
+✓ JSON-LD structured data on all pages
+✓ Semantic `<article>` tags on blog posts
+✓ All blog posts have machine-readable dates
+✓ Meta descriptions on all pages
+✓ Canonical URLs on all pages
+✓ **Zero visual changes to notebook aesthetic**
+✓ Passes structured data validation
+
+### Implementation Notes
+
+- Uses `jsonify` filter to properly escape JSON strings
+- Falls back to `.Summary` for descriptions when front matter missing
+- Preserves exact visual appearance (CSS classes unchanged)
+- `<time>` and `<meta>` tags are semantically meaningful but invisible
+- WebSite, Person, and BlogPosting schemas provide rich metadata for LLMs
+
+---
+
 ## Future Ideas & Enhancements
 
 ### Additional Testing
