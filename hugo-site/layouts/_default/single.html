@@ -1,5 +1,12 @@
 {{ define "main" }}
 {{ partial "notebook-header.html" . }}
 
-{{ .Content }}
+<article itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="headline" content="{{ .Title }}">
+  <meta itemprop="author" content="{{ .Site.Params.author }}">
+  {{ with .Params.date }}<meta itemprop="datePublished" content="{{ .Format "2006-01-02" }}">{{ end }}
+  {{ with .Description }}<meta itemprop="description" content="{{ . }}">{{ end }}
+
+  {{ .Content }}
+</article>
 {{ end }}

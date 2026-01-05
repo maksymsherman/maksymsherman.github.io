@@ -3,11 +3,16 @@ baseURL = 'https://msherman.xyz/'
 languageCode = 'en-us'
 title = 'Maksym Sherman'
 
-# Don't generate RSS, sitemap etc for now
-disableKinds = ['RSS', 'sitemap', 'taxonomy', 'term']
+# Don't generate taxonomy and term pages
+disableKinds = ['taxonomy', 'term']
 
 # Use actual .html files instead of directories (for relative path compatibility)
 uglyURLs = true
+
+# Site metadata for SEO and LLM consumption
+[params]
+  author = "Maksym Sherman"
+  description = "Personal website of Maksym Sherman - exploring great work, ambition, and explanations."
 
 # Keep .html extensions for backwards compatibility
 [permalinks]
