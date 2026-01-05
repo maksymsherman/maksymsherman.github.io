@@ -1,0 +1,8 @@
+# Ignore external links that may be rate-limited
+https://www.amazon.com/*
+https://twitter.com/*
+https://x.com/*
+
+# Ignore localhost links
+http://localhost:*
+https://localhost:*

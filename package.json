@@ -1,0 +1,29 @@
+{
+  "name": "msherman-website-tests",
+  "version": "1.0.0",
+  "description": "Automated testing suite for maksymsherman.github.io",
+  "scripts": {
+    "test": "npm run test:build && npm run test:custom && npm run test:html:info && npm run test:links:info",
+    "test:build": "cd hugo-site && hugo --gc --minify --logLevel info",
+    "test:html": "html-validate 'hugo-site/public/**/*.html'",
+    "test:html:info": "echo '\n📋 HTML Validation (informational):' && html-validate 'hugo-site/public/**/*.html' || echo '⚠️  HTML validation found issues (non-blocking)'",
+    "test:links": "lychee --offline --root-dir hugo-site/public hugo-site/public",
+    "test:links:info": "echo '\n🔗 Link Checking (informational):' && lychee --offline --root-dir hugo-site/public hugo-site/public || echo '⚠️  Link checker found issues (non-blocking)'",
+    "test:links:external": "lychee 'hugo-site/public/**/*.html' --base hugo-site/public",
+    "test:custom": "node tests/custom-validations.js"
+  },
+  "keywords": ["hugo", "testing", "validation"],
+  "author": "Maksym Sherman",
+  "license": "ISC",
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "cheerio": "1.0.0-rc.9",
+    "fast-xml-parser": "^4.3.4",
+    "glob": "^10.3.10",
+    "html-validate": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

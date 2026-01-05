@@ -1,0 +1,13 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "void-style": "off",
+    "no-inline-style": "off",
+    "require-sri": "off",
+    "no-trailing-whitespace": "warn",
+    "attr-quotes": "off",
+    "doctype-style": "off",
+    "element-required-content": "off"
+  },
+  "elements": ["html5"]
+}
