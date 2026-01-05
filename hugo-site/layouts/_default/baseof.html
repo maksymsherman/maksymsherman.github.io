@@ -7,6 +7,22 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <link rel="canonical" href="{{ .Permalink }}">
+
+  <!-- OpenGraph tags -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else if eq .Type "posts" }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ if eq .Type "posts" }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+  <meta property="article:author" content="{{ .Site.Params.author }}">
+  {{ end }}
+
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TR23NDH2MP"></script>
   <script>
