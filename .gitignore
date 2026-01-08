@@ -6,8 +6,3 @@
 # Hugo build artifacts
 /hugo-site/public/
 /hugo-site/.hugo_build.lock
-
-# Testing artifacts
-node_modules/
-package-lock.json
-.lychee_cache/

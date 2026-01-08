@@ -1,7 +1,0 @@
-cache = true
-max_cache_age = "1d"
-max_retries = 3
-retry_wait_time = 2
-accept = [200, 201, 202, 203, 204, 205, 206, 207, 208, 226]
-timeout = 20
-user_agent = "Mozilla/5.0 (compatible; LinkChecker/1.0)"

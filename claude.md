@@ -124,9 +124,9 @@ Based on VS Code dark theme with high-contrast golden yellow links.
 
 ### Manual Counts
 Navigation card counts must be updated manually:
-- Blog posts: Update in `content/_index.html` (currently 16, validated by tests)
-- Books: Currently 157 (tests validate ≥150)
-- Articles: Currently 70 (tests validate ≥60)
+- Blog posts: Update in `content/_index.html`
+- Books: Currently 160
+- Articles: Currently 70
 
 ---
 
@@ -160,8 +160,7 @@ Visit: http://localhost:1313/
 
 **Configuration:** `.github/workflows/hugo.yml`
 - Uses Hugo v0.154.0 (extended)
-- Runs automated tests before build (CSS validation, JSON-LD, counts, etc.)
-- Builds on every push to `main` (only if tests pass)
+- Builds on every push to `main`
 - Automatic deployment to GitHub Pages
 
 ---
@@ -193,63 +192,11 @@ Site is optimized for LLM consumption with JSON-LD structured data, semantic HTM
 
 ---
 
-## Automated Testing & QA
-
-Comprehensive test suite ensures code quality and catches issues before deployment.
-
-### Test Infrastructure
-
-**Configuration Files:**
-- `package.json` - npm scripts and dependencies (cheerio, ajv, html-validate)
-- `.htmlvalidate.json` - HTML validator config (allows Hugo minification)
-- `.lychee.toml` + `.lycheeignore` - Link checker configuration
-
-**Custom Test Suite (`/tests/` directory):**
-1. **CSS Loading Test** (CRITICAL) - Validates main.css and notebook.css never load together
-2. **Navigation Counts Test** - Ensures blog posts=16, books≥150, articles≥60
-3. **Code Cell Formatting Test** - Validates notebook cell structure
-4. **JSON-LD Validation Test** - Validates WebSite, Person, BlogPosting, ItemList schemas
-5. **RSS/Sitemap Validation Test** - Validates XML structure and content
-6. **Metadata Validation Test** - Checks OpenGraph, Twitter Cards, meta descriptions
-
-### Test Execution
-
-**Local testing:**
-```bash
-npm test              # Run all tests
-npm run test:build    # Hugo build only
-npm run test:custom   # Custom validations only
-npm run test:html     # HTML validation (blocking)
-npm run test:links    # Link checking (blocking)
-```
-
-**GitHub Actions:**
-- Runs automatically on every push to `main`
-- Critical tests (CSS, JSON-LD, counts, build) must pass before deployment
-- HTML validation and link checking are informational (non-blocking)
-- Uploads test artifacts on failure for debugging
-
-### Test Coverage
-
-**Critical (blocks deployment):**
-- ✅ Hugo build validation
-- ✅ CSS conditional loading (prevents style conflicts)
-- ✅ Navigation count validation
-- ✅ Code cell formatting
-- ✅ JSON-LD schema validation
-- ✅ RSS feed structure
-- ✅ Sitemap structure
-- ✅ Metadata presence
-
-**Informational (warnings only):**
-- HTML validation (55 known issues in existing content)
-- Link checking (12 missing images/PDFs in blog posts)
-
----
-
 ## Future Enhancements
 
 **Testing & Quality Assurance:**
+- Automated testing: Hugo build validation, HTML/link checking, JSON-LD validation
+- GitHub Actions integration for PR validation
 - Lighthouse audits (Performance, Accessibility, SEO)
 - Visual regression testing
 - Cross-browser testing (Safari, Firefox, Edge)
@@ -263,32 +210,6 @@ npm run test:links    # Link checking (blocking)
 ---
 
 ## Quick Reference
-
-### Development Workflow
-
-**Before committing changes:**
-```bash
-npm test              # Run all tests locally
-```
-
-**What gets tested:**
-- Hugo build succeeds
-- CSS loading is correct (no conflicts)
-- Navigation counts are accurate
-- JSON-LD schemas are valid
-- Code cell formatting is correct
-- RSS/sitemap structure is valid
-- HTML validation (informational)
-- Link checking (informational)
-
-**After tests pass:**
-```bash
-git add .
-git commit -m "Your message"
-git push
-```
-
-GitHub Actions will run the same tests automatically and block deployment if critical tests fail.
 
 ### Manual Updates Needed
 
@@ -322,18 +243,6 @@ Uses Jupyter notebook metaphor for navigation pages (homepage, blog list, books,
 **Last Updated:** 2026-01-05
 
 ### Recent Changes
-
-**2026-01-05** - Automated Testing & QA
-- Implemented comprehensive test suite with 6 custom validation tests
-- Added CSS loading validation (CRITICAL: prevents main.css + notebook.css conflicts)
-- Added navigation count validation (16 posts, ≥150 books, ≥60 articles)
-- Added JSON-LD schema validation for all structured data
-- Added RSS/sitemap XML validation
-- Added code cell formatting validation
-- Integrated tests into GitHub Actions workflow (blocks deployment on failure)
-- HTML validation and link checking run as informational (non-blocking)
-- Dependencies: cheerio, ajv, html-validate, lychee
-- Test execution time: ~1-2 minutes in CI
 
 **2026-01-05** - LLM Optimization
 - Added comprehensive JSON-LD structured data (WebSite, Person, BlogPosting, ItemList schemas)
