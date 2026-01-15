@@ -247,6 +247,36 @@ npm run test:links    # Link checking (blocking)
 
 ---
 
+## Testing Infrastructure Branch - Build Failure Fix Needed
+
+**Issue:** The testing-infrastructure branch fails to build in GitHub Actions (run #20731943331)
+
+**Root Cause:** Missing `package-lock.json` file
+
+**Details:**
+- The GitHub Actions workflow (`.github/workflows/hugo.yml:41`) uses `cache: 'npm'` which requires a lock file
+- Line 45 runs `npm ci` which strictly requires `package-lock.json` to be present
+- The branch has `package.json` with dependencies but the lock file was not committed
+
+**Error Message:**
+```
+Dependencies lock file is not found in /home/runner/work/maksymsherman.github.io/maksymsherman.github.io.
+Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
+```
+
+**Fix Required:**
+```bash
+# Run on machine with Node.js installed
+npm install  # This will create package-lock.json
+git add package-lock.json
+git commit -m "Add package-lock.json for CI dependency caching"
+git push
+```
+
+**GitHub Actions Run:** https://github.com/maksymsherman/maksymsherman.github.io/actions/runs/20731943331
+
+---
+
 ## Future Enhancements
 
 **Testing & Quality Assurance:**
