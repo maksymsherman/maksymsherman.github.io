@@ -264,10 +264,15 @@ Dependencies lock file is not found in /home/runner/work/maksymsherman.github.io
 Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
 ```
 
-**Fix Required:**
+**Fix Plan:**
+1. Generate a lockfile in the repo root (`npm install --package-lock-only` or `npm install`).
+2. Commit `package-lock.json` and optionally set `cache-dependency-path: package-lock.json` in `.github/workflows/hugo.yml`.
+3. Re-run the workflow; if `npm test` fails, use the CI output to target the failing check in `tests/*.js`.
+
+**Command sketch:**
 ```bash
 # Run on machine with Node.js installed
-npm install  # This will create package-lock.json
+npm install --package-lock-only
 git add package-lock.json
 git commit -m "Add package-lock.json for CI dependency caching"
 git push
