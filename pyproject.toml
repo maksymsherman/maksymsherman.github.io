@@ -1,0 +1,11 @@
+[project]
+name = "share-image-generator"
+version = "1.0.0"
+description = "Generate OpenGraph share images for Hugo site"
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=10.0.0",
+]
+
+[dependency-groups]
+dev = []
