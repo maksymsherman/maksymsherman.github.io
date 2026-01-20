@@ -7,6 +7,33 @@ Personal website built with Hugo, featuring a Jupyter notebook-inspired interfac
 **Live site:** https://msherman.xyz/
 **Deployment:** GitHub Pages via GitHub Actions
 
+### Latest AI Models (2026-01-20)
+
+When orchestrating agents or working with AI coding tools, use these latest model identifiers:
+
+**Anthropic Claude:**
+- **Opus 4.5**: `claude-opus-4-5-20251101` - Premium model with maximum intelligence
+- **Sonnet 4.5**: `claude-sonnet-4-5-20250929` - Best balance for complex agents and coding
+- **Haiku 4.5**: `claude-haiku-4-5-20251001` - Fastest model with near-frontier intelligence
+
+**OpenAI ChatGPT/Codex:**
+- **GPT-5.2 Codex**: `gpt-5.2-codex xhigh` - Latest Codex with extended high reasoning
+
+**Usage in NTM:**
+```bash
+# Claude Opus 4.5
+claude --dangerously-skip-permissions --model claude-opus-4-5-20251101
+
+# Claude Sonnet 4.5
+claude --dangerously-skip-permissions --model claude-sonnet-4-5-20250929
+
+# Claude Haiku 4.5
+claude --dangerously-skip-permissions --model claude-haiku-4-5-20251001
+
+# Codex GPT-5.2
+codex --dangerously-bypass-approvals-and-sandbox -m "gpt-5.2-codex xhigh" -c model_reasoning_summary_format=experimental --enable web_search_request
+```
+
 ### Site Structure
 
 - **Homepage:** Notebook-style interface with personal info (DataFrame output), navigation cards, and newsletter signup
