@@ -16,7 +16,7 @@ uglyURLs = false
 
 # Custom permalinks for posts
 [permalinks]
-  posts = '/p/:contentbasename'
+  posts = '/p/:filename'
 
 # Allow raw HTML in content files
 [markup]

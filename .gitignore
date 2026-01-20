@@ -7,6 +7,9 @@
 /hugo-site/public/
 /hugo-site/.hugo_build.lock
 
+# NTM runtime state (logs, pids)
+.ntm/
+
 # Python
 .venv/
 __pycache__/
