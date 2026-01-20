@@ -277,6 +277,22 @@ This project uses the Dicklesworthstone stack for multi-agent coordination, task
 
 You may NOT delete any file or directory unless I explicitly give the exact command **in this session**.
 
+**RULE 2 – BRANCH AND PR WORKFLOW (MANDATORY)**
+
+Agents must NEVER merge branches. The user will manually merge all PRs in GitHub.
+
+- Always work on feature branches (e.g., `feature/add-llm-discovery`, `fix/mobile-header`)
+- Create a Pull Request when work is complete
+- NEVER run `git merge` commands - the user merges all PRs manually in GitHub
+- NEVER merge to main, even with explicit approval - always let user merge in GitHub UI
+
+Workflow:
+1. Create a new branch: `git checkout -b feature/your-feature-name`
+2. Make changes and commit
+3. Push branch: `git push -u origin feature/your-feature-name`
+4. Open PR: `gh pr create --title "..." --body "..."`
+5. STOP - user will merge in GitHub when ready
+
 - This includes files you just created (tests, tmp files, scripts, etc.).
 - You do not get to decide that something is "safe" to remove.
 - If you think something should be removed, stop and ask. You must receive clear written approval **before** any deletion command is even proposed.
