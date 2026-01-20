@@ -8,6 +8,12 @@
   <meta name="author" content="{{ .Site.Params.author }}">
   <link rel="canonical" href="{{ .Permalink }}">
 
+  {{ $sameAs := slice "https://twitter.com/MaksymSherman" "https://maksymsherman.substack.com" "https://www.ournetwork.xyz/" }}
+  {{ $knowsAbout := slice "Data Analysis" "Economic Consulting" "Quantitative Research" "Explanatory Writing" "Blockchain Analytics" "Crypto Data" "Investment Research" "Market Research" "Great Work" "David Deutsch's Philosophy" "Book Recommendations" }}
+
+  <!-- RSS Discovery -->
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
+
   <!-- OpenGraph tags -->
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
@@ -72,10 +78,15 @@
     "@type": "WebSite",
     "name": "{{ .Site.Title }}",
     "url": "{{ .Site.BaseURL }}",
+    "description": {{ .Site.Params.description | jsonify }},
+    "sameAs": {{ $sameAs | jsonify }},
+    "knowsAbout": {{ $knowsAbout | jsonify }},
     "author": {
       "@type": "Person",
       "name": "{{ .Site.Params.author }}",
-      "url": "{{ .Site.BaseURL }}"
+      "url": "{{ .Site.BaseURL }}",
+      "sameAs": {{ $sameAs | jsonify }},
+      "knowsAbout": {{ $knowsAbout | jsonify }}
     }
   }
   </script>
@@ -85,10 +96,12 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Maksym Sherman",
+    "name": "{{ .Site.Params.author }}",
     "url": "{{ .Site.BaseURL }}",
     "jobTitle": "Data Consultant",
-    "description": "I believe in great work, ambition, and obsessiveness. I seek to understand the world through better explanations."
+    "description": {{ .Site.Params.description | jsonify }},
+    "sameAs": {{ $sameAs | jsonify }},
+    "knowsAbout": {{ $knowsAbout | jsonify }}
   }
   </script>
   {{ end }}
@@ -102,7 +115,9 @@
     "author": {
       "@type": "Person",
       "name": "{{ .Site.Params.author }}",
-      "url": "{{ .Site.BaseURL }}"
+      "url": "{{ .Site.BaseURL }}",
+      "sameAs": {{ $sameAs | jsonify }},
+      "knowsAbout": {{ $knowsAbout | jsonify }}
     },
     {{ with .Params.date }}
     "datePublished": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",

@@ -12,11 +12,11 @@ uglyURLs = false
 # Site metadata for SEO and LLM consumption
 [params]
   author = "Maksym Sherman"
-  description = "Personal website of Maksym Sherman - exploring great work, ambition, and explanations."
+  description = "I believe in great work, ambition, and obsessiveness. I seek to understand the world through better explanations."
 
 # Custom permalinks for posts
 [permalinks]
-  posts = '/p/:contentbasename'
+  posts = '/p/:filename'
 
 # Allow raw HTML in content files
 [markup]
