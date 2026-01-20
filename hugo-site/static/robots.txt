@@ -1,4 +1,13 @@
+# robots.txt for msherman.xyz
+# AI/LLM-optimized with explicit resource references
+
 User-agent: *
 Allow: /
 
+# Sitemaps and feeds
 Sitemap: https://msherman.xyz/sitemap.xml
+Sitemap: https://msherman.xyz/index.xml
+
+# LLM-specific resources
+# See https://msherman.xyz/llms.txt for structured site info
+# See https://msherman.xyz/for-llms for detailed LLM profile
