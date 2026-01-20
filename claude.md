@@ -7,6 +7,33 @@ Personal website built with Hugo, featuring a Jupyter notebook-inspired interfac
 **Live site:** https://msherman.xyz/
 **Deployment:** GitHub Pages via GitHub Actions
 
+### Latest AI Models (2026-01-20)
+
+When orchestrating agents or working with AI coding tools, use these latest model identifiers:
+
+**Anthropic Claude:**
+- **Opus 4.5**: `claude-opus-4-5-20251101` - Premium model with maximum intelligence
+- **Sonnet 4.5**: `claude-sonnet-4-5-20250929` - Best balance for complex agents and coding
+- **Haiku 4.5**: `claude-haiku-4-5-20251001` - Fastest model with near-frontier intelligence
+
+**OpenAI ChatGPT/Codex:**
+- **GPT-5.2 Codex**: `gpt-5.2-codex xhigh` - Latest Codex with extended high reasoning
+
+**Usage in NTM:**
+```bash
+# Claude Opus 4.5
+claude --dangerously-skip-permissions --model claude-opus-4-5-20251101
+
+# Claude Sonnet 4.5
+claude --dangerously-skip-permissions --model claude-sonnet-4-5-20250929
+
+# Claude Haiku 4.5
+claude --dangerously-skip-permissions --model claude-haiku-4-5-20251001
+
+# Codex GPT-5.2
+codex --dangerously-bypass-approvals-and-sandbox -m "gpt-5.2-codex xhigh" -c model_reasoning_summary_format=experimental --enable web_search_request
+```
+
 ### Site Structure
 
 - **Homepage:** Notebook-style interface with personal info (DataFrame output), navigation cards, and newsletter signup
@@ -249,6 +276,22 @@ This project uses the Dicklesworthstone stack for multi-agent coordination, task
 **RULE 1 – ABSOLUTE (DO NOT EVER VIOLATE THIS)**
 
 You may NOT delete any file or directory unless I explicitly give the exact command **in this session**.
+
+**RULE 2 – BRANCH AND PR WORKFLOW (MANDATORY)**
+
+Agents must NEVER merge branches. The user will manually merge all PRs in GitHub.
+
+- Always work on feature branches (e.g., `feature/add-llm-discovery`, `fix/mobile-header`)
+- Create a Pull Request when work is complete
+- NEVER run `git merge` commands - the user merges all PRs manually in GitHub
+- NEVER merge to main, even with explicit approval - always let user merge in GitHub UI
+
+Workflow:
+1. Create a new branch: `git checkout -b feature/your-feature-name`
+2. Make changes and commit
+3. Push branch: `git push -u origin feature/your-feature-name`
+4. Open PR: `gh pr create --title "..." --body "..."`
+5. STOP - user will merge in GitHub when ready
 
 - This includes files you just created (tests, tmp files, scripts, etc.).
 - You do not get to decide that something is "safe" to remove.
