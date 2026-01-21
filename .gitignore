@@ -17,3 +17,7 @@ __pycache__/
 
 # bv (beads viewer) local config and caches
 .bv/
+
+# Beads files (all beads live on beads-sync branch)
+.beads/*
+!.beads/README.md
