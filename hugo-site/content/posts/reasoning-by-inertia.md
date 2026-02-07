@@ -133,7 +133,7 @@ In discussing David Deutsch’s The Beginning of Infinity,
 > explanatory in a different area. Worse of all, he was going to use it to
 > predict things. We cannot predict what the organisms are going to evolve
 > into in the future as Darwin said.
-> - toKCast - Ch 15 “The Evolution of Culture” Part 1
+> \- toKCast - Ch 15 "The Evolution of Culture" Part 1
 
 
 Marx extrapolating evolution by natural selection into the domain of

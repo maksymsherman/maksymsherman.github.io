@@ -19,25 +19,24 @@ aliases: ["/p/live-nation.html"]
 Live Nation is the largest live entertainment company in the world. Live
     Nation’s three main business segments are concerts, ticketing, and
     advertising. Live Nation also has an artist management company with 410
-    artists**.**
+    artists.
 
 
 ## **Concerts**:
 
 
 - Live Nation promotes live music events in venues across the world.
-- For a live event, Live Nation as a promoter books the artist and venue.
-  Live Nation markets the concert and sells the tickets.
+- For a live event, Live Nation as a promoter books the artist and venue. Live Nation markets the concert and sells the tickets.
+- Payment for live events: first, the artist receives an advance (guarantee) that they keep regardless of ticket sales. Out of gross ticket sales, the promoter retains all revenue up to their expenses (venue costs, marketing, staff). The remaining net profits typically get divided 85/15 to 90/10 with the artist keeping 85% or 90%. The advance is included in that share. The promoter keeps the 15% or 10% share of net profits, but also eats the losses if gross sales cannot cover expenses and artist's guarantee. A promoter can cancel shows to reduce their losses. Table below illustrates an example of payment distribution:
 
-
-    <div class="captioned-image-container">
-        <figure>
-            <img src="/p/images/live-nation-1.png" alt="Live Nation Payment Distribution">
-            <figcaption>
-                Source: Donald S. Passman, <em>All You Need to Know About the Music Business (Eleventh Edition), </em>p. 402.
-            </figcaption>
-        </figure>
-    </div>
+<div class="captioned-image-container">
+    <figure>
+        <img src="/p/images/live-nation-1.png" alt="Live Nation Payment Distribution">
+        <figcaption>
+            Source: Donald S. Passman, <em>All You Need to Know About the Music Business (Eleventh Edition), </em>p. 402.
+        </figcaption>
+    </figure>
+</div>
 
 - Promoters can make rebate deals with venues, in which a venue pays
   the promoter an additional bonus for each ticket sold. For instance,
@@ -82,14 +81,14 @@ Live Nation is the largest live entertainment company in the world. Live
 ## **Economics**
 
 
-        <div class="captioned-image-container">
-            <figure>
-                <img src="/p/images/live-nation-2.png" alt="Live Nation AOI Explanation">
-                <figcaption>
-                    Note: AOI is a non-GAAP measure which measures operating income (loss) before non-operational factors.
-                </figcaption>
-            </figure>
-        </div>
+<div class="captioned-image-container">
+    <figure>
+        <img src="/p/images/live-nation-2.png" alt="Live Nation AOI Explanation">
+        <figcaption>
+            Note: AOI is a non-GAAP measure which measures operating income (loss) before non-operational factors.
+        </figcaption>
+    </figure>
+</div>
 
 - Operating income largely comes from ticketing and sponsorship &
   advertising.
@@ -131,14 +130,6 @@ Live Nation is the largest live entertainment company in the world. Live
 ## **Resources**
 
 
-- [Latest
-  Annual Report](https://d1io3yog0oux5.cloudfront.net/_a6b119479a16cd7dd42c417d688e98d4/livenationentertainment/db/670/6248/annual_report/2022+Annual+Report+%28bookmarked+PDF%29.pdf)
-  - provides an overview of Live Nation’s business in items 1 and 7
-  and financials in item 8.
-- [Michael
-  Rapino - The Bob Lefsetz Podcast](https://lefsetz.com/wordpress/2023/04/27/michael-rapino-this-weeks-podcast-2/)
-  (2023) - Live Nation’s CEO discusses business basics, expansion, and
-  vertical integration.
-- [All You Need to Know About the Music Business](https://www.amazon.com/dp/1668011069)
-  - Part V provides an artist’s perspective on how to think about
-  touring.
+- [Latest Annual Report](https://d1io3yog0oux5.cloudfront.net/_a6b119479a16cd7dd42c417d688e98d4/livenationentertainment/db/670/6248/annual_report/2022+Annual+Report+%28bookmarked+PDF%29.pdf) — provides an overview of Live Nation's business in items 1 and 7 and financials in item 8.
+- [Michael Rapino - The Bob Lefsetz Podcast](https://lefsetz.com/wordpress/2023/04/27/michael-rapino-this-weeks-podcast-2/) (2023) — Live Nation's CEO discusses business basics, expansion, and vertical integration.
+- [All You Need to Know About the Music Business](https://www.amazon.com/dp/1668011069) — Part V provides an artist's perspective on how to think about touring.

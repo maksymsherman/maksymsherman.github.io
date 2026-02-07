@@ -22,11 +22,14 @@ Working: 978-0593081914
 ##### <time datetime="2025-10-20">October 20, 2025</time>
 
 
-> President Kennedy’s eloquence was designed to make men think; President Johnson’s hammer blows are designed to make men act.
-> <!-- The Passage of Power, p. 597. Quote by journalist James Reston -->
+<blockquote style="max-width: 85%; margin: 0 auto 20px auto;">
+    <p> President Kennedy's eloquence was designed to make men think; President Johnson's hammer blows are designed to make men act. </p>
+    <!-- The Passage of Power, p. 597. Quote by journalist James Reston -->
+</blockquote>
 
-
-> “In some ways Congress is like a dangerous animal that you’re trying to make work for you. You push him a little bit and he may go just as you want but you push him too much and he may balk and turn on you. You’ve got to sense just how much he’ll take and what kind of a mood he’s in every day. For if you don’t have a feel for him, he’s liable to turn around and go wild. *And it all depends on your sense of timing.”* (emphasis mine) <!-- Johnson’s quote, The Passage of Power, p. 692 -->
+<blockquote style="max-width: 85%; margin: 0 auto 20px auto;">
+  <p> "In some ways Congress is like a dangerous animal that you're trying to make work for you. You push him a little bit and he may go just as you want but you push him too much and he may balk and turn on you. You've got to sense just how much he'll take and what kind of a mood he's in every day. For if you don't have a feel for him, he's liable to turn around and go wild. <em>And it all depends on your sense of timing."</em> (emphasis mine) <!-- Johnson's quote, The Passage of Power, p. 692 --> </p>
+</blockquote>
 
 
 When people hear that Robert Caro has written more than 3,000 pages on Lyndon B. Johnson, they often assume Caro chose Johnson as a subject because of his presidential achievements. In reality, Caro chose to write about Johnson because of his legislative record:
@@ -45,7 +48,7 @@ Johnson’s extraordinary legislative success stemmed from a crucial ability tha
 ---
 
 
-## ** Johnson Striking While the Iron is Hot **
+## **Johnson Striking While the Iron is Hot** {#johnson_striking}
 
 
 There are many examples of Johnson striking while the iron was hot in his political career. But none of those examples illustrate Johnson’s impeccable timing as well as his legislative leadership in the Senate.
@@ -113,7 +116,7 @@ The night before the vote, Johnson began telephoning senators not opposed to the
 
 
 > In essence, he said: Do you want the first action of the United States Senate to be a posthumous repudiation of John F. Kennedy and a slap in the face of Lyndon Johnson.
-> Framing the issue that way changed votes, and by about eleven o’clock that night, he had enough so that he knew he had won. But for his purpose—to show he was in charge—he wanted not just a victory, but a rout. “That wheat thing—I hope that gets * murdered*,” he said. He kept making calls. And the vote against the bill the next day would be 57 to 36. “WHEAT BILL—FIRST JOHNSON VICTORY,” the headlines said. <!-- The Passage of Power, p. 425 -->
+> Framing the issue that way changed votes, and by about eleven o’clock that night, he had enough so that he knew he had won. But for his purpose—to show he was in charge—he wanted not just a victory, but a rout. "That wheat thing—I hope that gets *murdered*," he said. He kept making calls. And the vote against the bill the next day would be 57 to 36. “WHEAT BILL—FIRST JOHNSON VICTORY,” the headlines said. <!-- The Passage of Power, p. 425 -->
 
 
 Once again, Caro identifies the talents that enabled Johnson’s success
@@ -137,7 +140,7 @@ Johnson’s genius wasn’t merely working hard—it was sensing the fortunate m
 ---
 
 
-## ** Johnson Fumbling **
+## **Johnson Fumbling** {#lbj_fumbling}
 
 
 While Johnson largely struck while the iron was hot, there are two cases when he failed to take advantage of incredible opportunities.
@@ -215,7 +218,7 @@ By 1958, Johnson was the Majority Leader of the Senate and—as mentioned earlie
 None of the other potential Democratic candidates (Stevenson, Kefauver, Kennedy, and Humphrey) seemed particularly strong. Caro continues:
 
 
-> If he won the nomination, furthermore, he would not have to face Eisenhower, since the beloved President would have served the two terms the Constitution allowed. Neither of the two potential Republican nominees—William Knowland of California and Eisenhower’s Vice President, Richard M. Nixon—would be nearly as formidable. Lyndon Johnson had positioned himself as well as was possible for a southern candidate. Now was the moment to * strike.* (emphasis mine)
+> If he won the nomination, furthermore, he would not have to face Eisenhower, since the beloved President would have served the two terms the Constitution allowed. Neither of the two potential Republican nominees—William Knowland of California and Eisenhower’s Vice President, Richard M. Nixon—would be nearly as formidable. Lyndon Johnson had positioned himself as well as was possible for a southern candidate. Now was the moment to *strike.* (emphasis mine)
 > BUT HE DIDN’T.
 > Sometime in 1958—no one involved knows the exact date—he summoned to his LBJ Ranch six or seven men who were veterans of previous campaigns, greeted them on the front lawn that sloped down from the house to the little Pedernales River, asked them to pull the lawn chairs into a semicircle around him, and told them he had called them together to discuss his upcoming campaign for the presidency. “He was convinced that he was the best man to be President,” recalls one of the group, Texas State Senator Charles Herring, and “he was convinced that he could be nominated and win if we’d work hard enough.” “I’m going to be President,” he told them. That was his destiny. “I was *meant* to be President.” <!-- The Passage of Power, p. 11 -->
 
@@ -267,7 +270,7 @@ Johnson’s life plan was to start his nationwide political career in the House,
 ---
 
 
-## ** Similarities between Caro and Johnson **
+## **Similarities between Caro and Johnson** {#caro_similarities}
 
 
 Just as Johnson recognized moments to seize political opportunities, Caro recognized biographical opportunities. Just as Johnson recognized that legislative moments are fleeting, Caro understood that his opportunity to capture Johnson’s story through firsthand accounts was limited by human mortality.
@@ -357,7 +360,7 @@ In some ways, writing later volumes is more challenging because so many people w
 ---
 
 
-## ** Conclusion **
+## **Conclusion** {#conclusion}
 
 
 Both Johnson and Caro shared the same deep belief: if you don’t take immediate advantage of an opportunity in front of your face, it will pass. Hard work brought them to their moments, but what distinguished them was a willingness to immediately strike.

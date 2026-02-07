@@ -172,11 +172,7 @@ A system built on anonymity prevents individual accountability. In the way
   stakeholders’ incentives.
 
 
-<em
-    >Note:
-    [The Uniswap Airdrop - Lessons for the Industry](https://dune.com/blog/uni-airdrop-analysis?ref=maksymsherman.com), published in November 2022, provides a great overview of the perils of
-    airdrops.</em
-  >
+*Note: [The Uniswap Airdrop - Lessons for the Industry](https://dune.com/blog/uni-airdrop-analysis?ref=maksymsherman.com), published in November 2022, provides a great overview of the perils of airdrops.*
 
 
 References

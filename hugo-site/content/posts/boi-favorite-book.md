@@ -28,7 +28,6 @@ Instead of a quick summary, this post provides one idea that can be fully unders
 An overarching idea of the book is that:
 
 1. Problems are inevitable.
-
 2. Problems are soluble.
 
 

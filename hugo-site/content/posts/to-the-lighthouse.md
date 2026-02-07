@@ -158,7 +158,7 @@ A painting is a way to capture the moment when the match struck. It is a way
 
 > "But William, she remembered, had listened to her with his wise child's eyes
 > when she explained how it was not irreverence: how a light there needed a
-> shadow there and so on"** (**176).
+> shadow there and so on"<strong> (</strong>176).
 
 
 The passage highlights how light interacts with objects. As the light on the
