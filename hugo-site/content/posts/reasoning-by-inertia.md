@@ -73,6 +73,7 @@ Let’s look at two extreme examples:
    the best way to present a certain finding—applies to the second class
    because you are operating in a similar environment. Reasoning by analogy
    is valid.
+
 2. If you are thinking about how to educate your children in the 21st
    century, looking back at how our ancestors educated their children 15,000
    years ago is not a great analogy. Compared to the past, we now have more

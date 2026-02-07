@@ -421,8 +421,7 @@ The final step of a network, locking in subscribers, is also increasingly
   paused email notifications for subscribers who installed the app “to prevent
   duplicate notifications.” However, the attempt to lock in readers and writers
   to Substack’s platform encountered criticism and the change was quickly
-  reversed, thereby keeping email notifications intact.
-
+  reversed, thereby keeping email notifications intact.<br>
   Another way in which Substack is trying to close its platform is the
   introduction of Substack Notes, a platform for Substack writers to publish
   short-form, public content; essentially, an in-house Twitter. This is

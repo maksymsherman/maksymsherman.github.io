@@ -151,7 +151,7 @@ While Johnson largely struck while the iron was hot, there are two cases when he
 ---
 
 
-**1. 1941 Special Senate Election **
+**1. 1941 Special Senate Election**
 
 
 When Johnson was a congressman in April 1941, Morris Sheppard—U.S. Senator from Texas—died from a stroke. The moment Johnson learned of Sheppard’s death, he decided to run for the vacant Senate in the special election.
@@ -217,7 +217,7 @@ Johnson thought he’d run for the Senate in 1942 against O’Daniel, but he pro
 ---
 
 
-**2. 1958–1960 Democratic Presidential Convention Preparation **
+**2. 1958–1960 Democratic Presidential Convention Preparation**
 
 
 By 1958, Johnson was the Majority Leader of the Senate and—as mentioned earlier—had already passed the 1957 Civil Rights Act. He was setting his eyes on the next stage of the ladder: the presidency. As a powerful Majority Leader, he was well-positioned to capitalize on his chance. The iron was hot.
