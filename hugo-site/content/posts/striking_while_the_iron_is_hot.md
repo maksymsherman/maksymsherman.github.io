@@ -67,6 +67,7 @@ Through ingenious maneuvering, Johnson kept the civil rights bill alive and slow
 
 
 > To recognize the opportunity when suddenly, without warning, it came.
+>
 > The talent required had, moreover, to consist not alone of insight but also of decisiveness, of an ability not only to recognize a crucial moment but to seize it, to see the opening—and to strike; to move fast enough so that the opportunity did not vanish, perhaps never to come again. It was the ability to recognize the key that might suddenly unlock votes that had seemed locked forever away—and to turn the key, and turn it fast. <!-- Master of the Senate, p. 910 -->
 
 
@@ -116,6 +117,7 @@ The night before the vote, Johnson began telephoning senators not opposed to the
 
 
 > In essence, he said: Do you want the first action of the United States Senate to be a posthumous repudiation of John F. Kennedy and a slap in the face of Lyndon Johnson.
+>
 > Framing the issue that way changed votes, and by about eleven o’clock that night, he had enough so that he knew he had won. But for his purpose—to show he was in charge—he wanted not just a victory, but a rout. "That wheat thing—I hope that gets *murdered*," he said. He kept making calls. And the vote against the bill the next day would be 57 to 36. “WHEAT BILL—FIRST JOHNSON VICTORY,” the headlines said. <!-- The Passage of Power, p. 425 -->
 
 
@@ -162,6 +164,7 @@ The last statewide poll before the election showed Johnson in the lead with 31 p
 
 
 > But Lyndon Johnson was to make a mistake.
+>
 > He made it at the very last moment—on Election Day, in fact. Arriving around noon at the Stephen F. Austin Hotel from Johnson City, where he had voted in the morning after making a last speech from the front porch of his boyhood home and kissing all the mothers and grandmothers, as he had kissed them as a teenager, he took a sleeping pill and napped for a while in the bedroom of his suite, while his mother stood guard in the living room to keep anyone from disturbing him. Awakening in the late afternoon, he learned that the news was good; the early returns had put him ahead of O’Daniel, and his lead was steadily widening. Mann and Dies [other candidates] were clearly out of the race. He was also told that George Parr and the other South Texas bosses had been telephoning to find out when they should report their counties’ votes—and he told them, either personally or through an aide, that they should report them immediately. <!-- The Path to Power, pp. 731-32 -->
 
 
@@ -169,7 +172,9 @@ For a while, everything seemed fine. With more than 96 percent of votes in, John
 
 
 > Not all the votes were counted on Election Day.
-> The urban vote was counted on Election Day, of course—by 1941, voting machines were in use in most Texas cities—and most of the rural vote, too, although most rural voting in Texas was still by paper ballot. The results from some rural precincts, however, often didn’t trickle in until several days after a statewide election—and the explanation, in some cases, did not lie merely in the isolation of these precincts and the fact that, in some of them, the county judge might not have a telephone with which to communicate with the Texas Election Bureau.
+>
+> The urban vote was counted on Election Day, of course—by 1941, voting machines were in use in most Texas cities—and most of the rural vote, too, although most rural voting in Texas was still by paper ballot. The results from some rural precincts, however, often didn't trickle in until several days after a statewide election—and the explanation, in some cases, did not lie merely in the isolation of these precincts and the fact that, in some of them, the county judge might not have a telephone with which to communicate with the Texas Election Bureau.
+>
 > There existed in the upper levels of Texas politics common knowledge about the precincts that were for sale, the “boxes” in which the county judge wouldn’t “bring in the box” (report the precinct totals to the Election Bureau) until the man who had paid him told him what he wanted the total to be, the precincts in which the county judge took the rather flimsy locked tin ballot box (to which the judge had the key) to his home to count the ballots at leisure and in privacy (and, if necessary, to insert some new ones), with confidence that no one would ever be able to discover—and certainly not to prove—what he had done. <!-- The Path to Power, pp. 733-34 -->
 
 
@@ -182,7 +187,8 @@ From this knowledge follows a rule:
 As O’Daniel was running on an anti-establishment platform, it’s easy to see why Johnson didn’t consider the possibility of vote-stealing on his behalf. But chance intervened. And that chance involved alcohol. O’Daniel was a Prohibitionist. In the weeks before the Senate election, O’Daniel "sent to the Legislature a bill prohibiting the sale of beer or liquor within ten miles of any military base."<!-- The Path to Power, p. 735 --> There was another development:
 
 
-> When, before the start of the campaign, the chairmanship of the state’s three-member Liquor Control Board, whose power over liquor licenses throughout Texas was all but absolute, fell vacant, the Governor had appointed a crusading Prohibitionist preacher to fill the post. The lobbyists had mobilized the Legislature to refuse to confirm the preacher’s appointment, and to turn down as well other O’Daniel nominees for the post, all of whom seemed more interested in closing down the liquor business in Texas than in supervising it—they included the head of the Texas anti-saloon league and the past president of the Women’s Christian Temperance Union. Ten days before the election, however, O’Daniel had succeeded in pushing through his fifth nominee, another Prohibitionist. A second vacancy on the board would occur shortly, and if O’Daniel succeeded in filling that, too, with another Prohibitionist, the Board “could just about have ended the liquor and beer business down here.” Equally important, O’Daniel’s victory reminded Beer, Inc., [formally the Texas Brewers Institute] that a powerful Governor might succeed in winning passage of the bill creating a “dry zone” around military camps. “There were millions and millions of dollars involved now,” Lawson says. “They *had* to get him out of the Governorship.”
+> When, before the start of the campaign, the chairmanship of the state’s three-member Liquor Control Board, whose power over liquor licenses throughout Texas was all but absolute, fell vacant, the Governor had appointed a crusading Prohibitionist preacher to fill the post. The lobbyists had mobilized the Legislature to refuse to confirm the preacher’s appointment, and to turn down as well other O’Daniel nominees for the post, all of whom seemed more interested in closing down the liquor business in Texas than in supervising it—they included the head of the Texas anti-saloon league and the past president of the Women’s Christian Temperance Union. Ten days before the election, however, O’Daniel had succeeded in pushing through his fifth nominee, another Prohibitionist. A second vacancy on the board would occur shortly, and if O’Daniel succeeded in filling that, too, with another Prohibitionist, the Board “could just about have ended the liquor and beer business down here.” Equally important, O’Daniel’s victory reminded Beer, Inc., [formally the Texas Brewers Institute] that a powerful Governor might succeed in winning passage of the bill creating a “dry zone” around military camps. “There were millions and millions of dollars involved now,” Lawson says. “They *had* to get him out of the Governorship."
+>
 > The lobbyists had thought the problem would be solved by O’Daniel’s election to the Senate, which would remove him to Washington and see him replaced in the Governor’s chair by Lieutenant Governor Coke Stevenson, a lifelong Wet and an ally of Beer, Inc. [also known as the Texas Brewers Institute], and its hard-liquor partner. Now O’Daniel appeared to have lost the election, but by only about 5,000 votes; it was at once apparent to these powerful lobbyists that removing the threat would not be difficult at all—particularly since Lyndon Johnson, by having his votes reported early, had let them know precisely how many additional O’Daniel votes would be needed to beat him. <!-- The Path to Power, p. 735 -->
 
 
@@ -195,8 +201,10 @@ As Johnson was celebrating, Beer, Inc.’s supporters visited county judges who 
 Hence, as a result of Beer, Inc.’s efforts, on Tuesday,
 
 
-> Hardly had the Election Bureau office opened when more “corrections” began coming in. By the end of the day, O’Daniel was more than a thousand votes ahead; the official final count would give him 175,590 votes to 174,279 for Johnson, a margin of 1,311.
-> Lyndon Johnson’s loss had been due to a political fluke. He had been beaten not by his opponent’s friends but by his opponent’s foes; O’Daniel had won the Senate seat not because these men wanted him to be Senator, but because they didn’t want him to be Governor—because they wanted to get him out of Texas. But it was Johnson’s mistake that had enabled these men to take his victory away. He had planned and schemed and maneuvered for ten years—had *worked* for ten years, worked day and night, weekday and weekend—had done “*everything*.” And, for ten years, he had won.
+> Hardly had the Election Bureau office opened when more "corrections" began coming in. By the end of the day, O'Daniel was more than a thousand votes ahead; the official final count would give him 175,590 votes to 174,279 for Johnson, a margin of 1,311.
+>
+> Lyndon Johnson's loss had been due to a political fluke. He had been beaten not by his opponent’s friends but by his opponent’s foes; O’Daniel had won the Senate seat not because these men wanted him to be Senator, but because they didn’t want him to be Governor—because they wanted to get him out of Texas. But it was Johnson’s mistake that had enabled these men to take his victory away. He had planned and schemed and maneuvered for ten years—had *worked* for ten years, worked day and night, weekday and weekend—had done “*everything*.” And, for ten years, he had won.
+>
 > He had relaxed for one day. And he had lost. <!-- The Path to Power, p. 740 -->
 
 
@@ -219,7 +227,9 @@ None of the other potential Democratic candidates (Stevenson, Kefauver, Kennedy,
 
 
 > If he won the nomination, furthermore, he would not have to face Eisenhower, since the beloved President would have served the two terms the Constitution allowed. Neither of the two potential Republican nominees—William Knowland of California and Eisenhower’s Vice President, Richard M. Nixon—would be nearly as formidable. Lyndon Johnson had positioned himself as well as was possible for a southern candidate. Now was the moment to *strike.* (emphasis mine)
-> BUT HE DIDN’T.
+>
+> BUT HE DIDN'T.
+>
 > Sometime in 1958—no one involved knows the exact date—he summoned to his LBJ Ranch six or seven men who were veterans of previous campaigns, greeted them on the front lawn that sloped down from the house to the little Pedernales River, asked them to pull the lawn chairs into a semicircle around him, and told them he had called them together to discuss his upcoming campaign for the presidency. “He was convinced that he was the best man to be President,” recalls one of the group, Texas State Senator Charles Herring, and “he was convinced that he could be nominated and win if we’d work hard enough.” “I’m going to be President,” he told them. That was his destiny. “I was *meant* to be President.” <!-- The Passage of Power, p. 11 -->
 
 
@@ -231,6 +241,7 @@ Speaking invitations poured into Johnson’s office from across the country—op
 
 
 > George Reedy or Walter Jenkins [Johnson’s aides] might bring in a sheaf of speaking invitations—they were pouring into Johnson’s office every day from all over the country. The boots would come off the desk, and Lyndon Johnson would begin to pace back and forth around the office. Or he would walk over to the window, plunge his hands into his trouser pockets, and stand looking out for long minutes, his tall figure, silhouetted against the fading late-afternoon light, very still—except that his assistants would hear a continual low jingle as his hands restlessly shuffled the coins and keys in his pockets. Returning to the desk, he would agonize over each invitation, unable to decide whether or not to accept it, at one moment saying he would, the next moment changing his mind, wavering back and forth.
+>
 > Almost always, he wound up declining—declining even invitations that a candidate (even an unannounced candidate) for the presidency would obviously be well advised to accept; among the seventeen invitations to deliver major speeches he received during March, 1958, were personal requests from the *grande dame* of his party, Eleanor Roosevelt, for a speech before the American Association for the United Nations, and from the governor of Iowa, Herschel C. Loveless, who had recently announced that he had not decided whom his state’s delegation would support in 1960. Sometimes, Johnson would accept one or another invitation—but then invariably would change his mind and refuse (as he did eventually with every one of the seventeen March requests), and then would regret that he had refused. <!-- The Passage of Power, pp. 23-24 -->
 
 

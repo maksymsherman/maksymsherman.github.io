@@ -66,6 +66,7 @@ In
 > thinking behind it. And moreover, in its training, ChatGPT has somehow
 > “implicitly discovered” whatever regularities in language (and thinking)
 > make this possible.
+>
 > The success of ChatGPT is, I think, giving us evidence of a fundamental and
 > important piece of science: it’s suggesting that we can expect there to be
 > major new “laws of language”—and effectively “laws of thought”—out there to

@@ -25,28 +25,37 @@ Excellent book. Men and Rubber was originally published in 1926 by Harvey
    for, realizing their weakness, they are always on the defensive, while a
    larger man will listen to what you have to say and be quick to grasp any
    money-making opportunities you may have to offer.
+
 2. The only firm rule I have is to take up one thing at a time and to take up
    nothing else until my mind is free.
+
 3. There is no expedient to which a man will not go to avoid the real labour
    of thinking.
+
 4. I have never found that pay alone would either bring together or hold good
    men. I think it was the game itself that drew these men; we were a little
    company fighting among big companies, and we were all together in the
    fight.
+
 5. Every change we made in the sales methods brought results—and proved the
    new method. We did not know that we would have shown as startling an
    increase had we abolished our whole sales force, closed all our branches
    and dealers, and just sent out our tires in freight cars to be thrown off
    on sidings and taken away by clamouring buyers.
+
 6. The single reason for the existence of any business must be that is
    supplies a human need or want.
+
 7. It is a gift to keep silent when one has nothing to say!
+
 8. No business can succeed unless it is constantly revisiting its product,
    not only to meet the actual demands of today but also the potential
    demands of tomorrow.
+
 9. Competition rarely puts anyone out of business—a man usually puts himself
    out of business either by not making a good article or by wrong methods in
    sales or finance.
+
 10. The real important matters cannot be settled by the application of rules.
 
 
@@ -513,10 +522,14 @@ Basic labor policies:
 
 
 1. Provide the best possible working conditions.
+
 2. Try to pay a somewhat higher wage than anyone else pays.
+
 3. Provide rewards and facilities over and above whay any other company
    provides.
+
 4. Insist that foremen treat their men as human beings.
+
 5. Avoid the strict definition of the duties of any supervisor or foreman, in
    order that no man may easily pass the buck.
 
@@ -551,10 +564,15 @@ We, in 1917, started an employees' stock savings plan by which any employee
 
 
 1. Will more work be produced?
+
 2. Will better work be produced?
+
 3. Will quality be sacrificed for quantity?
+
 4. Will the proposed change pay for itself?
+
 5. Will working conditions be improved?
+
 6. If it were your plant and your money, would you make the change?
 
 

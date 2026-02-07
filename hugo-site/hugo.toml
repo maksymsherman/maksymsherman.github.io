@@ -25,3 +25,4 @@ uglyURLs = false
       unsafe = true
     [markup.goldmark.extensions]
       typographer = false
+      linkify = false

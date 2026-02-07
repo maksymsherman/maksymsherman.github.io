@@ -43,6 +43,7 @@ Many attempts to build a dominant blockchain marketplace include:
 
 1. Lowering marketplace fees compared to incumbents but keeping them greater
    than 0%
+
 2. A native token that accrues value through a claim on marketplace fees
 
 
@@ -80,6 +81,7 @@ Open blockchain marketplaces require:
 
 
 1. A data standard
+
 2. An immutable marketplace-like structure
 
 

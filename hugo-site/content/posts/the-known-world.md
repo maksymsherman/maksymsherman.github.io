@@ -132,6 +132,7 @@ In a letter Calvin wrote to his sister from the City of Washington in 1861, he
 > It is what  God sees when he looks down on Manchester. At the bottom
 > right-hand corner of this Creation there were but two stitched words. Alice
 > Night.
+>
 > It was then that I noticed over her shoulder another Creation of the same
 > materials, paint, clay and cloth. I had been so captivated by the living map
 > of the County that I had not turned to see the other Wonder on the opposite
