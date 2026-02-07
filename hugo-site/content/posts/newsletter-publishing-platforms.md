@@ -5,15 +5,24 @@ description: "Newsletter platforms have disintermediated traditional media, but 
 aliases: ["/p/newsletter-publishing-platforms.html"]
 ---
 
-<h1>The Future of Substack and Newsletter Publishing Platforms</h1>
-<h5><time datetime="2023-05-16">May 16th, 2023</time></h5>
-<h5>Co-authored with Lucas Romualdo</h5>
 
-<h5><a href="/p/pdfs/Newsletter_Publishing_Platforms.pdf"> Link to a fully cited version of this paper</a></h5>
 
-<h2><strong>Product-Market Definition</strong></h2>
-<p>
-  Our market of interest is email-based newsletter publishing platforms,
+# The Future of Substack and Newsletter Publishing Platforms
+
+
+##### <time datetime="2023-05-16">May 16th, 2023</time>
+
+
+##### Co-authored with Lucas Romualdo
+
+
+##### [Link to a fully cited version of this paper](/p/pdfs/Newsletter_Publishing_Platforms.pdf)
+
+
+## **Product-Market Definition**
+
+
+Our market of interest is email-based newsletter publishing platforms,
   specifically English-language content for U.S.-based readers and content
   creators. These platforms distribute written content to a list of
   voluntary—sometimes paid—subscribers via email, and are distinctive as a
@@ -24,9 +33,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   advantage of specialization, outsourcing these settings to platforms with more
   experience doing so as opposed to the writers with less technical experience
   and interest.
-</p>
-<p>
-  There are other services that are on the border of this product-market. For
+
+
+There are other services that are on the border of this product-market. For
   example, blogs can publish on WordPress and Medium, which are primarily web
   hosting services. While these services also allow writers to collect paying
   subscribers and send emails, their offerings are not optimized for newsletter
@@ -34,12 +43,14 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   who depend more on search engine optimization and advertising revenue.
   Meanwhile, many larger news and publishing organizations, or content creators,
   are vertically integrated with respect to newsletter publishing:
-  <em>Morning Brew</em> and <em>Bloomberg</em>, for example, offer email
+  *Morning Brew* and *Bloomberg*, for example, offer email
   newsletters, and manage listservs, email distribution, and payments in-house.
-</p>
-<h2><strong>Thesis</strong></h2>
-<p>
-  Newsletter platforms have disintermediated traditional media such as
+
+
+## **Thesis**
+
+
+Newsletter platforms have disintermediated traditional media such as
   newspapers, allowing content creators to connect directly to their readers
   through email delivery and readers to create an a la carte selection of
   writing to read as opposed to a bundled newspaper publication. In recent
@@ -52,19 +63,19 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   complementarity with other newsletters: more newsletters on the platform
   increases the number of newsletters recommending yours; combined with a
   growing platform readership, this will grow your subscribers.
-</p>
-<p>
-  However, the number of writers will grow over time: the rise of AI-assisted
+
+
+However, the number of writers will grow over time: the rise of AI-assisted
   writing lowers the cost of producing an argument and synthesizing information,
   and will lower the barrier to entry for newsletter writers, while existing
   writers on other mediums will migrate to newsletters. As the number of
   newsletters increases, readers will near their reading capacity and the
   newsletter market will begin to saturate. To readers, newsletters will become
   increasingly substitutable: most new subscriptions will have to replace an old
-  one, especially if those subscriptions are paid.&nbsp;
-</p>
-<p>
-  This substitutability will reduce the upside of the recommendation feature to
+  one, especially if those subscriptions are paid.
+
+
+This substitutability will reduce the upside of the recommendation feature to
   large creators, as benefits of subscriber growth through Substack’s network
   will not cover Substack’s higher price compared to other platforms. Because
   all large platforms have exportable email lists and creator-owned Stripe
@@ -75,10 +86,12 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   subscriber base becomes stable. Thus, the market for newsletter platforms for
   mature creators will be monopolistically competitive, earning zero long-run
   economic profits, while Substack will earn positive profits as an incubator.
-</p>
-<h2><strong>Industry Overview</strong></h2>
-<p>
-  Newsletters disintermediate writers from publishers and allow readers to
+
+
+## **Industry Overview**
+
+
+Newsletters disintermediate writers from publishers and allow readers to
   create their own bundles of written content. Throughout the 20th century and
   early 21st century, most of the written content was published by newspapers,
   which distributed writers’ content to readers as a bundle. Newspapers are
@@ -89,10 +102,10 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   written content they wanted to read; however, readers with specific
   preferences had to pay for the whole bundle. From an operational standpoint,
   newspapers have historically earned revenue through subscriptions and
-  advertising.&nbsp;
-</p>
-<p>
-  The email newsletter publishing platform industry evolved from blog publishing
+  advertising.
+
+
+The email newsletter publishing platform industry evolved from blog publishing
   platforms in the early 2010s. At the time, most writers were either employed
   on salary by larger publications, and thus had limited economic upside in
   their work, or were independently publishing through blogs. However, the
@@ -104,9 +117,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   valued the writing highly would pay for it. Writing newsletters therefore
   became an attractive option for writers to own their upside because of
   distribution permitted by newsletter publishing platforms.
-</p>
-<p>
-  Newsletter publishing platforms thus emerged as a way to reduce costs for
+
+
+Newsletter publishing platforms thus emerged as a way to reduce costs for
   writers, the platforms’ consumers, providing a bundle of necessary services
   for writers: email publishing, listserv management, payment processing,
   website hosting, and newsletter layout. Platforms also include various
@@ -115,15 +128,15 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   recommendations features, which allow the platform or newsletters to recommend
   other newsletters to their subscribers, have become increasingly important in
   the industry and are the defining feature of its leading player,
-  Substack.&nbsp;
-</p>
-<p>
-  It is important to note that not all newsletter publishing services are
+  Substack.
+
+
+It is important to note that not all newsletter publishing services are
   independent, and there are substitutes for these services. For example, many
   large publications which already have payments and email distribution systems
   do not outsource newsletter distribution to these platforms instead using
   their own systems; the same is true for very large newsletters businesses such
-  as <em>Morning Brew</em>. This offers one possible substitute for newsletter
+  as *Morning Brew*. This offers one possible substitute for newsletter
   platforms: purchasing all of the individual services bundled by the platforms
   and distributing emails in-house. Meanwhile, as mentioned, blogs and writing
   for a publication are also alternatives to email newsletter publishing for
@@ -132,9 +145,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   writing, or provide both to their subscribers). While these substitutes are
   relevant to determining demand in our market of interest, they are still
   adjacent markets.
-</p>
-<p>
-  Ghost, the first independent newsletter publishing service, was founded in
+
+
+Ghost, the first independent newsletter publishing service, was founded in
   2013 as an open-source nonprofit platform. Ghost currently has 19,735 writers
   on its platform, earning an average annual revenue of $310 per writer. It
   offers four versions of its publishing service—starter, creator, team, and
@@ -150,10 +163,10 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   However, this activity would be considered outside of our product-market, as
   writers, in this case, are vertically integrating with their publishing
   service by self-hosting Ghost’s bundle of services.
-</p>
-<p>
-  Beehiiv, another newsletter platform, was founded in 2021 by former employees
-  of <em>Morning Brew</em>, a business newsletter. The platform offers similar
+
+
+Beehiiv, another newsletter platform, was founded in 2021 by former employees
+  of *Morning Brew*, a business newsletter. The platform offers similar
   features to Ghost. Like Ghost, it charges writers based on a monthly fee and
   offers three product versions with various levels of customization and
   analytics tools, called Launch, Grow, and Scale. Two features differentiate
@@ -174,9 +187,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   while Grow costs $42/month and Scale $84/month billed annually, regardless of
   number of subscribers, such that Beehiiv’s service is effectively a flat,
   fixed cost for writers.
-</p>
-<p>
-  Of the major newsletter platforms, Substack is both the largest and most
+
+
+Of the major newsletter platforms, Substack is both the largest and most
   distinct, founded in 2017. Unlike the other major platforms, Substack does not
   directly charge a fee to writers, instead taking 10% of writers’ subscription
   revenues. While Substack charges a fee only on paying subscribers, Ghost and
@@ -195,12 +208,12 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   in order to justify the cost. As a result of these differences, Beehiiv’s
   pricing model most favors newsletters with more subscribers (paying or
   otherwise), while Substack’s is more favorable to writers with fewer
-  <em>paying</em> subscribers, which would presumably imply fewer subscribers
+  *paying* subscribers, which would presumably imply fewer subscribers
   overall. Pricing thus introduces a key tension between large and small
   creators, based on the number of subscribers.
-</p>
-<p>
-  In addition to its unique pricing model, Substack also differentiates itself
+
+
+In addition to its unique pricing model, Substack also differentiates itself
   through a more robust network, through recommendations and its website.
   Recommendations can be thought of as a search device. Many Substack readers
   are introduced to the platform by signing up for a particular newsletter, and
@@ -215,9 +228,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   what other newsletters to recommend. A reader will not get recommendations
   outside of what at least one of the creators they are subscribed to
   recommends.
-</p>
-<p>
-  Substack’s recommendation feature is similar to Beehiiv’s, but is more
+
+
+Substack’s recommendation feature is similar to Beehiiv’s, but is more
   powerful because Substack, as a first mover in network-based newsletter
   platforms, has invested more in acquiring creators and readers. Substack's
   recommendation feature drives 40% of subscriptions and 20% of paid
@@ -230,9 +243,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   these platforms, writers gain the additional benefit of subscription growth
   through the recommendations feature, helping to justify the higher price of
   Substack to creators with larger newsletters.
-</p>
-<p>
-  To build a network of readers and writers, Substack began by attracting
+
+
+To build a network of readers and writers, Substack began by attracting
   writers with large and established followings to the platform, providing them
   advances on revenue, with the purpose of drawing in readers. Substack readers
   would then become part of Substack’s network, making Substack attractive to
@@ -257,9 +270,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   cost of producing code. As a result of these entry barriers, the market for
   newsletter publishing services is an oligopoly, with product differentiation
   through network size and features offered to writers.
-</p>
-<p>
-  These entry barriers are exemplified by two big-tech names which briefly
+
+
+These entry barriers are exemplified by two big-tech names which briefly
   entered the newsletter platform space: Twitter and Facebook. Revue, a Dutch
   newsletter platform, was acquired by Twitter in January 2021. Revue was known
   to provide a more simplified service, with fewer customization options, a
@@ -278,10 +291,10 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   service. However, unlike the other platforms, Facebook also restricted the set
   of writers, requiring an invitation to write over Bulletin. Like Revue,
   Bulletin shut down in October 2022, ending big tech’s foray into
-  newsletters.&nbsp;
-</p>
-<p>
-  These two entry failures exemplify the presence of entry barriers in the
+  newsletters.
+
+
+These two entry failures exemplify the presence of entry barriers in the
   newsletter publishing platform market. On Twitter’s part, many well-known
   writers are also prolific Tweeters, but Twitter was unable to successfully
   attract these writers, already on its platform, to its easily-accessible
@@ -309,10 +322,12 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   followings, which is necessary to build the reader network. These two cases
   substantiate the presence of entry barriers of sunk product development costs
   and attracting the appropriate readers and writers to a platform’s network.
-</p>
-<h2><strong>Networks &amp; Two-Sided Markets</strong></h2>
-<p>
-  Substack’s main differentiation from other newsletter publishing services is
+
+
+## **Networks & Two-Sided Markets**
+
+
+Substack’s main differentiation from other newsletter publishing services is
   its network. Services like Ghost and Beehiiv offer publishing services as
   production inputs for writers, who use the platforms to distribute their
   content to end users, or readers. Beehiiv has some network elements, such as a
@@ -321,9 +336,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   rather than connecting its set of creators to its set of readers. In this
   respect, these publishing services are essentially an upstream input for
   creators.
-</p>
-<p>
-  On the other hand, Substack operates as a platform that connects its creators
+
+
+On the other hand, Substack operates as a platform that connects its creators
   to its readers. On Substack’s website, readers can ‘shop’ for different
   newsletters based on their interests, while its recommendations feature
   creates complementary effects between creators through sharing readers. Unlike
@@ -343,16 +358,16 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   to pay for a subscription to those newsletters. Therefore, Substack not only
   depends on the size of its network to generate revenues, but also its
   strength: the more the platform can induce readers to become
-  <em>paying subscribers</em>, the higher Substack’s revenue. Available data
+  *paying subscribers*, the higher Substack’s revenue. Available data
   would support this assertion: the recommendations feature, or network aspect
   of Substack, drives 40% of subscriptions on the platform and 20% of paid
   subscriptions. Readers are heavily influenced by Substack’s recommendations
   and writers depend on Substack’s network for a sizable portion of their
   revenues, demonstrating that network size is essential for Substack’s success
   as a publishing service and platform.
-</p>
-<p>
-  In a network business model, platforms often offer introductory pricing,
+
+
+In a network business model, platforms often offer introductory pricing,
   allowing the platform to grow its reader and creator network, or its installed
   base. Once the network reaches sufficient size, the base becomes sufficiently
   locked in—users do not leave, as other platforms have less content, and
@@ -384,9 +399,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   platform service costs much less than Ghost and has a constant price until
   200,000 subscribers, which for a large range of subscriber values is less than
   the cost of hosting.
-</p>
-<p>
-  The final step of a network, locking in subscribers, is also increasingly
+
+
+The final step of a network, locking in subscribers, is also increasingly
   becoming a feature of these newsletter platforms. Substack, for example, has
   placed greater emphasis on users reading newsletters through its mobile app,
   instead of email. Technically, this would fall outside our product market of
@@ -406,7 +421,8 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   paused email notifications for subscribers who installed the app “to prevent
   duplicate notifications.” However, the attempt to lock in readers and writers
   to Substack’s platform encountered criticism and the change was quickly
-  reversed, thereby keeping email notifications intact.<br />
+  reversed, thereby keeping email notifications intact.
+
   Another way in which Substack is trying to close its platform is the
   introduction of Substack Notes, a platform for Substack writers to publish
   short-form, public content; essentially, an in-house Twitter. This is
@@ -425,10 +441,10 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   than Substack, and far more prospective subscribers to newsletters than those
   who are actively searching Substack Notes. Substack’s weakened integration
   with Twitter may favor other newsletter platforms instead of locking in their
-  base.&nbsp;
-</p>
-<p>
-  However, Substack is fundamentally unable to lock creators in. Substack, as
+  base.
+
+
+However, Substack is fundamentally unable to lock creators in. Substack, as
   well as all other major newsletter publishing services, allows writers to
   easily migrate their content and email lists (as all payments in this industry
   are handled by creator-owned Stripe accounts, those can be transferred easily
@@ -442,17 +458,19 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   that Substack has no route to extracting more surplus from current creators,
   as any increased price for users or creators would have to be offset by the
   growth benefits of its recommendation feature.
-</p>
-<h2><strong>Reader Demand Saturation</strong></h2>
-<p>
-  Substack’s network dilemma leads us to consider how Substack could raise
+
+
+## **Reader Demand Saturation**
+
+
+Substack’s network dilemma leads us to consider how Substack could raise
   prices without creator flight. The premise of our thesis is that over time,
   reader demand for newsletters will saturate; alternatively, readers have a
   limited capacity to read, and hence, writers will increasingly compete with
   one another for readers’ attention.
-</p>
-<p>
-  To understand the drivers of saturation, we can consider the market for email
+
+
+To understand the drivers of saturation, we can consider the market for email
   newsletters, specifically Substack writers. Entry barriers in content creation
   are fairly weak—literacy in the U.S. is high and fixed costs are low.
   Moreover, in an unsaturated market, readers are still willing to add
@@ -469,10 +487,10 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   prevent long-run profits. However, this comes with a caveat: part of a
   newsletter’s differentiation is its author’s name and reputation, which cannot
   be easily replicated or replaced by an entrant, providing some avenue for
-  existing newsletters to build long-run profits.&nbsp;
-</p>
-<p>
-  However, this differentiation is only successful insofar as there is demand
+  existing newsletters to build long-run profits.
+
+
+However, this differentiation is only successful insofar as there is demand
   for such variety, or heterogeneous consumer preferences. To a certain extent,
   readers will have exogenous preferences for what they read based on their
   personal interests; these preferences may also exogenously change with varying
@@ -488,9 +506,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   its author’s Twitter feed because the depth of content and frequency with
   which it is delivered differs, which affects the informational value to the
   reader.
-</p>
-<p>
-  There is also an aspect of vertical heterogeneity, concerning willingness to
+
+
+There is also an aspect of vertical heterogeneity, concerning willingness to
   pay for newsletter content. Americans’ wealth distribution will imply
   reasonably broad heterogeneity; this willingness to pay will also restrict
   quantity, as Substack requires writers to charge readers at least $5 per month
@@ -500,9 +518,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   total of $100 per month, if they do not value any individual newsletter over
   $3 per month, they will spend a total of $0 instead of $100. This may somewhat
   limit their vertical heterogeneity.
-</p>
-<p>
-  From a time perspective, there is also a very clear upper bound on newsletter
+
+
+From a time perspective, there is also a very clear upper bound on newsletter
   readership. In terms of reading broadly, Americans read less every year,
   reading for pleasure less than 20 minutes a day in 2021, down from 23 minutes
   per day reading in 2004. This has not been supplanted by reading news:
@@ -523,9 +541,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   vertical heterogeneity is expressed by how writers will offer both free and
   paid content — in effect, price discrimination, based on readers’ different
   willingness to pay.
-</p>
-<p>
-  Horizontal heterogeneity means that any prospective newsletter entrant with an
+
+
+Horizontal heterogeneity means that any prospective newsletter entrant with an
   appealing differentiation can earn short-run profits and will thus enter. To
   do this, new newsletters must seek out a niche to appeal to that heterogeneity
   and not enter into a niche already dominated by other newsletters; it is
@@ -540,10 +558,10 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   likelihood of removing another. Thus, readers will only want to add
   newsletters that appeal to their preferences more so than their existing
   newsletter portfolio, favoring the niche over the generic, or the new over the
-  established.&nbsp;
-</p>
-<p>
-  This trend will be especially tied to recommendations features.
+  established.
+
+
+This trend will be especially tied to recommendations features.
   Recommendations attempt to offer newsletters based on readers’ expressed
   preferences, and is therefore most effective when it offers a newsletter that
   a reader is more likely to subscribe to. Suggesting a larger newsletter with
@@ -565,10 +583,12 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   that recommendations will increasingly focus on newer, niche newsletters
   targeted at beating a reader’s existing newsletter portfolio, further favoring
   newer newsletters over larger, established ones.
-</p>
-<h2><strong>Increased Substitutability &amp; Flight</strong></h2>
-<p>
-  The aforementioned dynamic speaks to a growing tension between large and small
+
+
+## **Increased Substitutability & Flight**
+
+
+The aforementioned dynamic speaks to a growing tension between large and small
   creators, defined by number of subscribers. Currently, readership on Substack
   is growing; the recommendation feature drives much of this growth. Because
   other writers choose the newsletters to promote to their subscribers, creators
@@ -584,9 +604,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   and, currently, not many newsletters, meaning that readers do not view most
   newsletters as close substitutes, increasing reader willingness to add other
   newsletters they view as unique.
-</p>
-<p>
-  However, because the newsletter market is monopolistically competitive, more
+
+
+However, because the newsletter market is monopolistically competitive, more
   and more newsletters will enter with more and more niche differentiations;
   then, readers will increasingly meet their capacities and become less willing
   to add new newsletters, unless an option is more appealing than the portfolio
@@ -599,9 +619,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   above, recommendations will promote newsletters to readers that are
   increasingly niche and newer, thereby promoting smaller creators more than
   large ones.
-</p>
-<p>
-  The issue of reputation also speaks to this tension: large creators who
+
+
+The issue of reputation also speaks to this tension: large creators who
   migrated their followings to Substack lent the platform credibility, which new
   and small creators become able to take advantage of with no additional benefit
   to the large creators. Substack’s pricing model also creates a divide between
@@ -619,15 +639,17 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   the smaller and newer creators. Thus, large newsletters will have an incentive
   to move to a cheaper platform without a strong recommendations feature in
   order to maximize their value.
-</p>
-<h2><strong>Substack’s Future</strong></h2>
-<p>
-  As all large platforms allow hassle-free platform migration through exportable
+
+
+## **Substack’s Future**
+
+
+As all large platforms allow hassle-free platform migration through exportable
   email lists and creator-owned Stripe accounts for paid subscriptions, large
-  creators will migrate off of Substack.&nbsp;
-</p>
-<p>
-  Locking in large creators and extracting surplus from them could be a
+  creators will migrate off of Substack.
+
+
+Locking in large creators and extracting surplus from them could be a
   profitable approach for Substack. As discussed, Substack is already attempting
   to lock creators into its network with the introduction of Notes and mobile
   app, albeit with limited success. Substack could seek to build on this lock-in
@@ -635,9 +657,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   that extracted surplus to writers. However, this would essentially subject
   writers to the same model under which they were employed by newspapers and
   magazines, making this approach unlikely.
-</p>
-<p>
-  Moreover, Substack has made no attempts to block the ease of migration for
+
+
+Moreover, Substack has made no attempts to block the ease of migration for
   creators, thereby limiting the degree to which those creators are locked into
   the platform. Any attempt to foreclose on creator exit by blocking migration
   would likely result in legal action related to Substack’s Terms of Service,
@@ -651,9 +673,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   have diminished long-run profits, reducing Substack’s future network size and
   thus its value to readers and new writers looking to Substack’s network to
   grow their readership.
-</p>
-<p>
-  Another course of action for Substack, which we argue is more realistic, is
+
+
+Another course of action for Substack, which we argue is more realistic, is
   that Substack will allow the exit of its largest creators and instead use its
   network to service smaller, newer, more niche creators seeking a platform to
   act as an incubator and help them to ‘break out’ and ‘graduate’ from Substack
@@ -678,9 +700,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   publishing technology and expertise, suggests that the network-based
   newsletter platform market will be either a very small oligopoly (by number of
   firms) or a Substack monopoly.
-</p>
-<p>
-  In a monopoly, Substack would clearly earn positive long-run profits,
+
+
+In a monopoly, Substack would clearly earn positive long-run profits,
   incentivizing it to keep this ‘incubator’ business model. In the oligopoly
   case, Substack has a key form of product differentiation that will enable it
   to earn positive long-run profits in this sub-industry with entry barriers:
@@ -694,9 +716,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   oligopoly. Network size would presumably always be favored by new writers,
   such that Substack’s differentiation would remain popular and it could still
   earn positive long-run profits with an incubator business model.
-</p>
-<p>
-  The newsletter publishing services that large creators ‘graduate’ into will be
+
+
+The newsletter publishing services that large creators ‘graduate’ into will be
   a dissimilar market. Without the network element, there are no clear entry
   barriers: the sunk costs of current newsletter services like Ghost and Beehiiv
   are small, as these platforms bundle services that are mostly outsourced, such
@@ -713,10 +735,12 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   catering to up-and-coming newsletters with network-based services and higher
   prices, while the other would cater to more mature creators and offer less of
   a network in exchange for lower prices.
-</p>
-<h2><strong>Social Welfare</strong></h2>
-<p>
-  The bifurcation of the newsletter publishing platform market and the removal
+
+
+## **Social Welfare**
+
+
+The bifurcation of the newsletter publishing platform market and the removal
   of gatekeepers in the form of newspapers and book publishers means that the
   best writers of a generation will have a higher chance of succeeding as
   writers than in the past. While writers would previously have had to work
@@ -726,17 +750,17 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   barriers to entry for writers. As a result, readers will benefit from
   increased entry of talented writers, improving the quality of the content they
   consume.
-</p>
-<p>
-  Newsletter publishing platforms make consumers better off because consumers
+
+
+Newsletter publishing platforms make consumers better off because consumers
   choose a bundle that they enjoy the most, an a-la-carte bundle. An a-la-carte
   selection provides creators with an accurate signal of the market value of
   their newsletter, as paid subscriptions indicate market interest. Under
   newspapers, all the content was bundled, and newspapers often subsidized less
   popular content, and content supply did not accurately reflect reader demand.
-</p>
-<p>
-  Consumers now pay for a lot of subscriptions for all areas of life. In the
+
+
+Consumers now pay for a lot of subscriptions for all areas of life. In the
   past, most consumers had a limit to how much they were willing to pay for a
   newspaper, perhaps for one local newspaper and one or two national newspapers,
   and all of their news was bundled. Now, newsletter platforms promote
@@ -745,7 +769,7 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   content is paywalled individually. Hence, there is a possibility that
   newsletters will end up extracting more surplus out of consumers than
   newspapers. That tension could result in a re-bundling of newspaper-like
-  content on newsletters, like Bari Weiss’ <em>The Free Press</em>. This would
+  content on newsletters, like Bari Weiss’ *The Free Press*. This would
   limit the extent to which creators can extract surplus from readers:
   subscribing to a high-quality bundle is often a better deal than subscribing
   to individual newsletters. New business models, either managed through
@@ -755,10 +779,12 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   as increased attempts by creators to extract surplus from consumers in a
   saturated market could lead to a degradation of the quality of content
   available to consumers for a price similar to a bundled newspaper.
-</p>
-<h2><strong>Conclusion</strong></h2>
-<p>
-  This paper highlights the rise of newsletter publishing platforms which
+
+
+## **Conclusion**
+
+
+This paper highlights the rise of newsletter publishing platforms which
   directly connect writers to their readers through email, and the importance of
   recommendation features to creators. Currently, the creators compete in a
   positive-sum environment, as with growing reader demand for newsletters,
@@ -774,9 +800,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   newsletters due to its large network, while newsletter platforms without a
   large network will cater to established newsletters in a monopolistically
   competitive market.
-</p>
-<p>
-  There are some limitations to our thesis. It is not a given that the
+
+
+There are some limitations to our thesis. It is not a given that the
   newsletter market will saturate: prospective writers, seeing the declining
   reading trends in the U.S., may be discouraged from writing at all, preventing
   higher growth on the writer side relative to reader growth. Substack may also
@@ -784,9 +810,9 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   the platform, although this is unlikely based on past attempts. Lastly, from a
   welfare standpoint, there may be a possibility of coordination between
   platforms or between newsletter writers and platforms to raise prices.
-</p>
-<p>
-  A fundamental question that underlies this paper is how newsletters and
+
+
+A fundamental question that underlies this paper is how newsletters and
   written media in general will fare in the age of information abundance and
   shorter attention spans. Writer entry into the newsletter market will cause an
   abundance of written information that will undermine readers’ ability to
@@ -801,7 +827,7 @@ aliases: ["/p/newsletter-publishing-platforms.html"]
   supply of newsletters and a decreasing demand for reading overall, newsletters
   are operating in a declining market, limiting the long-term growth and
   viability of newsletters and their platforms.
-</p>
+
 
 <div class="captioned-image-container">
   <figure><img src="/p/images/substack.png"</figure>
