@@ -205,6 +205,14 @@ Site is optimized for LLM consumption with JSON-LD structured data, semantic HTM
 - All 16 blog posts have front matter with ISO 8601 dates and descriptions
 - Post archetype template (`hugo-site/archetypes/posts.md`)
 - robots.txt with sitemap reference
+- Markdown alternate output for all pages (`/p/slug/index.md` alongside `/p/slug/`)
+
+**Markdown Alternate Discovery:**
+Every page that has a markdown output includes two machine-readable hints so LLM agents can find the clean version without needing `llms.txt` first:
+1. `<link rel="alternate" type="text/markdown" href="...index.md">` in `<head>` (standard HTML alternate link)
+2. `<!-- AI/LLM hint: ... Markdown-only version ... available at .../index.md -->` HTML comment at top of `<body>`
+
+Configured via `page = ["html", "markdown"]` in `hugo.toml` `[outputs]`. The markdown template is `layouts/_default/single.md`. Homepage does not get markdown output (only html, rss, llmstxt).
 
 **Key Implementation:**
 - Uses Hugo's `jsonify` filter for proper JSON escaping
@@ -862,9 +870,15 @@ csctf "..." --publish-to-gh-pages --yes     # Publish to GitHub Pages
 
 ---
 
-**Last Updated:** 2026-01-20
+**Last Updated:** 2026-02-10
 
 ### Recent Changes
+
+**2026-02-10** - Markdown Alternate Output for LLM Agents
+- Every page now generates a sibling `index.md` with clean markdown content (no layout/scripts)
+- Two discovery hints in HTML: `<link rel="alternate" type="text/markdown">` in `<head>` and HTML comment in `<body>`
+- Agents landing on any blog post can immediately find the markdown version without needing `llms.txt`
+- Configured via `page = ["html", "markdown"]` in `hugo.toml`, template at `layouts/_default/single.md`
 
 **2026-01-20** - Dicklesworthstone Stack Integration
 - Added comprehensive Agent Coordination Tools section

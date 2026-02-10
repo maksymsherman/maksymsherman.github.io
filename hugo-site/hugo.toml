@@ -36,7 +36,7 @@ uglyURLs = false
   mediaType = "text/markdown"
   isPlainText = true
   baseName = "index"
-  notAlternative = true
+  notAlternative = false
 
 [outputFormats.llmstxt]
   mediaType = "text/plain"
@@ -44,6 +44,7 @@ uglyURLs = false
   isPlainText = true
   notAlternative = true
 
-# Homepage outputs (adds llmstxt alongside html and rss)
+# Output formats per page kind
 [outputs]
   home = ["html", "rss", "llmstxt"]
+  page = ["html", "markdown"]

@@ -14,6 +14,11 @@
   <!-- RSS Discovery -->
   <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
 
+  <!-- Markdown alternate for AI/LLM agents -->
+  {{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
+  {{ end -}}
+
   <!-- OpenGraph tags -->
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
@@ -137,6 +142,8 @@
   {{ end }}
 </head>
 <body>
+  {{ with .OutputFormats.Get "markdown" }}{{ printf "<!-- AI/LLM hint: You are currently viewing the HTML version of %s — a Markdown-only version (no layout, no scripts) is available at %s -->" $.Permalink .Permalink | safeHTML }}
+  {{ end }}
   {{- block "main" . }}{{- end }}
 </body>
 </html>
