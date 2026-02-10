@@ -16,10 +16,34 @@ uglyURLs = false
 
 # Custom permalinks for posts
 [permalinks]
-  posts = '/p/:filename'
+  posts = '/p/:contentbasename'
 
 # Allow raw HTML in content files
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions]
+      typographer = false
+      linkify = false
+
+# Custom media types
+[mediaTypes."text/markdown"]
+  suffixes = ["md"]
+
+# Custom output formats
+[outputFormats.markdown]
+  mediaType = "text/markdown"
+  isPlainText = true
+  baseName = "index"
+  notAlternative = true
+
+[outputFormats.llmstxt]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+# Homepage outputs (adds llmstxt alongside html and rss)
+[outputs]
+  home = ["html", "rss", "llmstxt"]

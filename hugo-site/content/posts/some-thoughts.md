@@ -5,101 +5,68 @@ description: "A collection of thoughts on delayed gratification, imperfection, c
 aliases: ["/p/some-thoughts.html"]
 ---
 
-<h1>Some Thoughts</h1>
-<h5><time datetime="2023-09-23">September 23th, 2023</time></h5>
 
-<ol>
-  <li><p>Delayed gratification is a sign of civilization</p></li>
-  <li>
-    <p>
-      Existence doesn't require perfection, so imperfection doesn't imply a need
-      for non-existence
-    </p>
-  </li>
-  <li><p>The problem with school is that schoolwork is top of mind</p></li>
-  <li>
-    <p>
-      It’s important to go deep on a topic early in life to understand that most
-      opinions in the world are too simplistic
-    </p>
-  </li>
-  <li><p>The world can only be grasped by action, not by contemplation</p></li>
-  <li><p>(I don't take enough action)</p></li>
-  <li>
-    <p>
-      Counterfactuals are hard to think about. It's essential to think about
-      counterfactuals
-    </p>
-  </li>
-  <li>
-    <p>
-      Key to understanding people is getting to see them in various contexts
-    </p>
-  </li>
-  <li>
-    <p>
-      If you think you’re good at something—you’re bad at it. The better we know
-      something, the more we realize how far away we are from knowing it well
-    </p>
-  </li>
-  <li>
-    <p>
-      No one should use "former" and "latter" in the same sentence. "First" and
-      "second" is more intuitive
-    </p>
-  </li>
-  <li>
-    <p>
-      Maybe we don’t have much innovation because we have too much
-      communication. Innovation requires going against what others think is
-      possible
-    </p>
-  </li>
-  <li>
-    <p>
-      People have a persisting tendency to rise (or fall) to what’s expected of
-      them
-    </p>
-  </li>
-  <li><p>Every sufficiently advanced creation gets used for war</p></li>
-  <li><p>Not everything is Pareto improving and that’s fine</p></li>
-  <li><p>Chinese medicine is healthcare, Western medicine is sickcare</p></li>
-  <li>
-    <p>Loneliness is felt around others; solitude is felt around yourself</p>
-  </li>
-  <li>
-    <p>
-      Evolution by natural selection can only make statements about the past
-    </p>
-  </li>
-  <li>
-    <p>
-      Differentiating exceptional from great is more important than
-      differentiating great from good
-    </p>
-  </li>
-  <li>
-    <p>
-      Life is a series of competing objectives. Defining the objectives is
-      harder than playing the game of life
-    </p>
-  </li>
-  <li>
-    <p>
-      Most businesses should not be run unless the owner has a condition that
-      prevents them from not running it
-    </p>
-  </li>
-  <li>
-    <p>Housing as an investment is incompatible with housing as a right</p>
-  </li>
-  <li>
-    <p>
-      Not thinking in accordance with the times is a sign of independent
-      thinking
-    </p>
-  </li>
-  <li>
-    <p>Time horizons are positively correlated with positive-sum behavior</p>
-  </li>
-</ol>
+
+# Some Thoughts
+
+
+##### <time datetime="2023-09-23">September 23th, 2023</time>
+
+
+1. Delayed gratification is a sign of civilization
+
+2. Existence doesn't require perfection, so imperfection doesn't imply a need
+   for non-existence
+
+3. The problem with school is that schoolwork is top of mind
+
+4. It's important to go deep on a topic early in life to understand that most
+   opinions in the world are too simplistic
+
+5. The world can only be grasped by action, not by contemplation
+
+6. (I don't take enough action)
+
+7. Counterfactuals are hard to think about. It's essential to think about
+   counterfactuals
+
+8. Key to understanding people is getting to see them in various contexts
+
+9. If you think you're good at something—you're bad at it. The better we know
+   something, the more we realize how far away we are from knowing it well
+
+10. No one should use "former" and "latter" in the same sentence. "First" and
+   "second" is more intuitive
+
+11. Maybe we don't have much innovation because we have too much
+   communication. Innovation requires going against what others think is
+   possible
+
+12. People have a persisting tendency to rise (or fall) to what's expected of
+   them
+
+13. Every sufficiently advanced creation gets used for war
+
+14. Not everything is Pareto improving and that's fine
+
+15. Chinese medicine is healthcare, Western medicine is sickcare
+
+16. Loneliness is felt around others; solitude is felt around yourself
+
+17. Evolution by natural selection can only make statements about the past
+
+18. Differentiating exceptional from great is more important than
+   differentiating great from good
+
+19. Life is a series of competing objectives. Defining the objectives is
+   harder than playing the game of life
+
+20. Most businesses should not be run unless the owner has a condition that
+   prevents them from not running it
+
+21. Housing as an investment is incompatible with housing as a right
+
+22. Not thinking in accordance with the times is a sign of independent
+   thinking
+
+23. Time horizons are positively correlated with positive-sum behavior

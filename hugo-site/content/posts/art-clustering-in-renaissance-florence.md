@@ -4,14 +4,21 @@ date: 2024-05-16
 description: "Renaissance Florence's art cluster arose from agglomeration economies: patronage as specialized input, labor pooling, and formal goldsmith training."
 aliases: ["/p/art-clustering-in-renaissance-florence.html"]
 ---
-<h1>Art Clustering in Renaissance Florence</h1>
-<h5><time datetime="2024-05-16">May 16th, 2024</time></h5>
 
-<h5><a href="/p/pdfs/Art_Clustering_in_Renaissance_Florence.pdf">  Link to a fully cited version of this paper</a></h5>
 
-<h3>Note</h3>
-<p>
-  This paper presupposes knowledge of three components of external scale
+# Art Clustering in Renaissance Florence
+
+
+##### <time datetime="2024-05-16">May 16th, 2024</time>
+
+
+##### [Link to a fully cited version of this paper](/p/pdfs/Art_Clustering_in_Renaissance_Florence.pdf)
+
+
+### Note
+
+
+This paper presupposes knowledge of three components of external scale
   economies (agglomeration economies) as an urbanization force. The components
   are: labor pooling, access to specialized inputs, and knowledge spillover.
   Labor pooling refers to the co-location of firms and workers lowering the
@@ -26,10 +33,12 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   resource. Knowledge spillovers refers to the sharing of knowledge in informal
   channels facilitated by proximity, such as unexpected conversations in a
   coffee shop or at the bar.
-</p>
-<h2><strong>Introduction</strong></h2>
-<p>
-  One of the notable characteristics of Renaissance Florence is the flourishing
+
+
+## **Introduction**
+
+
+One of the notable characteristics of Renaissance Florence is the flourishing
   of art and architecture, collectively referred to as “art” in this paper due
   to the similarity in their consumption patterns. The Renaissance period is
   commonly cited as starting from around the year 1400 until the 1530s. As has
@@ -47,9 +56,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   Florence’s art cluster throughout the 15th century. Social tensions in the
   late 15th century and threat of a foreign invasion in the 16th century
   disturbed agglomeration forces, lowering the intensity of the cluster.
-</p>
-<p>
-  Most stories about the rise of industrial clustering focus on modern cities
+
+
+Most stories about the rise of industrial clustering focus on modern cities
   which have large populations. Renaissance Florence is a pre-modern city which
   has lower mobility of goods and people, and low population levels with
   relatively low population density. One reason clustering occurs in large
@@ -58,10 +67,12 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   greater level of economic activity makes innovation easier. Renaissance
   Florence provides a study of how agglomeration economies shaped a cluster in a
   pre-modern city.
-</p>
-<h2><strong>Florence Background: 1300s to Early 1400s</strong></h2>
-<p>
-  At the beginning of the 15th century, Florence had a population of around
+
+
+## **Florence Background: 1300s to Early 1400s**
+
+
+At the beginning of the 15th century, Florence had a population of around
   70,000 people. The largest city in Europe at that time was Paris with a
   population of 280,000 while Milan and Venice both had a population of around
   125,000. By modern standards, 1400 cities were small and not particularly
@@ -74,9 +85,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   no central business district (CBD) and few if any local public goods (LPGs)
   existed with most of the government’s budget going to defense and interest
   payments on bonds.
-</p>
-<p>
-  Florence was one of the wealthiest cities in Europe around the start of the
+
+
+Florence was one of the wealthiest cities in Europe around the start of the
   Renaissance. Its banking and wool industries were the main drivers of its
   wealth. The Florentine banking industry started its international expansion by
   collecting papal revenue in England and supporting the papacy in its
@@ -102,9 +113,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   the currencies of Europe were fixed. The strength of the economy is summarized
   by the fact that “the revenue of the [Florentine] government in 1400 was
   greater than that of England in the heyday of Elizabeth.”
-</p>
-<p>
-  At the same time as the Florentine economy grew in the late 1300s, Florence
+
+
+At the same time as the Florentine economy grew in the late 1300s, Florence
   was involved in many conflicts. Florence waged war against the Avignon papacy
   in the War of the Eight Saints (1375-1378). Then, the Ciompi Revolt happened
   in 1378 in which laborers took control of the government and Florence was
@@ -118,10 +129,12 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   in feudal warfare and a start of a largely uninterrupted peace, opening up the
   doors to the urban forces that eventually resulted in what is now known as
   Renaissance Florence.
-</p>
-<h2><strong>The Beginnings: Early 1400s</strong></h2>
-<p>
-  With the rise of peace in the early 1400s, Florence began to focus on its
+
+
+## **The Beginnings: Early 1400s**
+
+
+With the rise of peace in the early 1400s, Florence began to focus on its
   internal affairs. While the wars in the late 1300s were still ongoing,
   Florence was undergoing substantial changes. As mentioned before, the
   urbanization rate in Center-North Italy in 1400 was around 17.6% and many
@@ -129,7 +142,7 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   the 1300s. However, the role of the city was constrained by constant warfare
   between the Italian city-states. As historian Richard Goldthwaite explores in
   his article
-  <em>The Empire of Things: Consumer Demand in Renaissance Florence</em>, the
+  *The Empire of Things: Consumer Demand in Renaissance Florence*, the
   early 1400s embodied the transition from a culture of feudalism which focused
   on rural land to a city-oriented culture. Under traditional feudal
   values—still dominant in most parts of Europe in 1400, especially the
@@ -140,16 +153,16 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   elaborates: “Consumption was directed to the rounding out of this scenario [of
   hospitality] for the assertion of status. Clothes, plate for the table, and
   retinues of liveried servants, dependents, and clients dominated expenditures…
-  For this way of life, <em>conspicuous consumption</em> was a kind of
+  For this way of life, *conspicuous consumption* was a kind of
   investment in the noble’s social position that secured service and paid
   dividends in the universal recognition of his dignity and status” (emphasis
   mine). As coined by Thorstein Veblen, conspicuous consumption involved wealthy
   individuals consuming valuable goods with the primary goal being not the
   utility from the good itself, but the acquisition of status from consuming the
   good.
-</p>
-<p>
-  The relatively high level of urbanization of Italian cities—in contrast to
+
+
+The relatively high level of urbanization of Italian cities—in contrast to
   northern Europe—resulted in an environment where cities resisted feudal-style
   assertions of status. Goldthwaite notes: “As a sense of public authority
   gradually asserted itself against the amorphous corporatism of the earlier
@@ -157,7 +170,7 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   constricted and its idiosyncratic ways curbed; and it eventually lost what had
   been its unique contribution to the commune with the increasing recourse to
   professional soldiers in the fourteenth century.” Even serving on the
-  <em>Signoria</em>, the highest government office in Florence, did not allow
+  *Signoria*, the highest government office in Florence, did not allow
   for displays of status and terms of office were only two months. The lack of
   occasions for hospitality meant that a man’s status was not to be judged by
   the number of his attendants and the scale of his hospitality, and servants
@@ -166,9 +179,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   expenditures, but it was an expression of values and attitudes that were
   remote from the realities of Renaissance Italy.” In short, wealthy households
   had no traditional way of asserting their status.
-</p>
-<p>
-  In response—as a way of asserting their status—wealthy households became art
+
+
+In response—as a way of asserting their status—wealthy households became art
   patrons. The wealthy sponsored architectural developments throughout Florence
   and such developments physically embodied their power and wealth. Similar to
   the feudal nobility’s investment in their social status through hosting
@@ -181,12 +194,12 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   their status instead of worrying about potential disruptions due to ongoing
   conflict, with Florence’s and Italian urban structure pushing the wealthy to
   become art patrons.
-</p>
-<p>
-  Similar to individual patrons, Florentine guilds also became art sponsors.
+
+
+Similar to individual patrons, Florentine guilds also became art sponsors.
   Florentine guilds were divided into seven greater guilds known as
-  <em>arti maggiori</em> and fourteen minor trades guilds that were the
-  <em>arti minori</em>. The guilds, especially the greater ones which included
+  *arti maggiori* and fourteen minor trades guilds that were the
+  *arti minori*. The guilds, especially the greater ones which included
   the wool guild, were wealthy as a result of Florence’s strong economy.
   Competition for political influence, with a similar idea of conspicuous
   consumption done by individuals, induced these guilds to commission
@@ -212,23 +225,25 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   in which Brunelleschi won the commission over Ghiberti. Work on the dome began
   in 1420 and finished in 1436. Among other notable commissions, the guild of
   the armorers and sword makers commissioned Donatello’s
-  <em>St George</em> around 1415 and the linen guild commissioned Fra Angelico
+  *St George* around 1415 and the linen guild commissioned Fra Angelico
   to paint a Madonna for their guildhall.” Thus, conspicuous consumption as an
   assertion of status was an important force for both individuals and guilds.
   The specialized input of patronage ensured the high availability of funding
   for artists and started the art cluster of Renaissance Florence.
-</p>
-<h2><strong>The Sustainment: Mid to Late 1400s</strong></h2>
-<p>
-  While the Florentine art cluster arose from the specialized input of
+
+
+## **The Sustainment: Mid to Late 1400s**
+
+
+While the Florentine art cluster arose from the specialized input of
   patronage, the cluster was sustained through the forces of labor pooling and
   formal training—similar to Steven Klepper’s discussion of spinoffs within the
   contexts of Silicon Valley and Detroit—and contributed towards artistic
   freedom and a market that pushed artists towards innovations in the field of
   art.
-</p>
-<p>
-  Two key components of labor pooling within the context of Renaissance Florence
+
+
+Two key components of labor pooling within the context of Renaissance Florence
   include a relatively high degree of social mobility and a wide distribution of
   wealth providing artists with insurance against patron retaliation. If a
   patron stops supporting an artist because the patron lost confidence in the
@@ -246,9 +261,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   idiosyncratically—some families experienced negative economic shocks and
   demanded less patronage while other families were on the rise and engaged in
   more conspicuous consumption, lowering the volatility of artist earnings.
-</p>
-<p>
-  The wide distribution of wealth is best captured by the Florentine Catasto
+
+
+The wide distribution of wealth is best captured by the Florentine Catasto
   (tax assessment) of 1427, made in response to a high level of government debt
   as a result of an ongoing conflict with Milan that was expensive but
   ultimately not existential. “One-quarter of the total wealth of the city was
@@ -270,9 +285,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   1,500 florins. In other words, at the top level of wealth the Nuremberg
   merchants could almost hold their own with the Florentines, but at the next
   level the Florentines outnumbered them well over nine times.”
-</p>
-<p>
-  In addition, historian Gene Bruckner notes that the spatial distribution of
+
+
+In addition, historian Gene Bruckner notes that the spatial distribution of
   families was such that wealthy families were not concentrated in any single
   part of Florence. Districts were heterogeneous and no sections of the city
   “were reserved exclusively for the rich, no ghettoes inhabited solely by the
@@ -307,9 +322,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   neighborhoods. Florence’s urban structure of patrons distributed across many
   neighborhoods created an environment for intense competition between patrons
   for funding the best art.
-</p>
-<p>
-  The reality of Florence’s art funding stands in stark contrast to other
+
+
+The reality of Florence’s art funding stands in stark contrast to other
   European and Italian cities which centralized artist funding in either the
   head of the state or the church. Historian Peter Burke provides the following
   description of what being an artist in other cities looked like: “Permanent
@@ -328,7 +343,7 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   kept a shop, on the other hand, he had less economic security and a lower
   social status, but it was easier for him to evade a commission that he did not
   want, as Giovanni Bellini seems to have done in the case of a request from
-  Isabella d’Este [of Mantua, a prominent patron of the Renaissance].”&nbsp;
+  Isabella d’Este [of Mantua, a prominent patron of the Renaissance].”
   While permanent service provided artists with security, it made artists
   dependent on the will of the patron and fluctuations in patron economic status
   directly affected the artist whether through less funding for their work or a
@@ -346,9 +361,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   competition between Florence and Venice in painting, but that occurred closer
   to the end of the 15th century. In short, no Italian city offered the same
   high level of funding for art distributed across many patrons as Florence.
-</p>
-<p>
-  Another strong force for sustaining Florence’s dominance in the art world was
+
+
+Another strong force for sustaining Florence’s dominance in the art world was
   its strong culture of formal training. Most successful artists went through an
   apprenticeship with another successful artist, a form of spinoffs that sustain
   the art clustering. Most of the Florentine artists were trained in
@@ -377,7 +392,7 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   contributed to the cultivation of local talent. “Thriving markets for small
   artistic commissions and crafts were essential for training and supporting
   budding artists.” “For painters and sculptors, the fundamental unit was the
-  workshop, the <em>bottega</em> - a small group of men producing a wide variety
+  workshop, the *bottega* - a small group of men producing a wide variety
   of objects in collaboration and a great contrast to the specialist,
   individualist artist of modern times.” This discussion points to the dominant
   role of the cultivation of domestic talent in Florence over the importation of
@@ -395,9 +410,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   compared to its population. The value of visual arts is also apparent: 60
   percent of Burke’s Tuscany sample went into the arts (95 visual artists to 62
   non-visual artists).
-</p>
-<p>
-  While each of the previously discussed components of the Florentine arts
+
+
+While each of the previously discussed components of the Florentine arts
   cluster is important individually, their combination produced a magical
   outcome. High levels and wide distribution of wealth created an environment
   where artists could cluster in one location and not be dependent on a single
@@ -418,9 +433,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   cities, the economic and urban structure of Florence encouraged innovation
   within the arts. Florence’s urban structure created a self-fulfilling flywheel
   of art creation unlike anything else in the world of Renaissance Florence.
-</p>
-<p>
-  Burke notes that a “characteristic generally ascribed to the culture of
+
+
+Burke notes that a “characteristic generally ascribed to the culture of
   Renaissance Italy, and discussed in detail in Burckhardt’s famous book on the
   subject, is ‘individualism.’ Like ‘realism’, ‘individualism’ is a term which
   has come to bear too many meanings. It will be used here to refer to the fact
@@ -435,7 +450,7 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   classical and modern artists and writers. Indeed, it was probably the norm.
   The point about individualism, like secularism, is not that it was dominant,
   but that it was relatively new, and that it distinguishes the Renaissance from
-  the Middle Ages.” At the end of the <em>Patrons and Clients</em> chapter,
+  the Middle Ages.” At the end of the *Patrons and Clients* chapter,
   Burke concludes that Florence’s market “may well have encouraged the
   increasing differentiation of subject matter and individualism of style noted
   in the first chapter: the exploitation of the artist’s unique qualities in
@@ -443,9 +458,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   artists to create art that differed from art produced in other locations.
   Florence’s cluster produced a unique type of art at the time of its
   flourishing.
-</p>
-<p>
-  Another insight into the Florentine cluster comes from the venture capitalist
+
+
+Another insight into the Florentine cluster comes from the venture capitalist
   Paul Graham who notes: “It's in fields like the arts or writing or technology
   that the larger environment matters. In these the best practitioners aren't
   conveniently collected in a few top university departments and research labs —
@@ -474,10 +489,12 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   every patron competed in the arena of maximizing their prestige by sponsoring
   great art. The Florentine cluster, dictated by its urban structure, developed
   up-and-coming native-born artists who then produced art of a distinct kind.
-</p>
-<h2><strong>The Decline: Late 1400s to Early 1500s</strong></h2>
-<p>
-  The Florentine cluster began its decline towards the late 1400s. The event
+
+
+## **The Decline: Late 1400s to Early 1500s**
+
+
+The Florentine cluster began its decline towards the late 1400s. The event
   that truly marked the decline was the rise of Girolamo Savonarola, a preacher
   who seized power in 1494 and imposed restrictions on art, literature, thought
   and behavior. In other words, Savoranola restricted conspicuous consumption.
@@ -486,10 +503,10 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   if he asked them to pay 100 florins for a chapel in San Marco they would do it
   just to display their family arms.” Savoranola was executed in 1498 and
   art-friendly rules in the face of the Medicis came back to power, but that
-  display disrupted the art cluster.&nbsp;
-</p>
-<p>
-  Around the same time, Pisa took advantage of the French invasion and declared
+  display disrupted the art cluster.
+
+
+Around the same time, Pisa took advantage of the French invasion and declared
   its independence in 1494. In 1497, Florence embarked on a war with Pisa, but
   the endeavour failed miserably, and this led to food shortages. The Florentine
   Republic was in decline. The state of the city that was unfriendly towards
@@ -501,9 +518,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   Michelangelo, and Raphael, went to work in Rome for the papacy as both Julius
   II (1503-1513) and Leo X (1513-1521) sought to increase the papacy’s prestige
   by spending money on expensive art commissions.
-</p>
-<p>
-  Florence was under siege for 10 months in 1529-1530 by the Spanish. “Threat of
+
+
+Florence was under siege for 10 months in 1529-1530 by the Spanish. “Threat of
   Spanish rule centralized Medici authority” and “political centralization (in
   1531) brought true Medici dominance over Florentine art. By mid-century Cosimo
   I ruled Florence with an iron hand and centralized the finance of Florentine
@@ -514,10 +531,12 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   centralization of patronage ultimately nullified all the benefits of access to
   the specialized input of patronage with its wide distribution, destroying the
   Florentine arts cluster.
-</p>
-<h2><strong>Conclusion</strong></h2>
-<p>
-  Florence’s background in banking and wool created one of the richest economies
+
+
+## **Conclusion**
+
+
+Florence’s background in banking and wool created one of the richest economies
   in Europe in the late 13th century and early 14th century. The decline in
   traditional feudalist values displayed in rural areas and the switch towards a
   city-based method of asserting status resulted in wealthy families turning
@@ -530,9 +549,9 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   patronage—a result of its urban structure—pushed artists towards innovations
   in the arts as both artists exercised their artistic freedom and patrons
   pushed artists towards innovation as a way to solidify their status.
-</p>
-<p>
-  As a pre-modern city, Florence had no centralizing forces beyond its jobs. By
+
+
+As a pre-modern city, Florence had no centralizing forces beyond its jobs. By
   modern standards, Florence would be a small city. In spite of that,
   urbanization forces of agglomeration economies practically indistinguishable
   from the modern day created and sustained Florence’s art cluster. Florence
@@ -550,60 +569,57 @@ aliases: ["/p/art-clustering-in-renaissance-florence.html"]
   to Renaissance Florence through the destruction of the specialized input of a
   large amount of funding and the labor pooling benefits of insuring artists
   against retaliation by an individual patron.
-</p>
-<p>
-  Overall, Florentine art represented a radical departure from traditional art
+
+
+Overall, Florentine art represented a radical departure from traditional art
   of that time. Ideas expressed by Florentine artists showed individuality and
   expressed creativity. Florence’s urban structure encouraged experimentation in
   the arts and experimentation is what gets recorded in human history, for
   history that is a continuation of the status quo loses in prominence to
   innovation. Florence’s urban structure produced artistic flourishing and its
   art entered humanity’s historical record.
-</p>
-<h2><strong>Appendix</strong></h2>
+
+
+## **Appendix**
+
 
 <div class="captioned-image-container">
   <figure><img src="/p/images/florence-1.png"</figure>
 </div>
 
-<p>
-  Figure 1: Neighborhoods where 22 richest people in Florence lived. Data is
+
+Figure 1: Neighborhoods where 22 richest people in Florence lived. Data is
   based on the Florentine Catasto of 1527. Note: all pins are at a neighborhood
   level, not an address level.
-</p>
-<p>
-  At least 30,000 florins. Both Leon Nero and Vaio have 3 households with rich
+
+
+At least 30,000 florins. Both Leon Nero and Vaio have 3 households with rich
   individuals.
-</p>
-<p>
-  Data: David Herlihy and Christiane Klapisch-Zuber,
-  <em
-    >Census and Property Survey of Florentine Domains in the Province of
-    Tuscany, 1427-1480</em
-  >. Machine readable data file. Online Catasto of 1427 Version 1.1. Online
-  Florentine Renaissance Re sources: Brown University, Providence, R.I., 1996.
-  https://cds.library.brown.edu/projects/catasto/newsearch/index.html.
-</p>
+
+
+Data: David Herlihy and Christiane Klapisch-Zuber,
+*Census and Property Survey of Florentine Domains in the Province of Tuscany, 1427-1480*. Machine readable data file. Online Catasto of 1427 Version 1.1. Online Florentine Renaissance Re sources: Brown University, Providence, R.I., 1996.
+https://cds.library.brown.edu/projects/catasto/newsearch/index.html.
+
 
 <div class="captioned-image-container">
   <figure><img src="/p/images/florence-2.png"</figure>
 </div>
-<p>Figure 2: Count of Top 137 that live in a given neighborhood.</p>
+
+Figure 2: Count of Top 137 that live in a given neighborhood.
+
 <div class="captioned-image-container">
   <figure><img src="/p/images/florence-3.jpeg"</figure>
 </div>
 
-<p>Figure 3: Distribution of top 137 households by neighborhood.</p>
-<p>
-  Data: David Herlihy and Christiane Klapisch-Zuber,
-  <em
-    >Census and Property Survey of Florentine Domains in the Province of
-    Tuscany, 1427-1480</em
-  >. Machine readable data file. Online Catasto of 1427 Version 1.1. Online
-  Florentine Renaissance Re sources: Brown University, Providence, R.I., 1996.
-  https://cds.library.brown.edu/projects/catasto/newsearch/M1427g.html#14.
-</p>
-<p>
-  Note: The 137 households (1.4%) with 10,000 Florins or more of total
+
+Figure 3: Distribution of top 137 households by neighborhood.
+
+
+Data: David Herlihy and Christiane Klapisch-Zuber,
+*Census and Property Survey of Florentine Domains in the Province of Tuscany, 1427-1480*. Machine readable data file. Online Catasto of 1427 Version 1.1. Online Florentine Renaissance Re sources: Brown University, Providence, R.I., 1996.
+https://cds.library.brown.edu/projects/catasto/newsearch/M1427g.html#14.
+
+
+Note: The 137 households (1.4%) with 10,000 Florins or more of total
   assessment in 1427 by Gonfalone.
-</p>

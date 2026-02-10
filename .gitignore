@@ -10,6 +10,10 @@
 # NTM runtime state (logs, pids)
 .ntm/
 
+# Node
+node_modules/
+package-lock.json
+
 # Python
 .venv/
 __pycache__/

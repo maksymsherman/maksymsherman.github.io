@@ -5,31 +5,33 @@ description: "Edward Jones explores a society built on slavery, raising question
 aliases: ["/p/the-known-world.html"]
 ---
 
-<h1>The Known World</h1>
-<h5><time datetime="2021-12-17">December 17th, 2021</time></h5>
 
-<p>
-  In <em>The Known World,</em> Edward Jones explores the world of Manchester
+
+# The Known World
+
+
+##### <time datetime="2021-12-17">December 17th, 2021</time>
+
+
+In *The Known World,* Edward Jones explores the world of Manchester
   Country, a county in the South of the US that is built upon the ideals of
   slavery. Viewed through the characters’ eyes, the world depicted in the novel
   is perceived as a natural world that should not be changed. The existence and
   persistence of such a society evoke the questions of “what does knowledge
   prevent you from knowing?” and “what does action prevent you from doing?”
-</p>
-<p>
-  In the following passage from Chapter 3, Henry Townsend, a former slave who is
+
+
+In the following passage from Chapter 3, Henry Townsend, a former slave who is
   now a Black slaveowner, discusses his desires about his future as a master.
-</p>
-<blockquote>
-  <p>
-    "Henry had always said that he wanted to be a better master than any white
-    man he had ever known. He did not understand that the kind of world he
-    wanted to create was doomed before he had even spoken the first syllable of
-    the word <em>master"</em> (64).
-  </p>
-</blockquote>
-<p>
-  Henry’s words, at first, might sound virtuous. The reader is engrossed in a
+
+
+> "Henry had always said that he wanted to be a better master than any white
+> man he had ever known. He did not understand that the kind of world he
+> wanted to create was doomed before he had even spoken the first syllable of
+> the word *master"* (64).
+
+
+Henry’s words, at first, might sound virtuous. The reader is engrossed in a
   story of a former slave who understands the humiliation and degradation slaves
   experience as their master subjugates their agency. Hence, Henry wants to be a
   “better master,” someone who respects the slaves and, perhaps, allows for a
@@ -37,11 +39,11 @@ aliases: ["/p/the-known-world.html"]
   Henry? If Henry can provide for a better quality of life for the slave, one
   could lean towards believing the latter. As Jones notes in the quote above,
   that world was doomed before Henry “had even spoken the first syllable of the
-  word <em>master</em>.” Jone’s words seem to counter the possibility that one
+  word *master*.” Jone’s words seem to counter the possibility that one
   could be a “better master.”
-</p>
-<p>
-  Reflecting on that possibility, it seems ludicrous that one could be a “better
+
+
+Reflecting on that possibility, it seems ludicrous that one could be a “better
   master.” Sure, a “better master” could provide the slave with better living
   conditions, allow the slave to save a part of their salary to possibly buy
   their freedom later, endow the slave with more free time to think instead of
@@ -54,21 +56,21 @@ aliases: ["/p/the-known-world.html"]
   their high expected value in the future. That “better master” somehow
   increases economic output, pays taxes to the government, and thus supports the
   system of governance that entrenches the oppressors’ power.
-</p>
-<p>
-  Within the discussion of the quote, it is essential to note that Jones does
+
+
+Within the discussion of the quote, it is essential to note that Jones does
   not merely state that it is paradoxical that a master can be “good.” Instead,
   by saying “doomed before he had even spoken the first syllable of the word
-  <em>master</em>,” Jones highlights that the phrases like “I want to be a
+  *master*,” Jones highlights that the phrases like “I want to be a
   better [blank]” are doomed before one gets to pronounce the last word. “A
   better” implies that one operates within a system where something “worse” is
   the default or at least a widespread reality. Expressed differently, one
   operates within an unjust system. This conclusion raises another question:
   should one blame Henry for his desire to be a “better master?” He attempted to
   make the most out of what was possible within his known world.
-</p>
-<p>
-  Henry only knew about the world in which a master exists, and he wanted to
+
+
+Henry only knew about the world in which a master exists, and he wanted to
   make the world a better place, to be a good master in a world filled with evil
   masters. Taking Jones’ thoughts a step further, the question Jones alludes to
   is whether when one sees an unjust system, should one attempt to change the
@@ -85,29 +87,27 @@ aliases: ["/p/the-known-world.html"]
   important than the answer is self-awareness necessary for one to ask such a
   question in the first place. That possibility is predisposed on the ability to
   think of an alternative reality, a world based upon the unknown.
-</p>
-<p>
-  A conversation in Chapter 5 between Broussard, a French prison, and John
+
+
+A conversation in Chapter 5 between Broussard, a French prison, and John
   Skiffington, the sheriff of Manchester Country, perfectly encapsulates the
   view of people in Manchester county towards the unknown. While talking to
   Skiffington, Broussard noticed how a map of the world that Skiffington bought
   from a Russian was inaccurate.
-</p>
-<blockquote>
-  <p>
-    "Heading the legend were the words 'The Known World…' 'I get you better,'
-    Broussard said. 'I get you better map, and more map of today. Map of today,
-    how the world out together today, not yesterday, not long ago.' The Russian
-    had told Skiffington that it was the first time the word
-    <em>America</em> had ever been put on a map. The land of North America on
-    the map was smaller than it was in actuality, and where Florida should have
-    been, there was nothing. South American seemed the right size, but it alone
-    of the continents was called 'America.' North America went nameless. 'I’m
-    happy with what I got,' Skiffington said" (174).
-  </p>
-</blockquote>
-<p>
-  After being told that a map Skiffington looked at on the wall was inaccurate,
+
+
+> "Heading the legend were the words 'The Known World…' 'I get you better,'
+> Broussard said. 'I get you better map, and more map of today. Map of today,
+> how the world out together today, not yesterday, not long ago.' The Russian
+> had told Skiffington that it was the first time the word
+> *America* had ever been put on a map. The land of North America on
+> the map was smaller than it was in actuality, and where Florida should have
+> been, there was nothing. South American seemed the right size, but it alone
+> of the continents was called 'America.' North America went nameless. 'I’m
+> happy with what I got,' Skiffington said" (174).
+
+
+After being told that a map Skiffington looked at on the wall was inaccurate,
   instead of asking for a more accurate description of the world, Skiffington
   dismissed the objection and was happy with what he got. Said more plainly,
   Skiffington, a government office with considerable power, was not interested
@@ -118,38 +118,35 @@ aliases: ["/p/the-known-world.html"]
   be more accurate, given the opportunity to disprove them). It is always easy
   to believe what everyone around you believes, to believe in the status quo
   that is the Known World.
-</p>
-<p>
-  In a letter Calvin wrote to his sister from the City of Washington in 1861, he
+
+
+In a letter Calvin wrote to his sister from the City of Washington in 1861, he
   mentions the map he saw in Washington.
-</p>
-<blockquote>
-  <p>
-    "It is, my Dear Caldonia, a kind of map of life of the County of Manchester,
-    Virginia. But a 'map' is such a poor word for such a wondrous thing. It is a
-    map of life made with every kind of art man has ever thought to represent
-    himself. Yes, clay. Yes, cloth. There are no people on this “map,” just all
-    the houses and barns and roads and cemeteries and wells in our Manchester.
-    It is what &nbsp;God sees when he looks down on Manchester. At the bottom
-    right-hand corner of this Creation there were but two stitched words. Alice
-    Night.
-  </p>
-  <p>
-    It was then that I noticed over her shoulder another Creation of the same
-    materials, paint, clay and cloth. I had been so captivated by the living map
-    of the County that I had not turned to see the other Wonder on the opposite
-    wall… This Creation may well be even more miraculous than the one of the
-    County. This is one about your home, Caldonia. It is your plantation, and
-    again, it is what God sees when he looks down. There is nothing missing, not
-    a cabin, not a barn, not a chicken, not a horse. Not a single person is
-    missing. I suspect that if I were to count the blades of grass, the number
-    would be correct as it was once when the creator of this work knew that
-    world. And, again, in the bottom of the right-hand corner are the stitched
-    words 'Alice Night'" (384-385).
-  </p>
-</blockquote>
-<p>
-  In the scene, one side of the wall contains the map of Manchester County,
+
+
+> "It is, my Dear Caldonia, a kind of map of life of the County of Manchester,
+> Virginia. But a 'map' is such a poor word for such a wondrous thing. It is a
+> map of life made with every kind of art man has ever thought to represent
+> himself. Yes, clay. Yes, cloth. There are no people on this “map,” just all
+> the houses and barns and roads and cemeteries and wells in our Manchester.
+> It is what  God sees when he looks down on Manchester. At the bottom
+> right-hand corner of this Creation there were but two stitched words. Alice
+> Night.
+>
+> It was then that I noticed over her shoulder another Creation of the same
+> materials, paint, clay and cloth. I had been so captivated by the living map
+> of the County that I had not turned to see the other Wonder on the opposite
+> wall… This Creation may well be even more miraculous than the one of the
+> County. This is one about your home, Caldonia. It is your plantation, and
+> again, it is what God sees when he looks down. There is nothing missing, not
+> a cabin, not a barn, not a chicken, not a horse. Not a single person is
+> missing. I suspect that if I were to count the blades of grass, the number
+> would be correct as it was once when the creator of this work knew that
+> world. And, again, in the bottom of the right-hand corner are the stitched
+> words 'Alice Night'" (384-385).
+
+
+In the scene, one side of the wall contains the map of Manchester County,
   while the other side contains the map of the Townsend plantation. The choice
   of the adjective “living” to describe a map signifies what a map represents. A
   map, in this case, is a representation of the world known to its author, but
@@ -170,28 +167,26 @@ aliases: ["/p/the-known-world.html"]
   to them. Calvin’s story in the letter clarifies the importance of venturing
   beyond what is known. One should not let current knowledge prevent one from
   exploring a different possibility.
-</p>
-<p>
-  Our knowledge gets codified into laws. By exploring the laws of a society, one
+
+
+Our knowledge gets codified into laws. By exploring the laws of a society, one
   can learn what that society values. In the following conversation, William
   Robbins, Manchester County’s wealthiest slaveholder, tells Henry how he is not
   supposed to be lenient with his slaves.
-</p>
-<blockquote>
-  <p>
-    "But the law expects you to know what is master and what is slave. And it
-    does not matter if you are not much more darker than your slave. The law is
-    blind to that. You are the master and that is all the law wants to know. The
-    law will come to you and stand behind you. But if you roll around and be a
-    playmate to your property, and your property turns round and bites you, the
-    law will come to you still, but it will not come with the full heart and all
-    the deliberate speed that you will need. You will have failed in your part
-    of the bargain. You will have pointed to the line that separates you from
-    your property and told your property that the line does not matter” (123).
-  </p>
-</blockquote>
-<p>
-  The law is the supposed arbiter of justice. The law is meant to reproduce
+
+
+> "But the law expects you to know what is master and what is slave. And it
+> does not matter if you are not much more darker than your slave. The law is
+> blind to that. You are the master and that is all the law wants to know. The
+> law will come to you and stand behind you. But if you roll around and be a
+> playmate to your property, and your property turns round and bites you, the
+> law will come to you still, but it will not come with the full heart and all
+> the deliberate speed that you will need. You will have failed in your part
+> of the bargain. You will have pointed to the line that separates you from
+> your property and told your property that the line does not matter” (123).
+
+
+The law is the supposed arbiter of justice. The law is meant to reproduce
   moral code. Such statements convey the intentionality behind the law. In the
   above passage, similar to the description of the “living map,” a reader feels
   that law is alive, such as “the law will come to you and stand behind you.”
@@ -204,23 +199,21 @@ aliases: ["/p/the-known-world.html"]
   motion will continue to move. Law is the power that differentiates the initial
   rest and subsequent motion. Law provokes action that conforms to the law but
   prevents action that might challenge the law.
-</p>
-<p>
-  After Sheriff Patterson, the enforcer of laws in Manchester County, resigned
+
+
+After Sheriff Patterson, the enforcer of laws in Manchester County, resigned
   from his position in 1843 and moved to England. He took issue with the legal
   system he was a part of.
-</p>
-<blockquote>
-  <p>
-    "Whenever people in that part of the world asked Patterson about the wonders
-    of America, the possibilities and the hope of America, Patterson would say
-    that it was a good and fine place but all the Americans were running it into
-    the ground and that it would be a far better place if it had no Americans"
-    (41).
-  </p>
-</blockquote>
-<p>
-  At first, it might seem that Patterson believes the issue with America is the
+
+
+> "Whenever people in that part of the world asked Patterson about the wonders
+> of America, the possibilities and the hope of America, Patterson would say
+> that it was a good and fine place but all the Americans were running it into
+> the ground and that it would be a far better place if it had no Americans"
+> (41).
+
+
+At first, it might seem that Patterson believes the issue with America is the
   people running it. Upon further examination, the true nature of the issue is
   that the people running the country codified their beliefs into stagnant
   principles immune to adjustments over time. Patterson did not see a way for
@@ -233,30 +226,28 @@ aliases: ["/p/the-known-world.html"]
   push without worrying about alternative possibilities. In essence, the system
   works to engage one in action to decrease the possibility of venturing into
   the unknown.
-</p>
-<p>
-  The unknown is scary. What does it mean to have your identity attacked? To
+
+
+The unknown is scary. What does it mean to have your identity attacked? To
   realize that your whole life, you have lived a life built on lies? In Chapter
   7, Counsel Skiffington, John Skiffington’s cousin, rode on a horse into Texas
   and encountered a pack of wild dogs and a wagon train with people of many
   races. Suddenly, Counsel encountered a patch of thick vegetation and had to
   move his feet, walking the horse alongside him.
-</p>
-<blockquote>
-  <p>
-    "The horse began pulling him back. Counsel stopped, sweating, head full of
-    thunder, chest heaving, and he looked the horse in the eyes. ‘Come,' he said
-    in as calm a voice as he could manage. ‘Come.’ He pulled out his pistol.
-    ‘When I tell you to come, don’t you think I mean it?’ The horse did not
-    move. ‘Come,’ he said, again calmly. He raised the pistol and shot the horse
-    between the eyes. The horse sank on two knees and moaned and Counsel fired
-    once more and the horse collapsed. Its breathing was heavy and he prepared
-    to fire again but soon the breathing stopped. ‘Why is coming so hard?’ he
-    said to the horse" (242).
-  </p>
-</blockquote>
-<p>
-  While alone in Texas, far from home, stuck in this patch of vegetation,
+
+
+> "The horse began pulling him back. Counsel stopped, sweating, head full of
+> thunder, chest heaving, and he looked the horse in the eyes. ‘Come,' he said
+> in as calm a voice as he could manage. ‘Come.’ He pulled out his pistol.
+> ‘When I tell you to come, don’t you think I mean it?’ The horse did not
+> move. ‘Come,’ he said, again calmly. He raised the pistol and shot the horse
+> between the eyes. The horse sank on two knees and moaned and Counsel fired
+> once more and the horse collapsed. Its breathing was heavy and he prepared
+> to fire again but soon the breathing stopped. ‘Why is coming so hard?’ he
+> said to the horse" (242).
+
+
+While alone in Texas, far from home, stuck in this patch of vegetation,
   Counsel decided to shoot his horse because it did not respond to his commands.
   This scenario is a paradox; any rational human being would make sure to get
   the horse out of that patch alive to ensure safe travels in the future.
@@ -272,9 +263,9 @@ aliases: ["/p/the-known-world.html"]
   fundamentally destructive that it led to him making a decision that got him
   stuck in an unknown state that lives within a reality Counsell believes is
   incompatible with his principles.
-</p>
-<p>
-  Jones makes it clear that knowledge gives one a map of the world that is
+
+
+Jones makes it clear that knowledge gives one a map of the world that is
   partial. To explore the unknown, we need to accept the possibility that an
   unknown exists. Even better, one should accept that an unknown is something
   that is waiting to be discovered, and one’s mission is to go on an exploration
@@ -282,10 +273,9 @@ aliases: ["/p/the-known-world.html"]
   one is acting on the back of a known schema, there is only a limited number of
   things one can do. The current system intentionally delays respect for what
   one does not yet know.
-</p>
-<p>
-  To go beyond what current knowledge and action reveal requires a degree of
+
+
+To go beyond what current knowledge and action reveal requires a degree of
   intentionality one does not achieve without being open to the unknown.
   Regardless of whether one is open to the unknown or not, the unknown is real.
-  One should seek truth over convenience regardless of outside factors.<br />
-</p>
+  One should seek truth over convenience regardless of outside factors.
