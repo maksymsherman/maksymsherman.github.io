@@ -19,7 +19,7 @@ aliases: ["/p/live-nation.html"]
 Live Nation is the largest live entertainment company in the world. Live
     Nation’s three main business segments are concerts, ticketing, and
     advertising. Live Nation also has an artist management company with 410
-    artists.
+    artists<strong>.</strong>
 
 
 ## **Concerts**:
@@ -80,8 +80,10 @@ Live Nation is the largest live entertainment company in the world. Live
 ## **Sponsorship & Advertising**:
 
 
-- Sponsors advertise using Live Nation’s concert, festival, venue and
-  ticketing assets.
+<ul>
+<li><p>Sponsors advertise using Live Nation's concert, festival, venue and
+ticketing assets.</p></li>
+</ul>
 
 
 
@@ -97,8 +99,10 @@ Live Nation is the largest live entertainment company in the world. Live
     </figure>
 </div>
 
-- Operating income largely comes from ticketing and sponsorship &
-  advertising.
+<ul>
+<li><p>Operating income largely comes from ticketing and sponsorship &amp;
+advertising.</p></li>
+</ul>
 
 
 
