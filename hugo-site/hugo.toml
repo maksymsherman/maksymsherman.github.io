@@ -44,6 +44,10 @@ uglyURLs = false
   isPlainText = true
   notAlternative = true
 
+# Preserve HTML comments through minification (for AI/LLM hints)
+[minify.tdewolff.html]
+  keepComments = true
+
 # Output formats per page kind
 [outputs]
   home = ["html", "rss", "llmstxt"]
