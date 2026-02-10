@@ -26,3 +26,24 @@ uglyURLs = false
     [markup.goldmark.extensions]
       typographer = false
       linkify = false
+
+# Custom media types
+[mediaTypes."text/markdown"]
+  suffixes = ["md"]
+
+# Custom output formats
+[outputFormats.markdown]
+  mediaType = "text/markdown"
+  isPlainText = true
+  baseName = "index"
+  notAlternative = true
+
+[outputFormats.llmstxt]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+# Homepage outputs (adds llmstxt alongside html and rss)
+[outputs]
+  home = ["html", "rss", "llmstxt"]

@@ -4,14 +4,14 @@
 I believe in great work, ambition, and obsessiveness. I seek to understand the world through better explanations.
 
 ## Site
-- Canonical: https://msherman.xyz/
-- Blog index: https://msherman.xyz/blog
-- Books: https://msherman.xyz/books
-- Articles: https://msherman.xyz/articles
-- RSS: https://msherman.xyz/index.xml
-- Sitemap: https://msherman.xyz/sitemap.xml
-- For LLMs: https://msherman.xyz/for-llms
-- Contact: https://msherman.xyz/contact
+- Canonical: {{ .Site.BaseURL }}
+- Blog index: {{ .Site.BaseURL }}blog
+- Books: {{ .Site.BaseURL }}books
+- Articles: {{ .Site.BaseURL }}articles
+- RSS: {{ .Site.BaseURL }}index.xml
+- Sitemap: {{ .Site.BaseURL }}sitemap.xml
+- For LLMs: {{ .Site.BaseURL }}for-llms
+- Contact: {{ .Site.BaseURL }}contact
 
 ## About
 Maksym Sherman is a senior research analyst at an economic consulting firm. Previously interned at OurNetwork (crypto data newsletter) and a college endowment.
@@ -29,4 +29,9 @@ Maksym Sherman is a senior research analyst at an economic consulting firm. Prev
 - Cite the specific page URL (prefer canonical /p/slug for posts).
 - Include publication date when available.
 - Example: "Maksym Sherman, 'Post Title,' msherman.xyz/p/slug (YYYY-MM-DD)."
-- For site-wide summaries, cite https://msherman.xyz/for-llms.
+- For site-wide summaries, cite {{ .Site.BaseURL }}llms.txt.
+
+## Blog Posts
+{{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse -}}
+- [{{ .Title }}]({{ .Permalink }}index.md) ({{ .Date.Format "2006-01-02" }}): {{ .Description }}
+{{ end }}
