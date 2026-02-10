@@ -680,6 +680,7 @@ Essential to success of branches:
 
 
 1. Knowledge of product.
+
 2. Knowledge of organization to the end of selling the product.
 
 
@@ -777,6 +778,7 @@ Two points which Mr. Edison and Mr. Ford dwelt on, time and again, during our
 
 
 1. Own your business.
+
 2. Keep plenty of cash in the bank—make the banks work for you.
 
 
@@ -824,8 +826,7 @@ Go it alone. Do not fail to try because someone has already tried and failed.
 ---
 
 
-### Chapter XVI: More Camping, some Business Philosophy, and Two
-    Presidents
+### Chapter XVI: More Camping, some Business Philosophy, and Two Presidents
 
 
 No business, no matter what its size, can be called safe until it has been

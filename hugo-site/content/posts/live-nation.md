@@ -140,8 +140,8 @@ Live Nation is the largest live entertainment company in the world. Live
 ## **Resources**
 
 
-- [Latest Annual Report](https://d1io3yog0oux5.cloudfront.net/_a6b119479a16cd7dd42c417d688e98d4/livenationentertainment/db/670/6248/annual_report/2022+Annual+Report+%28bookmarked+PDF%29.pdf) — provides an overview of Live Nation's business in items 1 and 7 and financials in item 8.
+- [Latest Annual Report](https://d1io3yog0oux5.cloudfront.net/_a6b119479a16cd7dd42c417d688e98d4/livenationentertainment/db/670/6248/annual_report/2022+Annual+Report+%28bookmarked+PDF%29.pdf) - provides an overview of Live Nation's business in items 1 and 7 and financials in item 8.
 
-- [Michael Rapino - The Bob Lefsetz Podcast](https://lefsetz.com/wordpress/2023/04/27/michael-rapino-this-weeks-podcast-2/) (2023) — Live Nation's CEO discusses business basics, expansion, and vertical integration.
+- [Michael Rapino - The Bob Lefsetz Podcast](https://lefsetz.com/wordpress/2023/04/27/michael-rapino-this-weeks-podcast-2/) (2023) - Live Nation's CEO discusses business basics, expansion, and vertical integration.
 
-- [All You Need to Know About the Music Business](https://www.amazon.com/dp/1668011069) — Part V provides an artist's perspective on how to think about touring.
+- [All You Need to Know About the Music Business](https://www.amazon.com/dp/1668011069) - Part V provides an artist's perspective on how to think about touring.
