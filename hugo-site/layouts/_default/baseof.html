@@ -144,6 +144,8 @@
 <body>
   {{ with .OutputFormats.Get "markdown" }}{{ printf "<!-- AI/LLM hint: You are currently viewing the HTML version of %s — a Markdown-only version (no layout, no scripts) is available at %s -->" $.Permalink .Permalink | safeHTML }}
   {{ end }}
+  {{ if .IsHome }}{{ printf "<!-- AI/LLM hint: Machine-readable site information is available at %sllms.txt -->" .Site.BaseURL | safeHTML }}
+  {{ end }}
   {{- block "main" . }}{{- end }}
 </body>
 </html>
