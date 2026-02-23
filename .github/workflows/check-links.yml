@@ -24,16 +24,29 @@ jobs:
             https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Build Hugo site
+      - name: Build Hugo site (check for warnings)
         working-directory: ./hugo-site
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          hugo --gc --minify --baseURL "https://msherman.xyz/"
+          hugo --gc --minify --baseURL "https://msherman.xyz/" 2>&1 | tee /tmp/hugo_build.log
+          if grep -qE "^WARN" /tmp/hugo_build.log; then
+            echo ""
+            echo "Hugo emitted warnings:"
+            grep -E "^WARN" /tmp/hugo_build.log
+            exit 1
+          fi
 
       - name: Run link checks
         run: |
           python3 tests/check_links.py \
             --public hugo-site/public \
             --content hugo-site/content/posts
+
+      - name: Run build checks
+        run: |
+          python3 tests/check_build.py \
+            --public hugo-site/public \
+            --content hugo-site/content/posts \
+            --static hugo-site/static
