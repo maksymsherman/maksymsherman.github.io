@@ -1,0 +1,39 @@
+name: Check links
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.154.0
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb \
+            https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Build Hugo site
+        working-directory: ./hugo-site
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo --gc --minify --baseURL "https://msherman.xyz/"
+
+      - name: Run link checks
+        run: |
+          python3 tests/check_links.py \
+            --public hugo-site/public \
+            --content hugo-site/content/posts
