@@ -149,12 +149,6 @@ Based on VS Code dark theme with high-contrast golden yellow links.
 - **Mobile cell gutter:** Increased to `60px` width with `10px` font size to prevent "Out[1]:" from overlapping content
 - **Consistent max-width:** Both notebook pages and blog posts use `55ch` to eliminate jarring horizontal shifts when navigating
 
-### Manual Counts
-Navigation card counts must be updated manually:
-- Blog posts: Update in `content/_index.html`
-- Books: Currently 160
-- Articles: Currently 70
-
 ---
 
 ## Testing Locally
@@ -249,14 +243,12 @@ Configured via `page = ["html", "markdown"]` in `hugo.toml` `[outputs]`. The mar
 ### Manual Updates Needed
 
 **Adding a new blog post:**
-1. Create HTML file in `hugo-site/content/posts/`
-2. Update count in `hugo-site/content/_index.html` navigation
-3. Add link to `hugo-site/content/blog.html`
+1. Create file in `hugo-site/content/posts/`
+2. Add link to `hugo-site/content/blog.md`
 
 **Adding a new book:**
-1. Add entry to `hugo-site/content/books.html`
+1. Add entry to `hugo-site/content/books.md` under the appropriate year section
 2. Use inline style for color: `style="color: var(--book-green)"`
-3. Update count in `hugo-site/content/_index.html` if needed
 
 **Typography rules:**
 - Notebook pages: 16px base, line-height 1.6

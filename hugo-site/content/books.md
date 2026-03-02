@@ -28,11 +28,16 @@ aliases: ["/books.html"]
   and all the other books are highlighted in <a style="color:var(--book-gray);">gray</a>.</p>
   <!--lime green, cyan, gray-->
 
-<p>2025:</p>
+<p>2026:</p>
 <ul>
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-green);">NAME</a> </li> --> <!-- phenomenal -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-blue);">NAME</a> </li> --> <!-- great -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-gray);">NAME</a> </li> --> <!-- other -->
+  <li> <a href="https://www.amazon.com/Crime-Holland-Inspector-Maigret/dp/1250391067"style="color:var(--book-gray);">A Crime in Holland (Inspector Maigret, 7)</a> </li>
+</ul> 
+
+<p>2025:</p>
+<ul>
   <li> <a href="https://www.amazon.com/Lost-Executioner-Story-Khmer-Rouge/dp/0802714722"style="color:var(--book-gray);">The Lost Executioner</a> </li>
   <li> <a href="https://www.amazon.com/Werner-Herzog-Perplexed-Conversations-Cronin/dp/0571259774"style="color:var(--book-blue);">Werner Herzog – A Guide for the Perplexed</a> </li>
   <li> <a href="https://www.amazon.com/Yellow-Dog-Inspector-Maigret/dp/1250391024"style="color:var(--book-gray);">The Yellow Dog (Inspector Maigret, 5)</a> </li>
