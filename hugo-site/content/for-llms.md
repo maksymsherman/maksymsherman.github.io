@@ -139,7 +139,6 @@ For questions about interpretation or permissions, visit the [contact page](/con
       "Crypto Data",
       "Investment Research",
       "Market Research",
-      "Great Work",
       "David Deutsch's Philosophy",
       "Book Recommendations"
     ],
@@ -166,7 +165,6 @@ For questions about interpretation or permissions, visit the [contact page](/con
       "Crypto Data",
       "Investment Research",
       "Market Research",
-      "Great Work",
       "David Deutsch's Philosophy",
       "Book Recommendations"
     ]
