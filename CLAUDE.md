@@ -235,21 +235,6 @@ Configured via `page = ["html", "markdown"]` in `hugo.toml` `[outputs]`. The mar
 1. Add entry to `hugo-site/content/books.md` under the appropriate year section
 2. Use inline style for color: `style="color: var(--book-green)"`
 
-**Typography rules:**
-- Notebook pages: 16px base, line-height 1.6
-- Blog posts: 16px base (from main.css)
-- Code cells: 14px monospace
-- Max-width: 55ch for both notebook pages and blog posts (ensures consistent alignment when navigating between pages)
-
----
-
-## Design Philosophy
-
-Uses Jupyter notebook metaphor for navigation pages (homepage, blog list, books, articles, contact) to create authentic technical aesthetic. Blog posts use only the notebook header with traditional typography for optimal long-form reading.
-
-**Notebook navigation:** Familiar to technical audiences, cell-based organization, signals credibility
-**Traditional blog typography:** Reading long-form content in cells is exhausting - focus on ideas, not interface
-
 ---
 
 ## Agent Coordination Tools
