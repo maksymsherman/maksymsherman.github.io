@@ -116,8 +116,8 @@ aliases: ["/books.html"]
     <li> <a href="https://www.amazon.com/Reasons-Hopeful-consoling-inspiring-beautiful/dp/1912891891"style="color:var(--book-gray);">Reasons to Be Hopeful</a> </li>
     <li> <a href="https://www.amazon.com/Wager-Tale-Shipwreck-Mutiny-Murder/dp/0385534264"style="color:var(--book-gray);">The Wager</a> </li>
     <li> <a href="https://www.amazon.com/Meaning-All-Thoughts-Citizen-Scientist/dp/0465023940"style="color:var(--book-gray);">The Meaning of It All</a> </li>
-    <li> <a href=" https://www.amazon.com/Men-Rubber-Business-Harvey-Firestone/dp/1778063837"style="color:var(--book-blue);">Men and Rubber</a> </li>
-    <li> <a href=" https://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060839872"style="color:var(--book-gray);">Zen and the Art of Motorcycle Maintenance</a> </li>
+    <li> <a href="https://www.amazon.com/Men-Rubber-Business-Harvey-Firestone/dp/1778063837"style="color:var(--book-blue);">Men and Rubber</a> </li>
+    <li> <a href="https://www.amazon.com/Zen-Art-Motorcycle-Maintenance-Inquiry/dp/0060839872"style="color:var(--book-gray);">Zen and the Art of Motorcycle Maintenance</a> </li>
     <li> <a href="https://www.amazon.com/Amusing-Ourselves-Death-Discourse-Business/dp/014303653X"style="color:var(--book-gray);">Amusing Ourselves to Death</a> </li>
     <li> <a href="https://www.amazon.com/Chaos-Monkeys-Obscene-Fortune-Failure/dp/0062458191"style="color:var(--book-gray);">Chaos Monkey</a> </li>
     <li> <a href="https://www.amazon.com/Ascent-Man-Jacob-Bronowski/dp/1849901155"style="color:var(--book-gray);">The Ascent of Man</a> </li>

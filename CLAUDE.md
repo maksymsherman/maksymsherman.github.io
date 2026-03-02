@@ -153,6 +153,18 @@ Based on VS Code dark theme with high-contrast golden yellow links.
 
 ## Testing Locally
 
+**MANDATORY: Run tests before every commit.** Build the site and run both test scripts. All checks must pass before committing.
+
+```bash
+cd hugo-site && hugo --quiet && cd ..
+python3 tests/check_build.py
+python3 tests/check_links.py
+```
+
+If any check fails, fix the issue and re-run before committing.
+
+**Dev server for visual testing:**
+
 ```bash
 cd hugo-site
 hugo server --noHTTPCache --disableFastRender
