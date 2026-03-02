@@ -26,7 +26,7 @@ aliases: ["/books.html"]
 <p>Books that I thought were phenomenal are highlighted in <a style="color:var(--book-green);">green</a>, 
   books that I thought were particularly great are highlighted in <a style="color:var(--book-blue);">blue</a>, 
   and all the other books are highlighted in <a style="color:var(--book-gray);">gray</a>.</p>
-  <!--lime green, cyan, gray-->
+  <!--soft green, soft blue, gray-->
 
 <p>2026:</p>
 <ul>

@@ -3,6 +3,7 @@ html {
     padding: 0px 0 20px 0px;
     color:#f0e7d5;
     font-weight: normal;
+    font-family: 'Inter', sans-serif;
     background: #252525;
     background-attachment: fixed !important;
     background: linear-gradient(#2a2a29, #1c1c1c);
@@ -154,138 +155,11 @@ html {
     border-bottom:1px solid #434343;
   }
   
-  hr {
-    border: 0;
-    outline: none;
-    height: 3px;
-    background: transparent url('assets/images/hr.gif') center center repeat-x;
-    margin: 0 0 20px;
-  }
-  
   dt {
     color:#F0E7D5;
     font-weight: normal;
   }
   
-  
-  #header {
-    z-index: 100;
-    left:0;
-    top: 0px;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    background: url(assets/images/nav-bg.gif) #353535;
-    border-bottom: 4px solid #434343;
-    box-shadow: 0px 1px 3px rgba(0,0,0,.25);
-  
-    nav {
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 0 10px;
-      background: blue;
-      margin: 6px auto;
-  
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-  
-        li {
-          font-weight: normal;
-          list-style: none;
-          display: inline;
-          color: white;
-          line-height: 50px;
-          text-shadow: 0px 1px 0px rgba(0,0,0,.2);
-          font-size: 14px;
-  
-          a {
-            color: white;
-            border: 1px solid #5d910b;
-            background: linear-gradient(#93bd20, #659e10);
-            border-radius: 2px;
-            box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 7px rgba(0,0,0,.7);
-  
-            background-color: #93bd20;
-            padding: 10px 12px;
-            margin-top: 6px;
-            line-height:14px;
-            font-size:14px;
-            display:inline-block;
-            text-align:center;
-  
-            &:hover {
-              background: linear-gradient(#749619, #527f0e);
-              background-color: #659e10;
-              border: 1px solid #527f0e;
-              box-shadow: inset 0px 1px 1px rgba(0,0,0,.2), 0px 1px 0px rgba(0,0,0,.0);
-            }
-          }
-  
-          &.fork {
-            float: left;
-            margin-left: 0px;
-          }
-  
-          &.downloads {
-            float: right;
-            margin-left: 6px;
-          }
-  
-          &.title {
-            float: right;
-            margin-right: 10px;
-            font-size: 11px;
-          }
-        }
-      }
-    }
-  }
-  
-  section {
-    max-width:650px;
-    padding: 30px 0px 50px 0px;
-    margin: 20px 0;
-    margin-top: 70px;
-  
-    #title {
-      border: 0;
-      outline: none;
-      margin: 0 0 50px 0;
-      padding: 0 0 5px 0;
-  
-      h1 {
-        font-weight: normal;
-        font-size: 40px;
-        text-align: center;
-        line-height: 36px;
-      }
-  
-      p {
-        color: #d7cfbe;
-        font-weight: normal;
-        font-size: 18px;
-        text-align: center;
-      }
-  
-      .credits {
-        font-size: 11px;
-        font-weight: normal;
-        color: #696969;
-        margin-top: -10px;
-  
-        &.left {
-          float: left;
-        }
-  
-        &.right {
-          float: right;
-        }
-      }
-  
-    }
-  }
   
 
   @media screen and (max-width: 768px) {
@@ -354,26 +228,3 @@ html {
       }
   }
 
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('/assets/fonts/InterVariable.woff2') format('woff2');
-  }
-  
-  @font-face {
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url('/assets/fonts/InterVariable-Italic.woff2') format('woff2');
-  }
-  
-  :root {
-    --book-green: #00FF00;
-    --book-blue: #00FFFF;
-    --book-gray: #9E9E9E;
-    font-family: 'Inter', sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-  }
