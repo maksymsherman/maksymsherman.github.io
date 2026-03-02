@@ -444,6 +444,51 @@ body {
 }
 
 /* ============================================
+   TRACEBACK OUTPUT (404 page)
+   ============================================ */
+
+.traceback {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  padding: 12px;
+  color: var(--text-primary);
+}
+
+.traceback a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.traceback a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+.traceback-header {
+  color: #e57373;
+}
+
+.traceback-error {
+  color: #e57373;
+  font-weight: 600;
+}
+
+.traceback-location {
+  color: var(--accent-green);
+}
+
+.traceback-bold {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.traceback-code {
+  color: var(--text-primary);
+}
+
+/* ============================================
    MOBILE RESPONSIVENESS
    ============================================ */
 

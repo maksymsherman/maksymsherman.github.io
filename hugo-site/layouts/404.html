@@ -1,14 +1,104 @@
 {{ define "main" }}
-<h1>404: Page Not Found</h1>
+{{ partial "notebook-header.html" . }}
 
-<p>Sorry, the page you're looking for doesn't exist.</p>
+<main class="notebook">
+  <!-- Cell 1: Big clear heading -->
+  <div class="cell markdown-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"></div>
+      <div class="cell-body">
+        <div class="list-content">
+          <h1>404 — Page Not Found</h1>
+          <p>The page you're looking for doesn't exist. Here's what happened:</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<p>You might want to check out:</p>
-<ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/blog.html">Blog</a></li>
-  <li><a href="/books.html">Book List</a></li>
-  <li><a href="/articles.html">Article List</a></li>
-  <li><a href="/contact.html">Contact</a></li>
-</ul>
+  <!-- Cell 2: Code that caused the error -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>404<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">ms</span>.<span class="function">get_page</span>(<span class="string">"<span id="error-path">/unknown</span>"</span>)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 3: Traceback output -->
+  <div class="cell output-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>404<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="traceback">
+<span class="traceback-header">---------------------------------------------------------------------------</span>
+<span class="traceback-error">PageNotFoundError</span>                         Traceback (most recent call last)
+<span class="traceback-location">Cell <span class="traceback-bold">In [404]</span>, line <span class="traceback-bold">1</span></span>
+<span class="traceback-code">----> 1 ms.get_page("/unknown")</span>
+
+<span class="traceback-error">PageNotFoundError</span>: The requested page does not exist on this site.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cell 4: Recovery -->
+  <div class="cell code-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">In [</span>405<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <div class="code-input"><span class="variable">ms</span>.<span class="function">get_sections</span>()  <span class="comment"># Here's where you can go instead</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell output-cell">
+    <div class="cell-content">
+      <div class="cell-gutter"><span class="bracket">Out[</span>405<span class="bracket">]:</span></div>
+      <div class="cell-body">
+        <nav aria-label="404 navigation" class="nav-output">
+          <a href="/" class="nav-link">
+            <span class="nav-icon">&#127968;</span>
+            <div class="nav-content">
+              <div class="nav-title">home <span class="nav-arrow">&rarr;</span></div>
+            </div>
+            <div class="nav-meta"></div>
+          </a>
+          <a href="/blog.html" class="nav-link">
+            <span class="nav-icon">&#128221;</span>
+            <div class="nav-content">
+              <div class="nav-title">blog <span class="nav-arrow">&rarr;</span></div>
+            </div>
+            <div class="nav-meta"></div>
+          </a>
+          <a href="/books.html" class="nav-link">
+            <span class="nav-icon">&#128218;</span>
+            <div class="nav-content">
+              <div class="nav-title">books <span class="nav-arrow">&rarr;</span></div>
+            </div>
+            <div class="nav-meta"></div>
+          </a>
+          <a href="/articles.html" class="nav-link">
+            <span class="nav-icon">&#128279;</span>
+            <div class="nav-content">
+              <div class="nav-title">articles <span class="nav-arrow">&rarr;</span></div>
+            </div>
+            <div class="nav-meta"></div>
+          </a>
+          <a href="/contact.html" class="nav-link">
+            <span class="nav-icon">&#128231;</span>
+            <div class="nav-content">
+              <div class="nav-title">contact <span class="nav-arrow">&rarr;</span></div>
+            </div>
+            <div class="nav-meta"></div>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Show the actual path the user tried to visit
+  document.getElementById('error-path').textContent = window.location.pathname;
+</script>
 {{ end }}

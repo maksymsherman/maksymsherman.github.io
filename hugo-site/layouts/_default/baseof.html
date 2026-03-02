@@ -62,7 +62,7 @@
   <link rel="stylesheet" href="/shared.css">
 
   <!-- Conditional CSS: notebook.css for homepage + list pages, main.css for blog posts -->
-  {{ if or .IsHome (eq .Params.layout "notebook") }}
+  {{ if or .IsHome (eq .Params.layout "notebook") (eq .RelPermalink "/404.html") }}
     <link rel="stylesheet" href="/notebook.css">
   {{ else }}
     <link rel="stylesheet" href="/main.css">
