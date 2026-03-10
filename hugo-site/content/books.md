@@ -33,6 +33,7 @@ aliases: ["/books.html"]
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-green);">NAME</a> </li> --> <!-- phenomenal -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-blue);">NAME</a> </li> --> <!-- great -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-gray);">NAME</a> </li> --> <!-- other -->
+  <li> <a href="https://www.amazon.com/dp/1250391083"style="color:var(--book-gray);">The Grand Banks Café (Inspector Maigret, 8)</a> </li>
   <li> <a href="https://www.amazon.com/Crime-Holland-Inspector-Maigret/dp/1250391067"style="color:var(--book-gray);">A Crime in Holland (Inspector Maigret, 7)</a> </li>
 </ul> 
 
