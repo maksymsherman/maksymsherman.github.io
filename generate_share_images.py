@@ -149,17 +149,33 @@ def generate_share_image(title, description, output_path):
     img = create_gradient_background()
     draw = ImageDraw.Draw(img)
 
-    # Try to load Inter font, fall back to default
-    try:
-        # Adjust these paths based on where Inter font is located
-        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 64)
-        desc_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
-        domain_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 20)
-    except OSError:
-        print("Warning: Could not load custom fonts, using default")
-        title_font = ImageFont.load_default()
-        desc_font = ImageFont.load_default()
-        domain_font = ImageFont.load_default()
+    # DejaVu: Linux (CI) at /usr/share/..., macOS (Homebrew cask) at ~/Library/Fonts
+    bold_candidates = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        str(Path.home() / "Library/Fonts/DejaVuSans-Bold.ttf"),
+    ]
+    regular_candidates = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        str(Path.home() / "Library/Fonts/DejaVuSans.ttf"),
+    ]
+
+    def load_font(candidates, size):
+        for path in candidates:
+            try:
+                return ImageFont.truetype(path, size)
+            except OSError:
+                continue
+        return None
+
+    title_font = load_font(bold_candidates, 64)
+    desc_font = load_font(regular_candidates, 24)
+    domain_font = load_font(bold_candidates, 20)
+
+    if title_font is None or desc_font is None or domain_font is None:
+        print("Warning: Could not load DejaVu fonts, using default")
+        title_font = title_font or ImageFont.load_default()
+        desc_font = desc_font or ImageFont.load_default()
+        domain_font = domain_font or ImageFont.load_default()
 
     # Layout constants
     padding = 80
@@ -251,7 +267,10 @@ def main():
     # Generate images for all posts
     posts_dir = CONTENT_DIR / "posts"
     if posts_dir.exists():
-        for post_file in posts_dir.glob("*.html"):
+        for post_file in posts_dir.glob("*.md"):
+            if post_file.name == "_index.md":
+                continue
+
             title, description = parse_frontmatter(post_file)
 
             if title:
@@ -262,8 +281,8 @@ def main():
                 generate_share_image(title, description, output_path)
 
     # Generate images for other pages
-    for page_file in CONTENT_DIR.glob("*.html"):
-        if page_file.name == "_index.html":
+    for page_file in CONTENT_DIR.glob("*.md"):
+        if page_file.name == "_index.md":
             continue
 
         title, description = parse_frontmatter(page_file)
