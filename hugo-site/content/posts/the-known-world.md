@@ -2,7 +2,7 @@
 title: "The Known World"
 date: 2021-12-17
 description: "Edward Jones explores a society built on slavery, raising questions about what knowledge prevents you from knowing and what action prevents you from doing."
-aliases: ["/p/the-known-world.html"]
+aliases: ["/p/the-known-world.html", "/tkw"]
 ---
 
 

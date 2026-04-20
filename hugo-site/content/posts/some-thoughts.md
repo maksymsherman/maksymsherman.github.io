@@ -2,7 +2,7 @@
 title: "Some Thoughts"
 date: 2023-09-23
 description: "A collection of thoughts on delayed gratification, imperfection, counterfactuals, time horizons, and independent thinking."
-aliases: ["/p/some-thoughts.html"]
+aliases: ["/p/some-thoughts.html", "/st"]
 ---
 
 

@@ -2,7 +2,7 @@
 title: "Perverse Incentives and Airdrops"
 date: 2021-12-03
 description: "Airdrops create perverse incentives for stakeholders with insider information to conduct Sybil attacks and profit from upcoming token distributions."
-aliases: ["/p/perverse-incentives-and-airdrops.html"]
+aliases: ["/p/perverse-incentives-and-airdrops.html", "/piaa"]
 ---
 
 

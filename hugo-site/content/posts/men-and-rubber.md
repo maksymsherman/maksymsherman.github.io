@@ -2,7 +2,7 @@
 title: "Men and Rubber (Book Notes)"
 date: 2023-08-16
 description: "Notes on Men and Rubber by Harvey Firestone, founder of Firestone Tire and Rubber Company, covering thinking, business judgment, and entrepreneurship."
-aliases: ["/p/men-and-rubber.html"]
+aliases: ["/p/men-and-rubber.html", "/mar"]
 ---
 
 

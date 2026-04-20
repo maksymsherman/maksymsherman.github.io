@@ -2,7 +2,7 @@
 title: "To The Lighthouse"
 date: 2021-10-18
 description: "Virginia Woolf explores darkness, revealing that the meaning of life comes from little daily miracles—illuminations struck unexpectedly in the dark."
-aliases: ["/p/to-the-lighthouse.html"]
+aliases: ["/p/to-the-lighthouse.html", "/ttl"]
 ---
 
 

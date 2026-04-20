@@ -273,6 +273,9 @@ def check_canonical_urls(public_root: Path, base_url: str):
         public/index.html          -> {base_url}
         public/blog/index.html     -> {base_url}blog/
         public/p/unpredictable/index.html -> {base_url}p/unpredictable/
+
+    Alias redirect pages (meta-refresh) are skipped — their canonical
+    intentionally points to the real post URL, not the alias path.
     """
     failures = []
     for html_file in sorted(public_root.rglob("index.html")):
@@ -281,11 +284,17 @@ def check_canonical_urls(public_root: Path, base_url: str):
         except OSError:
             continue
 
+        # Skip alias redirect pages — their canonical points to the real post
+        redirect_parser = RedirectParser()
+        redirect_parser.feed(text)
+        if redirect_parser.redirect_url:
+            continue
+
         parser = CanonicalParser()
         parser.feed(text)
         actual = parser.canonical
         if not actual:
-            continue  # no canonical tag (e.g. alias redirect files don't have one)
+            continue  # no canonical tag
 
         # Derive expected URL from file path
         rel = html_file.parent.relative_to(public_root)

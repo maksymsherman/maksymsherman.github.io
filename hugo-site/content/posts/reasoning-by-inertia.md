@@ -2,7 +2,7 @@
 title: "Reasoning by Inertia"
 date: 2024-02-03
 description: "We easily fool ourselves that we are reasoning by analogy when we are actually reasoning by inertia—continuing past actions without critical thinking."
-aliases: ["/p/reasoning-by-inertia.html"]
+aliases: ["/p/reasoning-by-inertia.html", "/rbi"]
 ---
 
 
