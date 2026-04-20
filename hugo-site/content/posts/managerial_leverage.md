@@ -82,5 +82,5 @@ You are a manager of agents now. Start acting like one.
 ---
 
 
-<iframe src="https://maksymsherman.substack.com/embed" style="border:1px solid #434343; background:#252525; width: 100%; max-width: 480px; height: 320px;" frameborder="0" scrolling="no">
+<iframe src="https://maksymsherman.substack.com/embed" style="border:1px solid #434343; background:#252525; width: 100%; max-width: 480px; height: 320px; display: block; margin: 0 auto;" frameborder="0" scrolling="no">
 </iframe>
