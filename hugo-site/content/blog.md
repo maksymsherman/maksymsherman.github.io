@@ -22,6 +22,8 @@ aliases: ["/blog.html"]
     <div class="cell-body">
       <div class="list-content">
         <h1>Blog</h1>
+        <h3>2026</h3>
+        <p><a href="/p/managerial_leverage">Managerial Leverage with AI Agents</a></p>
         <h3>2025</h3>
         <p><a href="/p/striking_while_the_iron_is_hot">Lyndon Johnson and Robert Caro: Striking While the Iron is Hot</a></p>
         <p><a href="/p/unpredictable">Unpredictable</a></p>
@@ -76,6 +78,11 @@ aliases: ["/blog.html"]
     ]
   },
   "itemListElement": [
+    {
+      "@type": "ListItem",
+      "url": "https://msherman.xyz/p/managerial_leverage",
+      "name": "Managerial Leverage with AI Agents"
+    },
     {
       "@type": "ListItem",
       "url": "https://msherman.xyz/p/striking_while_the_iron_is_hot",
