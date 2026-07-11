@@ -216,12 +216,14 @@ body {
   font-weight: 500;
 }
 
-.markdown-cell a {
+.markdown-cell a,
+.dataframe td a {
   color: var(--link-color);
   text-decoration: none;
 }
 
-.markdown-cell a:hover {
+.markdown-cell a:hover,
+.dataframe td a:hover {
   text-decoration: underline;
 }
 
