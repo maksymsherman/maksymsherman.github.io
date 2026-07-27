@@ -33,6 +33,7 @@ aliases: ["/books.html"]
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-green);">NAME</a> </li> --> <!-- phenomenal -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-blue);">NAME</a> </li> --> <!-- great -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-gray);">NAME</a> </li> --> <!-- other -->
+  <li> <a href="https://www.amazon.com/Writing-Well-Classic-Guide-Nonfiction/dp/0060891548"style="color:var(--book-gray);">On Writing Well</a> </li>
   <li> <a href="https://www.amazon.com/Bloomberg-Revised-Updated-Michael-R/dp/1119554268/"style="color:var(--book-gray);">Bloomberg by Bloomberg</a> </li>
   <li> <a href="https://www.amazon.com/Shackleton-Endurance-Conquer-Michael-Smith/dp/1780747071"style="color:var(--book-gray);">Shackleton: By Endurance We Conquer</a> </li>
   <li> <a href="https://www.amazon.com/Shackletons-Journey-Frank-Arthur-Worsley/dp/0393318648"style="color:var(--book-gray);">Shackleton's Boat Journey</a> </li>
