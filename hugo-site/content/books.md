@@ -33,6 +33,9 @@ aliases: ["/books.html"]
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-green);">NAME</a> </li> --> <!-- phenomenal -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-blue);">NAME</a> </li> --> <!-- great -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-gray);">NAME</a> </li> --> <!-- other -->
+  <li> <a href="https://www.amazon.com/dp/0190078944"style="color:var(--book-gray);">The World for Sale</a> </li>
+  <li> <a href="https://www.amazon.com/dp/1598534971"style="color:var(--book-gray);">String Theory</a> </li>
+  <li> <a href="https://a.co/d/06JI78Dw"style="color:var(--book-gray);">Cochrane: Britannia's Sea Wolf</a> </li>
   <li> <a href="https://www.amazon.com/HBR-Guide-Better-Business-Writing/dp/142218403X"style="color:var(--book-gray);">HBR Guide to Better Business Writing  </a> </li>
   <li> <a href="https://www.amazon.com/Writing-Well-Classic-Guide-Nonfiction/dp/0060891548"style="color:var(--book-gray);">On Writing Well</a> </li>
   <li> <a href="https://www.amazon.com/Bloomberg-Revised-Updated-Michael-R/dp/1119554268/"style="color:var(--book-gray);">Bloomberg by Bloomberg</a> </li>
