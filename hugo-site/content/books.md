@@ -33,7 +33,7 @@ aliases: ["/books.html"]
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-green);">NAME</a> </li> --> <!-- phenomenal -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-blue);">NAME</a> </li> --> <!-- great -->
   <!-- <li> <a href="https://www.amazon.com/"style="color:var(--book-gray);">NAME</a> </li> --> <!-- other -->
-  <li> <a href="https://www.amazon.com/s?k=The+Shadow+Puppet+Simenon+Maigret"style="color:var(--book-gray);">The Shadow Puppet (Inspector Maigret, 12)</a> </li>
+  <li> <a style="color:var(--book-gray);">The Shadow Puppet (Inspector Maigret, 12)</a> </li>
   <li> <a href="https://www.amazon.com/dp/0190078944"style="color:var(--book-gray);">The World for Sale</a> </li>
   <li> <a href="https://www.amazon.com/dp/1598534971"style="color:var(--book-gray);">String Theory</a> </li>
   <li> <a href="https://a.co/d/06JI78Dw"style="color:var(--book-gray);">Cochrane: Britannia's Sea Wolf</a> </li>
